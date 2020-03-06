@@ -147,18 +147,19 @@
                                     </table>
                                 </t>
                            <!-- ///////////////////// COMPAÑIA Biumak //////////////////////-->
-                             <t t-if="compañia == 'Biumak Pharmaceuticals, C.A.'">
+                             <t t-if="compañia != 'Biumak Pharmaceuticals, C.A.'">
                                  <table style="width:100%;">
                                     <tr>
-                                        <td colspan="6" ><p class="text-left">&amp;nbsp;</p></td>
-                                        <td colspan="2" class="text-left"> <b>Fecha: </b><span t-esc="info['fecha']"/> </td>
+                                        <td colspan="5" ><p class="text-left">&amp;nbsp;</p></td>
+                                        <td colspan="3" class="text-left"> <b>Fecha: </b><span t-esc="info['fecha']"/> </td>
                                     </tr>
                                     <tr>
-                                        <td colspan="6" ><p class="text-left">&amp;nbsp;</p></td>
-                                        <td colspan="2" class="text-left"> <b>N° de Factura: </b><p><span t-esc="info['n_factura']"/></p> </td></tr>
+                                        <td colspan="5" ><p class="text-left">&amp;nbsp;</p></td>
+                                        <td colspan="3" class="text-left"> <b>N° de Factura: </b><span t-esc="info['n_factura']"/></td>
+                                    </tr>                                    
                                     <tr>
-                                        <td colspan="6" ><p class="text-left">&amp;nbsp;</p></td>
-                                        <td colspan="2" class="text-left"> <b>N° Cliente: </b><span t-esc="info['n_cliente']"/> </td>
+                                        <td colspan="5" ><p class="text-left">&amp;nbsp;</p></td>
+                                        <td colspan="3" class="text-left"> <b>N° Cliente: </b><span t-esc="info['n_cliente']"/> </td>
                                     </tr>
                                      <tr><td>&amp;nbsp;</td></tr>
                                      <tr><td>&amp;nbsp;</td></tr>
@@ -182,10 +183,10 @@
 
                                      <tr class="text-center table-bordered" style="height:20px; border: 1px solid #000000;">
                                         <th class="text-center table-bordered" style="width:2%; vertical-align: middle; border: 1px solid #000000; ">&amp;nbsp;N°</th>
-                                        <th class="text-center table-bordered" style="width:26%; vertical-align: middle; border: 1px solid #000000;">COD. PRODUCTO</th>
+                                        <th class="text-center table-bordered" style="width:36%; vertical-align: middle; border: 1px solid #000000;">COD. PRODUCTO</th>
                                         <th class="text-center table-bordered" style="width:13%; vertical-align: middle; border: 1px solid #000000;" colspan="2">&amp;nbsp;CANT</th>
                                         <!--th class="text-center table-bordered" style="width:8%; vertical-align: middle; border: 1px solid #000000;">U.M</th-->
-                                        <th class="text-center table-bordered" style="width:30%; vertical-align: middle; border: 1px solid #000000;">DESCRIPCION</th>
+                                        <th class="text-center table-bordered" style="width:20%; vertical-align: middle; border: 1px solid #000000;">DESCRIPCION</th>
                                         <th class="text-center table-bordered" style="width:12%; vertical-align: middle; border: 1px solid #000000;">N° DE LOTE</th>
                                         <th class="text-center table-bordered" style="width:13%; vertical-align: middle; border: 1px solid #000000;">PRECIO UNITARIO</th>
                                         <th class="text-center table-bordered" style="width:12%; vertical-align: middle; border: 1px solid #000000;">TOTAL</th>
