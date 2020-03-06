@@ -1,0 +1,18 @@
+<odoo>
+  <data>
+  <record id="teste_google" model="ir.actions.act_url">
+      <field name="name">Google 1</field>
+      <field name="type">ir.actions.act_url</field>
+      <field name="target">self</field>
+      <field name="url">https://www.mercadolibre.com.ve/</field><!--www.google.com.au/?teste2=teste2-->
+  </record>
+
+   <menuitem
+             id="mi_boton_1"
+             parent="base.menu_administration"
+             name="Mercado libre"
+             action="teste_google"
+             sequence="111"
+        />
+  </data>
+</odoo>
