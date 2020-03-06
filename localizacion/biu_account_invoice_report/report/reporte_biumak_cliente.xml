@@ -183,13 +183,13 @@
 
                                      <tr class="text-center table-bordered" style="height:20px; border: 1px solid #000000;">
                                         <th class="text-center table-bordered" style="width:2%; vertical-align: middle; border: 1px solid #000000; ">&amp;nbsp;N°</th>
-                                        <th class="text-center table-bordered" style="width:36%; vertical-align: middle; border: 1px solid #000000;">COD. PRODUCTO</th>
+                                        <th class="text-center table-bordered" style="width:26%; vertical-align: middle; border: 1px solid #000000;">COD. PRODUCTO</th>
                                         <th class="text-center table-bordered" style="width:13%; vertical-align: middle; border: 1px solid #000000;" colspan="2">&amp;nbsp;CANT</th>
                                         <!--th class="text-center table-bordered" style="width:8%; vertical-align: middle; border: 1px solid #000000;">U.M</th-->
-                                        <th class="text-center table-bordered" style="width:20%; vertical-align: middle; border: 1px solid #000000;">DESCRIPCION</th>
+                                        <th class="text-center table-bordered" style="width:30%; vertical-align: middle; border: 1px solid #000000;">DESCRIPCION</th>
                                         <th class="text-center table-bordered" style="width:12%; vertical-align: middle; border: 1px solid #000000;">N° DE LOTE</th>
-                                        <th class="text-center table-bordered" style="width:13%; vertical-align: middle; border: 1px solid #000000;">PRECIO UNITARIO</th>
-                                        <th class="text-center table-bordered" style="width:12%; vertical-align: middle; border: 1px solid #000000;">TOTAL</th>
+                                        <th class="text-center table-bordered" style="width:16%; vertical-align: middle; border: 1px solid #000000;">PRECIO UNITARIO</th>
+                                        <th class="text-center table-bordered" style="width:16%; vertical-align: middle; border: 1px solid #000000;">TOTAL</th>
                                      </tr>
                                      <t t-set="cont" t-value="1"/>
                                      <t t-foreach="docs" t-as="doc">
@@ -200,8 +200,8 @@
                                             <td class="text-center " style="width:8%;   vertical-align: middle;"><span t-esc="doc['um']"/></td>
                                             <td class="text-left" style="width:30%;  vertical-align: middle; padding-left:15px;"><span t-esc="doc['descripcion']"/></td>
                                             <td class="text-center " style="width:12%;   vertical-align: middle;"><span t-esc="doc['lote']"/></td>
-                                            <td class="text-right " style="width:13%;  vertical-align: center;"><span t-esc="doc['precio_unitario']"/>&amp;nbsp;&amp;nbsp;&amp;nbsp;</td>
-                                            <td class="text-right " style="width:12%;  vertical-align: middle;"><span t-esc="doc['precio_total']"/></td>
+                                            <td class="text-right " style="width:16%;  vertical-align: center;"><span t-esc="doc['precio_unitario']"/>&amp;nbsp;&amp;nbsp;&amp;nbsp;</td>
+                                            <td class="text-right " style="width:16%;  vertical-align: middle;"><span t-esc="doc['precio_total']"/></td>
                                              <t t-set="cont" t-value="cont+1"/>
                                          </tr>
                                      </t>
