@@ -147,7 +147,7 @@
                                     </table>
                                 </t>
                            <!-- ///////////////////// COMPAÑIA Biumak //////////////////////-->
-                             <t t-if="compañia != 'Biumak Pharmaceuticals, C.A.'">
+                             <t t-if="compañia == 'Biumak Pharmaceuticals, C.A.'">
                                  <table style="width:100%;">
                                     <tr>
                                         <td colspan="5" ><p class="text-left">&amp;nbsp;</p></td>
