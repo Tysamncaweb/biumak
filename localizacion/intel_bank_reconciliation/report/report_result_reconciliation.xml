@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="header_report_result_reconciliation">
+            <div class="header">
+                <table style="width:100%; height:40px;">
+                          <tr style="height:40px;">
+                              <td style="width:20%;">
+                                  <img t-att-src="'data:image/png;base64,%s' %(to_text(res_company.logo))" style="width:280px; height:100px; margin-top:40px; margin-bottom:0px;"/>
+                              </td>
+                          </tr>
+                </table>
+                 <td style="border: 1px solid black;">
+                     <h1 class="text-center" >
+                         <strong><span t-esc="res_company.name"/></strong>
+                     </h1>
+                 </td>
+                 <table style=" width:100%; height:40px; font-size: 14px;">
+                     <tr style="height:30px;">
+                         <td class="text-left" style="width:70%;" >
+                             <!--span t-esc="account_journal.name" /-->
+                         </td>
+                         <td class="text-left" style="width:20%;">
+                             AL MES DE:
+                         </td>
+                         <td class="text-left" style="width:50%;" >
+                             <span t-esc="mes"/> <span t-esc="year"/>
+                         </td>
+                     </tr>
+                     <tr style="height:30px;">
+                         <td class="text-left" style="width:70%;">
+                             Cuenta/Nombre SN:
+                         </td>
+                         <td class="text-left" style="width:20%;" >
+                         </td>
+                     </tr>
+                </table>
+            </div>
+        </template>
+
+        <record model="report.paperformat" id="paperformat_result_reconciliation">
+            <field name="name">paperformat.result.reconciliation</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_width">210</field>
+            <field name="page_height">297</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">60</field>
+            <field name="margin_right">10</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">10</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">60</field>
+            <field name="dpi">80</field>
+        </record>
+
+        <report
+            id="action_report_result_reconciliation"
+            string="Resultado Conciliación"
+            model="account.bank.statement"
+            report_type="qweb-pdf"
+            name="intel_bank_reconciliation.report_result_reconciliation"
+            file="intel_bank_reconciliation.report_result_reconciliation"
+            paperformat ="paperformat_result_reconciliation"
+        />
+
+
+        <template id="report_result_reconciliation">
+            <div class="page">
+                <t t-call="intel_bank_reconciliation.header_report_result_reconciliation"/>
+                <div class="article">
+                    <table style="width:100%;">
+                        <tr>
+                            <td class="text-left" style="width:10%;"></td>
+                            <td class="text-left" style="width:70%;">SALDO FINAL BANCO:</td>
+                            <td class="text-right" style="width:20%;">1.233.444</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left" style="width:10%;">(-)</td>
+                            <td class="text-left" style="width:70%;">DEPOSITOS Y NC NO CONTABILIZADOS:</td>
+                            <td class="text-right" style="width:20%;">1.233.444</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left" style="width:10%;">(+)</td>
+                            <td class="text-left" style="width:70%;">CHEQUES Y ND NO CONTABILIZADOS:</td>
+                            <td class="text-right" style="width:20%;">1.233.444</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left" style="width:10%;">(-)</td>
+                            <td class="text-left" style="width:70%;">CHEQUES NO COBRADOS:</td>
+                            <td class="text-right" style="width:20%;">1.233.444</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left" style="width:10%;">(+)</td>
+                            <td class="text-left" style="width:70%;">DEPOSITOS NO REGISTRADOS:</td>
+                            <td class="text-right" style="width:20%;">1.233.444</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left" style="width:10%;"></td>
+                            <td class="text-left" style="width:70%;">SALDO FINAL EN LIBROS (CONCILIADO):</td>
+                            <td class="text-right" style="width:20%;">1.233.444</td>
+                        </tr>
+                    </table><br/>
+
+                    <table style="width:100%;">
+                        <thead>
+                            <tr>
+                                <th style="vertical-align: middle; border: 1px solid #000000;" class="text-center" colspan="3">DETALLE DE LAS PARTIDAS PENDIENTES</th>
+                            </tr>
+                            <tr>
+                                <th style="vertical-align: middle; border: 1px solid #000000;" class="text-center" colspan="3">EN CONTABILIDAD</th>
+                            </tr>
+                        </thead>
+                        <tr><td rowspan="1"><p> &amp;nbsp;</p></td></tr>
+                        <tr>
+                            <td>
+                                <table style="width:100%;">
+                                    <thead>
+                                        <tr>
+                                            <th style="vertical-align: middle; border: 1px solid #000000;" class="text-center" colspan="4">DEPOSITOS Y NOTAS DE CRÉDITO</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="vertical-align: middle; border: 1px solid #000000;" class="text-center" colspan="4">NO CONTABILIZADAS</th>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th class="text-center" style="width:15%; vertical-align: middle; border: 1px solid #000000;">FECHA</th>
+                                            <th class="text-center" style="width:15%; vertical-align: middle; border: 1px solid #000000;">OP.</th>
+                                            <th class="text-center" style="width:15%; vertical-align: middle; border: 1px solid #000000;">N° OP</th>
+                                            <th class="text-center" style="width:15%; vertical-align: middle; border: 1px solid #000000;">MONTO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="text-center">
+                                            <td style="width:15%; vertical-align: middle; border: 1px solid #000000;">
+                                                Prueba</td>
+                                            <td style="width:15%; vertical-align: middle; border: 1px solid #000000;">
+                                                Prueba1</td>
+                                            <td style="width:15%; vertical-align: middle; border: 1px solid #000000;">
+                                                Prueba2</td>
+                                            <td class="text-right" style="width:15%; vertical-align: middle; border: 1px solid #000000;">
+                                                Prueba3</td>
+                                        </tr>
+                                         <tr>
+                                            <td class="text-center" style="vertical-align: middle; border: 1px solid #000000;" colspan="3">TOTAL</td>
+                                            <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;">12133</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>&amp;nbsp;&amp;nbsp;</td>
+                            <td>
+                                <table style="width:100%;">
+                                    <thead>
+                                        <tr>
+                                            <th style="vertical-align: middle; border: 1px solid #000000;" class="text-center" colspan="4">CHEQUES Y NOTAS DE DÉDITO</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="vertical-align: middle; border: 1px solid #000000;" class="text-center" colspan="4">NO CONTABILIZADAS</th>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th class="text-center" style="width:10%; vertical-align: middle; border: 1px solid #000000;">FECHA</th>
+                                            <th class="text-center" style="width:10%; vertical-align: middle; border: 1px solid #000000;">OP.</th>
+                                            <th class="text-center" style="width:10%; vertical-align: middle; border: 1px solid #000000;">N° OP</th>
+                                            <th class="text-center" style="width:10%; vertical-align: middle; border: 1px solid #000000;">MONTO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="text-center">
+                                            <td style="vertical-align: middle; border: 1px solid #000000;">
+                                                Prueba</td>
+                                            <td style="vertical-align: middle; border: 1px solid #000000;">
+                                                Prueba1</td>
+                                            <td style="vertical-align: middle; border: 1px solid #000000;">
+                                                Prueba2</td>
+                                            <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;">
+                                                Prueba3</td>
+                                        </tr>
+                                         <tr>
+                                            <td class="text-center" style="vertical-align: middle; border: 1px solid #000000;" colspan="3">TOTAL</td>
+                                            <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;">12133</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr><td rowspan="1"><p> &amp;nbsp;</p></td></tr>
+
+                        <thead>
+                            <tr>
+                                <th style="vertical-align: middle; border: 1px solid #000000;" class="text-center" colspan="3">EN BANCO</th>
+                            </tr>
+                        </thead>
+                        <tr><td rowspan="1"><p> &amp;nbsp;</p></td></tr>
+                        <tr>
+                            <td>
+                                <table style="width:100%;">
+                                    <thead>
+                                        <tr>
+                                            <th style="vertical-align: middle; border: 1px solid #000000;" class="text-center" colspan="4">CHEQUES Y NOTAS DE DÉBITO</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="vertical-align: middle; border: 1px solid #000000;" class="text-center" colspan="4">NO COBRADOS</th>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th class="text-center" style="width:15%; vertical-align: middle; border: 1px solid #000000;">FECHA</th>
+                                            <th class="text-center" style="width:15%; vertical-align: middle; border: 1px solid #000000;">OP.</th>
+                                            <th class="text-center" style="width:15%; vertical-align: middle; border: 1px solid #000000;">N° CH/TRANSF</th>
+                                            <th class="text-center" style="width:15%; vertical-align: middle; border: 1px solid #000000;">MONTO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="text-center">
+                                            <td style="width:15%; vertical-align: middle; border: 1px solid #000000;">
+                                                Prueba</td>
+                                            <td style="width:15%; vertical-align: middle; border: 1px solid #000000;">
+                                                Prueba1</td>
+                                            <td style="width:15%; vertical-align: middle; border: 1px solid #000000;">
+                                                Prueba2</td>
+                                            <td class="text-right" style="width:15%; vertical-align: middle; border: 1px solid #000000;">
+                                                Prueba3</td>
+                                        </tr>
+                                         <tr>
+                                            <td class="text-center" style="vertical-align: middle; border: 1px solid #000000;" colspan="3">TOTAL</td>
+                                            <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;">12133</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>&amp;nbsp;&amp;nbsp;</td>
+                            <td>
+                                <table style="width:100%;">
+                                    <thead>
+                                        <tr>
+                                            <th style="vertical-align: middle; border: 1px solid #000000;" class="text-center" colspan="4">DEPOSITOS Y NOTAS DE CRÉDITO</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="vertical-align: middle; border: 1px solid #000000;" class="text-center" colspan="4">NO REGISTRADOS</th>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th class="text-center" style="width:10%; vertical-align: middle; border: 1px solid #000000;">FECHA</th>
+                                            <th class="text-center" style="width:10%; vertical-align: middle; border: 1px solid #000000;">OP.</th>
+                                            <th class="text-center" style="width:10%; vertical-align: middle; border: 1px solid #000000;">N° OP</th>
+                                            <th class="text-center" style="width:10%; vertical-align: middle; border: 1px solid #000000;">MONTO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="text-center">
+                                            <td style="vertical-align: middle; border: 1px solid #000000;">
+                                                Prueba</td>
+                                            <td style="vertical-align: middle; border: 1px solid #000000;">
+                                                Prueba1</td>
+                                            <td style="vertical-align: middle; border: 1px solid #000000;">
+                                                Prueba2</td>
+                                            <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;">
+                                                Prueba3</td>
+                                        </tr>
+                                         <tr>
+                                            <td class="text-center" style="vertical-align: middle; border: 1px solid #000000;" colspan="3">TOTAL</td>
+                                            <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;">12133</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr><td rowspan="1"><p> &amp;nbsp;</p></td></tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>Realizado por:</td>
+                        </tr>
+                    </table>
+
+                </div>
+                <div class="footer">
+                    <div class="row text-center" style="border-top: 1px solid black;">
+                        <div class="text-right">
+                            <ul class="list-inline" style="margin-top:10px;">
+                                <li>Pag:</li>
+                                <li>
+                                    <span class="page"/>
+                                </li>
+                                <li>de</li>
+                                <li>
+                                    <span class="topage"/>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!-- Wizard para imprimir reporte movientos por cuentas-->
+        <record id="report_analytic_account" model="ir.ui.view">
+       	    <field name="name"> Reporte analitico por cuenta</field>
+            <field name="model">wizard.report.analytic.account</field>
+    	    <field name="arch" type="xml">
+    	    	 <form string="Reporte Analitico por cuenta">
+                    <div>
+                        <group colspan="8" col="4">
+                            <field name="move_dest" string="Moviento destino" widget='radio'/>
+                            <field name="ordenado_fecha" string="Ordenado por Fecha:" widget="checkboxes"/>
+                        </group>
+                    </div>
+                     <group colspan="8" col="4">
+                         <field name="cuentas_contables" string="Motrar Cuentas" widget="radio"/>
+                         <field name="saldo_inicial" string="Incluir Saldo Inicial" widget="checkboxes"/>
+                         <field name="company" string="Empresa" required="1"/>
+                         <field name="currency_id" string="Moneda" widget="selection"/>
+
+                     </group>
+                     <group colspan="8" col="4">
+                     </group>
+                     <group colspan="8" col="4">
+                             <field name="date_start" string="Fecha inicio" required="1"/>
+                             <field name="date_end" string="Fecha fin" required="1"/>
+                            </group>
+                     <group>
+                            <field name="cuenta_especifica" string="Cuenta específica" widget="checkboxes"/>
+                            <field name="num_cuenta_contables" string="Número Cuenta Contable" attrs="{'invisible':[('cuentas_contables', '=', 'all')],'required':[('cuenta_especifica', '=', True)]}"/>
+                     </group>
+
+                     <group>
+                        <field name="name" colspan="4" invisible="1"/>
+                        <field name="report" filename="name" colspan="4"/>
+                     </group>
+
+
+                <footer>
+                   <button name="print_analitico_pdf" string="Exportar PDF" type="object" class="oe_highlight" />
+                   <button name="print_analitico_xls" string="Exportar XLS" type="object" class="oe_highlight" />
+                   <button special="cancel" string="Cancel" class="oe_highlight" />
+                </footer>
+
+                </form>
+    	    </field>
+    	</record>
+
+        <record id="action_report_analytic_account" model="ir.actions.act_window">
+        	<field name="name">Reporte Analítico por cuenta</field>
+        	<field name="res_model">wizard.report.analytic.account</field>
+        	<field name="view_type">form</field>
+        	<field name="view_mode">form</field>
+        	<field name="view_id" ref="report_analytic_account"/>
+        	<field name="target">new</field>
+    	</record>
+
+        <menuitem
+                 id="menuitem_report_analytic_account"
+                 parent="intel_retention_islr.retention_islr_finanzas"
+                 name="Analítico por cuenta"
+                 action="action_report_analytic_account"
+        />
+    </data>
+</odoo>

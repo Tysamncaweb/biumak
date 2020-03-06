@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data>
+    <!--
+    =====================================================
+    Extender funcionalidad de la factura de cliente en donde incluye el nombre del proyecto al
+    cual pertenece
+    =====================================================
+    -->
+        <record id="account_invoice_ext_view_form_project" model="ir.ui.view">
+            <field name="name">account.invoice.ext.view.form.project</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='payment_term_id']" position="after">
+                    <field name="account_analytic_name" readonly="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

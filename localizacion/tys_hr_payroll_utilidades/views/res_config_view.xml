@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.utilidades</field>
+            <field name="model">periodo.utilidades</field>
+            <field name="arch" type="xml">
+                <form string="Periodo de Utilidades">
+                    <group col="6" colspan="4">
+                        <field name="module_hr_utilidades_add_calculo"/>
+                        <field name="module_hr_utilidades_add_date_start"/>
+                        <field name="module_hr_utilidades_add_date_end"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="res_config_settings_view_tree" model="ir.ui.view">
+            <field name="name">res.config.settings.view.tree.utilidades</field>
+            <field name="model">periodo.utilidades</field>
+            <field name="arch" type="xml">
+                <tree string="Utilidades periodo" editable="bottom">
+                    <field name="module_hr_utilidades_add_calculo"/>
+                    <field name="module_hr_utilidades_add_date_start" required="1"/>
+                    <field name="module_hr_utilidades_add_date_end" required="1"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="action_res_config_settings_view_tree" model="ir.actions.act_window">
+            <field name="name">Período Utilidades</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">periodo.utilidades</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <!--field name="view_id" ref="res_config_settings_view_tree"/-->
+        </record>
+
+        <menuitem
+            id="menu_hr_payroll_periodo_utilidades_view"
+            action="action_res_config_settings_view_tree"
+            parent="hr_payroll.menu_hr_payroll_configuration"
+             sequence="23"
+            />
+
+    </data>
+</odoo>

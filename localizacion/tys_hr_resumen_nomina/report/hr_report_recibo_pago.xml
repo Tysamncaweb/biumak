@@ -1,0 +1,146 @@
+<odoo>
+
+    <record model="report.paperformat" id="paperformat_hr_payroll_summary_report">
+
+        <field name="name">paperformat.report.hr.payroll.summary.report</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="page_height">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">40</field>
+        <field name="margin_right">10</field>
+        <field name="margin_bottom">20</field>
+        <field name="margin_left">10</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">35</field>
+        <field name="dpi">0</field>
+
+    </record>
+
+    <report
+            id="action_hr_payroll_summary_report"
+            string="Recibo de pago"
+            model="hr.payslip"
+            report_type="qweb-pdf"
+            name="tys_hr_resumen_nomina.template_hr_payroll_summary_report"
+            file="tys_hr_resumen_nomina.template_hr_payroll_summary_report"
+            paperformat="paperformat_hr_payroll_summary_report"
+    />
+
+    <template id="template_hr_payroll_summary_report" >
+        <div class="header">
+            <table cellspacing="0" cellpadding="0" border="0" style="width:100%; height:40px;">
+                <tr style="height:40px;"><!--Altura-->
+                    <td  style="width:50%;"><!--Ancho-->
+                        <img t-att-src="'data:image/png;base64,%s' %(to_text(res_company.logo))" style="width:120px; height:120px; "/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="page">
+              <div class="article">
+                  <div class="oe_structure"/>
+                  <h4 class="text-center"><b>RECIBO DE PAGO</b></h4>
+                  <t t-foreach="docs" t-as="doc">
+                        <br/>
+                        <table style="width:100%;">
+                                <tr>
+                                    <td scope="col">&amp;nbsp;&amp;nbsp;</td>
+                                    <td scope="col">&amp;nbsp;&amp;nbsp;</td>
+                                    <td scope="col">&amp;nbsp;&amp;nbsp;</td>
+                                    <td scope="col">&amp;nbsp;&amp;nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <th style="width:25%;"><p  class="text-left">Nombre y Apellido: </p></th>
+                                    <td style="width:25%;"><p  class="text-left"><span t-esc="doc['employee']"/></p></td>
+                                    <th style="width:25%;"><p  class="text-left">Cédula de Identidad::</p></th>
+                                    <td style="width:25%;"><p  class="text-left"><span t-esc="doc['ci']"/></p></td>
+                                </tr>
+                                <tr>
+                                    <th style="width:25%;"><p  class="text-left">Fecha de Ingreso: </p></th>
+                                    <td style="width:25%;"><p  class="text-left"><span t-esc="doc['f_ing']"/></p></td>
+                                    <th style="width:25%;"><p  class="text-left">Correo Electronico: </p></th>
+                                    <td style="width:25%;"><p  class="text-left"><span t-esc="doc['correo']"/></p></td>
+
+                                </tr>
+                                <tr>
+                                    <th style="width:25%;"><p  class="text-left">Cargo:</p></th>
+                                    <td style="width:25%;"><p  class="text-left"><span t-esc="doc['cargo']"/></p></td>
+                                    <th style="width:25%;"><p  class="text-left">Departamento:</p></th>
+                                    <td style="width:25%;"><p  class="text-left"><span t-esc="doc['department']"/></p></td>
+
+                                </tr>
+                                <tr>
+                                   <th style="width:25%;"><p  class="text-left">Salario Mensual:</p></th>
+                                    <td style="width:25%;"><p  class="text-left"><span t-esc="doc['wage']"/></p></td>
+                                    <th style="width:25%;"><p  class="text-left">Salario Diario:</p></th>
+                                    <td style="width:25%;"><p  class="text-left"><span t-esc="doc['sal_diario']"/></p></td>
+                                </tr>
+                                <tr>
+                                    <!--td scope="col">&amp;nbsp;&amp;nbsp;</td>
+                                    <td scope="col">&amp;nbsp;&amp;nbsp;</td-->
+                                    <th style="width:25%;"><p  class="text-left"><b>Período de Pago:</b></p></th>
+                                    <td style="width:25%;"><p  class="text-left"><span t-esc="doc['date_start']"/>&amp;nbsp;al&amp;nbsp;<span t-esc="doc['date_end']"/></p></td>
+                                    <th style="width:25%;"><p  class="text-left">Emitido el:</p></th>
+                                    <td style="width:25%;"><p  class="text-left"><span t-esc="doc['date_actual']"/></p></td>
+                                </tr>
+                        </table>
+                        <br/><br/>
+                        <table style="width:100%;border: 1px solid black;">
+                            <thead>
+                                <tr style="background:#AED6F1;">
+                                    <th style="border: 1px solid black;width:18,26%;"><p  class="text-center">&amp;nbsp;CÓDIGO&amp;nbsp;</p></th>
+                                    <th style="border: 1px solid black;width:18,26%;"><p  class="text-center">&amp;nbsp;DESCRIPCIÓN DEL PAGO&amp;nbsp;</p></th>
+                                    <th style="border: 1px solid black;width:8,66%; "><p  class="text-center">CANT.</p></th>
+                                    <th style="border: 1px solid black;width:18,26%;"><p  class="text-center">&amp;nbsp;ASIGNACIONES&amp;nbsp;</p></th>
+                                    <th style="border: 1px solid black;width:18,26%;"><p  class="text-center">&amp;nbsp;DEDUCCIONES&amp;nbsp;</p></th>
+                                    <th style="border: 1px solid black;width:18,26%;"><p  class="text-center">SALDO</p></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <t t-foreach="docs2" t-as="doc2">
+                                        <div>
+                                            <tr>
+                                                <td><p  class="text-center"><span t-esc="doc2['code']"/></p></td>
+
+                                                <td><p  class="text-center"><span t-esc="doc2['descripcion']"/></p></td>
+
+                                                <td><p  class="text-center"><span t-esc="doc2['cant_sueldo']"/></p></td>
+
+                                                <td><p  class="text-center"><span t-esc="doc2['total_alw']"/></p></td>
+
+                                                <td><p  class="text-center"><span t-esc="doc2['total_ded']"/></p></td>
+
+                                                <td> </td>
+                                            </tr>
+                                        </div>
+                                    </t>
+
+                                    <tr style="border: 1px solid black;">
+                                        <td style="width:18,26%;" scope="col">&amp;nbsp;&amp;nbsp;</td>
+                                        <td style="width:18,26%;" scope="col">&amp;nbsp;&amp;nbsp;</td>
+                                        <th style="width:8,66%;"><p  class="text-center"> Totales</p></th>
+                                        <td style="width:18,26%;"><p  class="text-center"><span t-esc="doc['asig_total']"/></p></td>
+                                        <td style="width:18,26%;"><p  class="text-center"><span t-esc="doc['ded_total']"/></p></td>
+                                        <td style="width:18,26%;" scope="col">&amp;nbsp;&amp;nbsp;</td>
+                                    </tr>
+
+                                    <tr style="border: 1px solid black;">
+                                        <td style="width:18,26%;" scope="col">&amp;nbsp;&amp;nbsp;</td>
+                                        <th style="width:18,26%;"><p  class="text-right">Neto a Pagar&amp;nbsp;</p></th>
+                                        <td style="width:26,92%;" colspan="2" ><p  class="text-left">=====================></p></td>
+                                        <td style="width:18,26%;" scope="col">&amp;nbsp;&amp;nbsp;</td>
+                                        <td style="width:18,26%;"><p  class="text-center"><span t-esc="doc['net_total']"/></p></td>
+                                    </tr>
+                            </tbody>
+                        </table>
+
+                  </t>
+
+
+            </div>
+        </div>
+    </template>
+
+</odoo>

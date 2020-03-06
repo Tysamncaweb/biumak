@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="header_report_purchase_adjustments">
+            <div class="header">
+            <div  style="border-bottom: 1px solid black">
+                <table  cellspacing="0" cellpadding="0" border="0" style="width:100%; height:140px;">
+                    <tr style="height:100%;">
+                        <td style="width:17%;">
+                            <img t-att-src="'data:image/png;base64,%s' %(to_text(res_company.logo))" style="width:290px; height:100px; margin-top:38px; margin-bottom:0px;"/>
+                        </td>
+                        <td  style="width:43%;">
+                            <p><b><span t-field="o.company_id.street"/>, <span t-field="o.company_id.city"/> <span t-field="o.company_id.zip"/>. <span t-field="o.company_id.country_id.name"/>
+                            TLF.: (0212) <span t-field="o.company_id.phone"/> / Email: <span t-field="o.company_id.email"/> / <span t-field="o.company_id.website"/></b></p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </template>
+
+
+
+    <template id="report_purchasquotation_document_national">
+    <t t-call="biu_sale_purchase.header_report_purchase_adjustments"/><br/><br/>
+         <t t-foreach="o.with_context({'lang':o.partner_id.lang})" t-as="o">
+             <div class="article">
+              <div class="page">
+                 <div class="oe_structure"/>
+
+                  <!--div class="row mt32 mb32">
+                    <div class="col-xs-6">
+                        <strong>Dirección de envio:</strong>
+                        <div t-if="o.dest_address_id">
+                            <div t-field="o.dest_address_id"
+                                t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
+                        </div>
+                        <div t-if="not o.dest_address_id and o.picking_type_id.warehouse_id">
+                            <span t-field="o.picking_type_id.warehouse_id.name"/>
+                            <div t-field="o.picking_type_id.warehouse_id.partner_id"
+                                t-options='{"widget": "contact", "fields": ["address", "phone"], "no_marker": True, "phone_icons": True}'/>
+                        </div>
+                    </div>
+                </div-->
+
+                   <h2> Solicitud de presupuesto <span t-field="o.name"/></h2>
+
+                        <table width="100%"  style="font-size: 14px">
+                            <td width="70%">&amp;nbsp;</td>
+                              <td><strong>Nº de Presupuesto </strong> <span t-esc="o.name"/></td><tr/>
+                            <td width="70%">&amp;nbsp;</td>
+                                <td><strong>Fecha </strong> <span t-esc="o.date_order"/></td><tr/>
+                        </table>
+                        <br/>
+                        <table width="100%"  style="border:1px solid #C0C0C0;font-size: 14px">
+                             <thead>
+                                <tr>
+                                    <td style="border:1px solid #C0C0C0;"><strong>Razon social: </strong> <span t-esc="docs.partner_id.name"/></td>
+                                    <td style="border:1px solid #C0C0C0;"><strong>RIF:</strong> <span t-esc="docs.partner_id.vat"/></td>
+                                    <td style="border:1px solid #C0C0C0;"><strong>Telefono:</strong> <span t-esc="docs.partner_id.phone"/></td>
+                                </tr>
+                             </thead>
+                        </table>
+                            <table width="100%"  style="border:1px solid #C0C0C0; font-size: 14px">
+                                 <thead>
+                                    <tr>
+                                        <td style="border:1px solid #C0C0C0;"><strong>Dirección Fiscal:</strong><span t-esc="docs.partner_id.street"/> , <span t-esc="docs.partner_id.city"/> , <span t-esc="docs.partner_id.state_id.name"/> , <span t-esc="docs.partner_id.country_id.name"/></td>
+                                    </tr>
+                                 </thead>
+                        </table><br/><br/><br/>
+
+                  <table class="table table-condensed">
+                            <tr class="border-black">
+
+                                    <td style="border:1px solid #C0C0C0;" class="text-center"><strong>DESCRIPCIÓN</strong></td>
+                                    <td style="border:1px solid #C0C0C0;" class="text-center"><strong>CANT.</strong></td>
+                                    <td style="border:1px solid #C0C0C0;" class="text-center"><strong>U.M</strong></td>
+                        <td style="border:1px solid #C0C0C0;" class="text-center"><strong>IMPUESTOS</strong></td>
+
+                                </tr>
+                             <tbody>
+                                <tr t-foreach="o.order_line" t-as="order_line">
+                                    <td style="border:1px solid #C0C0C0;" class="text-center"><span t-field="order_line.product_id.name"/></td>
+                                    <td style="border:1px solid #C0C0C0;" class="text-center"><span t-field="order_line.product_qty"/></td>
+                                    <td style="border:1px solid #C0C0C0;" class="text-center"><span t-field="order_line.product_uom"/></td>
+                    <td style="border:1px solid #C0C0C0;" class="text-center"><span t-field="order_line.taxes_id"/></td>
+                                </tr>
+                            </tbody>
+                        <table width="100%">
+                            <td style="border:1px solid #C0C0C0; text-align:right"><strong>IMPUESTOS </strong></td>
+                                <td style="border:1px solid #C0C0C0; text-align:right">
+                            <span t-field="o.amount_tax"/>
+                        </td><tr/>
+                    </table>
+                  </table>
+                </div>
+
+                  <div name="notes" t-if="o.notes" class="col-xs-3">
+                        <strong>TERMINOS Y CONDICIONES: </strong>
+                        <p t-field="o.notes" />
+                  </div>
+
+                 <div class="footer">
+                     <div style="border-top: 1px solid black; text-align:center;">
+                             <ul class="list-inline" style="margin-top:10px;">
+                             <li>
+                                 <strong>Tlf:</strong><span t-esc="res_company.phone"/><td>&amp;nbsp;</td>
+                                 <strong>Web:</strong><span t-esc="res_company.website"/><td>&amp;nbsp;</td>
+                                 <strong>E-mail:</strong><span t-esc="res_company.email"/><td>&amp;nbsp;</td>
+                                 </li>
+                             <li>Pag:
+                                 <span class="page"/>/
+                                 <span class="topage"/>
+                             </li>
+                         </ul>
+                      </div>
+                 </div>
+             </div>
+            </t>
+    </template>
+
+
+      <template id="report_purchasequotation_inherit" inherit_id="purchase.report_purchasequotation">
+        <t t-call="web.html_container"   position="replace">
+                 <t t-foreach="docs" t-as="o">
+                     <t t-call="biu_sale_purchase.report_purchasquotation_document_national"/>
+            </t>
+        </t>
+    </template>
+
+
+</odoo>
+
+

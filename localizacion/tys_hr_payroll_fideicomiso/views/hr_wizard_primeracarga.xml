@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    <record id="account_wizard_carga_inicial" model="ir.ui.view">
+       	    <field name="name">Generar historico</field>
+            <field name="model">primera.carga.historico</field>
+    	    <field name="arch" type="xml">
+                <form string="Primera Carga">
+                    <group>
+                          <label for= "empleado" string="EMPLEADO"/>
+                            <div>
+                                <div class="address_format">
+                                    <field name= "empleado" style="width: 35%%" string = "Empleado" required="1"/>
+                                </div>
+                            </div>
+                    </group>
+
+
+                    <group col="4">
+
+
+                        <field name="fecha_ini" style="width: 70%%" string="Fecha Inicio" required="1"/>
+                        <field name="fecha_fin" style="width: 70%%"  string="Fecha Fin" required="1"/>
+                        <field name="dias_acumulados"  style="width: 70%%" string="Días Acumulados de las GPS" required="1"/>
+                        <field name="neto_acumulado" style="width: 70%%" string="Antiguedad Neto Acumulado de las GPS" required="1"/>
+                        <field name="dias_adicionales"  style="width: 70%%" string="Días Adicionales de las GPS" required="1"/>
+                        <field name="acumulado_dias_adic"  style="width: 70%%" string="Monto Acumulado de los Días Adicionales de las GPS" required="1"/>
+                        <field name="total_anticipo"  style="width: 70%%" string="Total Anticipos de la GPS"/>
+                        <field name="ultimo_anticipo"  style="width: 70%%" string="Ultimo Anticipo de las GPS"/>
+                        <field name="fecha_ult_ant"  style="width: 70%%" string="Fecha de Ultimo Anticipo"/>
+                        <field name="total_int_acu"  style="width: 70%%" string="Total de Intereses Acumulados" />
+                        <field name="interes_pagado"  style="width: 70%%" string="Intereses Pagados"/>
+                        <field name="fecha_ult_interes"  style="width: 70%%" string="Fecha de Intereses Pagados"/>
+                    </group>
+
+                    <footer >
+                        <button name="carga_data" string="Cargar Data"  confirm="Esta seguro de la Data que desea ingresar?"  type="object" class="oe_highlight" />
+                        <button special="cancel" string="Cancel" class="oe_highlight" />
+                    </footer>
+                   
+                </form>
+    	    </field>
+    </record>
+    <act_window id="action_Bono_menu_historico_inicial"
+        name="Asistente para carga inicial"
+        src_model="primera.carga.historico"
+        res_model="primera.carga.historico"
+        view_mode="form"
+        target="new" multi="True"
+    />
+    <record id="action_account_menu_historico_inicial" model="ir.actions.act_window">
+        	<field name="name">Generar historico</field>
+        	<field name="res_model">primera.carga.historico</field>
+        	<field name="view_type">form</field>
+        	<field name="view_mode">form</field>
+        	<field name="view_id" ref="account_wizard_carga_inicial"/>
+        	<field name="target">new</field>
+    </record>
+
+
+
+    <menuitem id="menu_historico_inicial"  name="Historico Prestaciones Carga Inicial" action="action_account_menu_historico_inicial" parent="tys_hr_payroll_fideicomiso.menu_hr_historico_fideicomiso"/>
+    </data>
+</odoo>
+
+
+
+
+
+
+
+
+

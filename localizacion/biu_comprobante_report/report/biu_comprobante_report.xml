@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="report.paperformat" id="paperformat_comprobante_contable">
+
+        <field name="name">paperformat.comprobante.contable</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">30</field>
+        <field name="margin_right">20</field>
+        <field name="margin_bottom">25</field>
+        <field name="margin_left">20</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">0</field>
+        <field name="dpi">90</field>
+
+    </record>
+
+
+    <template id="template_comprobante_contable" >
+        <div class="header">
+                 <h4> <b>BIUMAK PHARMACEUTICALS, C.A</b></h4>
+                 <h5><b>___________________________________________</b></h5>
+                 <h5><b>Número de identificación  fiscal: J-41222290-2</b></h5>
+        </div>
+
+        <div class="article">
+            <div class="page" style="page-break-before:always;">
+                <t t-foreach="docs" t-as="doc">
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <h3 class="text-center"><b>Asiento Contable: <span t-esc="doc['name']"/></b></h3>
+                    <br/><br/>
+                    <h4 class="text-right"> <b>Fecha de Impresion </b> &amp;nbsp; <span t-esc="doc['fecha_actual']"/></h4>
+                    <br/>
+                    <table  style="width:100%">
+                        <tr>
+                            <td class="text-left"><b>Fecha</b></td>
+                            <td class="text-left"><span t-esc="doc['date']"/></td>
+                            <td class="text-left" colspan="2">&amp;nbsp;</td>
+                            <td class="text-left"><b>Diario</b></td>
+                            <td class="text-left"><span t-esc="doc['diario']"/></td>
+                        </tr>
+                        <br/>
+                        <tr>
+                            <td class="text-left"><b>Referencia</b></td>
+                            <td class="text-left"><span t-esc="doc['referencia']"/></td>
+                            <td class="text-left" colspan="2">&amp;nbsp;</td>
+                            <td class="text-left"><b>Compañia</b></td>
+                            <td class="text-left"><span t-esc="doc['compañia']"/></td>
+                        </tr>
+
+                    </table>
+                    <br/><br/><br/>
+                    <h4 class="text-left"><b>Apuntes contables</b></h4>
+                    <table class="table table-striped" style="width:100%">
+                        <tr>
+                            <td style="width:15%"><b>Cuenta</b></td>
+                            <td><b>Empresa</b></td>
+                            <td><b>Descripción</b></td>
+                            <td><b>Cuenta analítica</b></td>
+                            <td><b>Etiquetas analíticas</b></td>
+                            <td><b>Importe en moneda</b></td>
+                            <td><b>Moneda</b></td>
+                            <td><b>Debe</b></td>
+                            <td><b>Haber</b></td>
+                            <td><b>Fecha vencimiento</b></td>
+                        </tr>
+                        <t t-foreach="lines" t-as="line">
+                            <tr>
+                                <td><span t-esc="line['cuenta']"/></td>
+                                <td><span t-esc="line['empresa']"/></td>
+                                <td><span t-esc="line['descripcion']"/></td>
+                                <td><span t-esc="line['cuenta_analitica']"/></td>
+                                <td><span t-esc="line['etiquetas_analiticas']"/></td>
+                                <td><span t-esc="line['importe_moneda']"/></td>
+                                <td><span t-esc="line['moneda']"/></td>
+                                <td><span t-esc="line['debe']"/></td>
+                                <td><span t-esc="line['haber']"/></td>
+                                <td><span t-esc="line['fecha_vencimiento']"/></td>
+                            </tr>
+                        </t>
+                            <tr>
+                                <td >&amp;nbsp;</td>
+                                <td >&amp;nbsp;</td>
+                                <td >&amp;nbsp;</td>
+                                <td >&amp;nbsp;</td>
+                                <td >&amp;nbsp;</td>
+                                <td >&amp;nbsp;</td>
+                                <td >&amp;nbsp;</td>
+                                <td ><b><span t-esc="doc['debe_total']"/></b></td>
+                                <td ><b><span t-esc="doc['haber_total']"/></b></td>
+                                <td >&amp;nbsp;</td>
+                            </tr>
+                    </table>
+                </t>
+            </div>
+         </div>
+
+    </template>
+
+
+    <report
+            id="action_hr_report_recibo_cestaticket"
+            string="Comprobante Contable"
+            model="account.move"
+            report_type="qweb-pdf"
+            name="biu_comprobante_report.template_comprobante_contable"
+            file="biu_comprobante_report.template_comprobante_contable"
+            paperformat="paperformat_comprobante_contable"
+    />
+
+</odoo>

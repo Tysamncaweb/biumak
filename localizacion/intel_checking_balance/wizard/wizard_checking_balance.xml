@@ -1,0 +1,63 @@
+<odoo>
+  <data>
+      <record id="view_checking_balance_wizard" model="ir.ui.view">
+            <field name="name">checking.balance.form</field>
+                <field name="model">checking.balance</field>
+                <field name="arch" type="xml">
+                    <form string="BALANCE DE COMPROBACIÓN">
+                        <field invisible="1" name="state"/>
+                        <div states="choose">
+                            <group colspan="2" col="2">
+                                <group>
+                                    <field name="target_movement" widget="radio" required="True"/>
+                                    <field name="show_accounts" widget="radio"/>
+                                    <field name="start_date" string="Fecha de inicio"/>
+                                </group>
+                                <group>
+                                    <field name="company" string="Empresa"/>
+                                    <field name="balance" string="Incluir Saldo inicial"/>
+                                    <field name="currency_id" string="Moneda" options="{'no_create': True, 'no_create_edit':True}"/>
+                                    <field name="tasa" domain="[('currency_id', '=', currency_id)]" options="{'no_create': True, 'no_edit': True, 'no_open':True}" attrs="{'invisible': [('currency_id', '=', 4)], 'required': [('currency_id', '!=', 4)]}"/>
+                                    <field name="report_format" widget="radio"/>
+                                    <field name="end_date" string="Fecha Final"/>
+                                </group>
+                            </group>
+                        </div>
+                        <div states="get">
+                            <group>
+                                <field name="name" colspan="4" invisible="1"/>
+                                <field name="report" filename="name" colspan="4"/>
+                            </group>
+                        </div>
+                        <footer states="choose">
+                            <button name="generate_checking_balance" string="Imprimir" type="object" class="btn-primary"/>
+                            <button string="Cancel" class="btn-default" special="cancel" />
+                        </footer>
+                        <footer states="get">
+                            <button special="cancel" string="Cancel" class="oe_highlight" />
+                        </footer>
+                    </form>
+                </field>
+        </record>
+
+      <!--.act_window id="action_libro_ventas"
+        name="Asistente para impresion de factura de Clientes"
+        src_model="checking.balance"
+        res_model="checking.balance"
+        view_mode="form"
+        target="new" multi="True"
+        /-->
+
+        <record id="action_checking_balance" model="ir.actions.act_window">
+        	<field name="name">BALANCE DE COMPROBACIÓN</field>
+        	<field name="res_model">checking.balance</field>
+        	<field name="view_type">form</field>
+        	<field name="view_mode">form</field>
+        	<field name="view_id" ref="view_checking_balance_wizard"/>
+        	<field name="target">new</field>
+    	</record>
+      
+      <menuitem id="checking_balance_id" name="Balance Comprobación" parent="intel_retention_islr.retention_islr_finanzas" action="action_checking_balance" sequence="3"/>
+
+  </data>
+</odoo>

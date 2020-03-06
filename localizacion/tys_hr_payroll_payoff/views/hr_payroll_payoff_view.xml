@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <!--  Liquidaciones -->
+        <!--  vista lista -->
+        <record id="hr_payroll_payoff_list_view" model="ir.ui.view">
+            <field name="name">hr.payroll.payoff.list.view</field>
+            <field name="model">hr.payslip</field>
+            <field name="arch" type="xml">
+                <!--tree colors="blue:state in ('confirm','verify','done');black:state == 'draft';gray:state == 'cancel'" string="Liquidacionnes" domain="[('payslip_type','=','payoff')]"-->
+                    <tree>
+                    <field name="name"/>
+                    <field name="number"/>
+                    <field name="employee_id"/>
+                    <field name="department_id"/>
+                    <field name="job_id"/>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+                <!--  vista Formulario inicio-->
+        <record id="hr_payroll_payoff_form_view" model="ir.ui.view">
+            <field name="name">hr.payroll.payoff.form.view</field>
+            <field name="model">hr.payslip</field>
+            <field name="context">{'readonly_by_pass': True}</field>
+            <field name="arch" type="xml">
+                <form string="Liquidaciones" version="7.0">
+                    <header>
+                        <button string="Confirmar" name="hr_action_confirm" class="oe_highlight" type="object" confirm="Esta seguro que desea confirmar esta nomina?" attrs="{'invisible':['|',('general_state', '=', 'not_autorized' ),('state', 'not in', 'verify' )]}"/>
+                        <button string="Calcular" name="hr_verify_sheet" states="draft" type='object' class="oe_highlight" context="{'come_from':'payoff'}"/>
+                        <button string="Volver a Borrador" name="hr_action_draft" states="verify" type="object" context="{'come_from':'hr_action_draft'}"/>
+                        <button string="Realizado" name="hr_action_done" type="object" states="confirm" class="oe_highlight"/>
+                        <button string="Cancelar" name="hr_action_cancel" states="draft,verify" type="object" />
+                        <field name="state" widget="statusbar" statusbar_visible="draft,verify,done"/>
+                        <field name="general_state" invisible="1"/>
+                    </header>
+                    <sheet>
+                        <group name="datos_emploeado" col="2" >
+                            <field name="name" attrs="{'readonly':[('state','not in','draft')]}" required="1"/>
+                            <field name="number"  readonly="1" attrs="{'invisible':[('state','not in','confirm')]}"/>
+                            <field name="employee_id" style="width: 50%%" attrs="{'readonly':[('state','not in','draft')]}" required="1"/>
+                            <field name="department_id" style="width: 50%%" attrs="{'readonly':[('state','not in','draft')]}" required="1"/>
+                            <field name="job_id" style="width: 50%%" attrs="{'readonly':[('state','not in','draft')]}" required="1"/>
+                            <field name="journal_id" string="Diario" style="width: 50%%" attrs="{'readonly':[('state','not in','draft')]}" required="1"/>
+                            <field name="m_egreso" options="{'search_more': True}" style="width:150px" attrs="{'readonly':[('state','not in','draft')]}" required="1"/>
+                        </group>
+                        <group name="periodo" col="4">
+                            <field name="date_from" attrs="{'readonly':[('state','not in','draft')]}" required="1"/>
+                            <field name="date_to" attrs="{'readonly':[('state','not in','draft')]}" required="1" on_change="onchange_date_end(date_from,date_to)"/>
+                        </group>
+
+                        <group>
+                            <group name="tiempo_servicio" string="Tiempo de Servicio">
+                                <field name="tiempo_servicio_year" string="Años" readonly="1" force_save="1"/>
+                                <field name="tiempo_servicio_meses" readonly="1" string="Meses" force_save="1"/>
+                                <field name="tiempo_servicio_dias" string="Días" readonly="1" force_save="1"/>
+                                <field name="tiempo_servicio" readonly="1" force_save="1"/>
+                                <field name="month_worked_year_str" readonly="1" force_save="1"/>
+                                <field name="month_worked_year" readonly="1" invisible="1" force_save="1"/>
+                            </group>
+
+                        </group>
+                        <notebook colspan="4">
+                             <page string="Liquidación">
+                                <group col="2" name="datos_calculo">
+                                    <field name="structure" readonly="1"/>
+                                    <field name="conceptos_salariales" string="Conceptos Salariales" attrs="{'readonly':[('state','not in','draft')],'invisible':[('state','not in','draft')],'nolabel':[('state','not in','draft')]}"/>
+                                    <field name="line_ids" string="Conceptos Salariales" attrs="{'readonly':[('state','!=','draft')],'invisible':[('state','in','draft')],'nolabel':[('state','in','draft')]}">
+                                        <tree string="Salary Structure" editable="bottom">
+                                            <field name="name"/>
+                                            <field name="code"/>
+                                            <field name="category_id"/>
+                                            <field name="sequence" invisible="1"/>
+                                            <field name="quantity"/>
+                                            <field name="rate"/>
+                                            <field name="amount"/>
+                                            <field name="total"/>
+                                        </tree>
+                                    </field>
+                                    <field name="move_id" string="Asiento Contable"  readonly="1"/>
+                                </group>
+                             </page>
+                            <page string="Datos a Ingresar" name="datos_ingresar">
+                                <group>
+                                    <group name="payoff_aditional_fields_2">
+                                         <label for= "comisiones_check" string="Gana Comisiones?"/>
+                                        <div>
+                                            <div class="address_format">
+                                                <field name="comisiones_check" style="width: 15%%"/>
+
+                                            </div>
+                                        </div>
+                                        <label for= "night_bonus_check" string="Horas Nocturnas"/>
+                                        <div>
+                                            <div class="address_format">
+                                                <field name="night_bonus_check" style="width: 15%%"/>
+                                                <field name="night_bonus_value" class="oe_no_button" style="width: 30%%" placeholder="hh:mm" attrs="{'invisible': [('night_bonus_check', '!=', True)], 'readonly':[('state','not in','draft')]}"/>
+                                                <field name="night_bonus" class="oe_no_button" style="width: 35%%" attrs="{'invisible': [('night_bonus_check', '!=', True)]}" readonly="1" force_save="1"/>
+                                            </div>
+                                        </div>
+                                        <label for= "lunes_check" string="Cantidad de Lunes"/>
+                                        <div>
+                                            <div class="address_format">
+                                                <field name="lunes_check" style="width: 15%%"/>
+                                                <field name="lunes_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('lunes_check', '!=', True)], 'readonly':[('state','not in','draft')]}"/>
+                                            </div>
+                                        </div>
+                                        <label for= "saturdays_check" string="Sábado Trabajado"/>
+                                        <div>
+                                            <div class="address_format">
+                                                <field name="saturdays_check" style="width: 15%%"/>
+                                                <field name="saturdays_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('saturdays_check', '!=', True)], 'readonly':[('state','not in','draft')]}"/>
+                                            </div>
+                                        </div>
+                                        <label for= "sundays_check" string="Domingo Trabajado"/>
+                                        <div>
+                                            <div class="address_format">
+                                                <field name="sundays_check" style="width: 15%%"/>
+                                                <field name="sundays_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('sundays_check', '!=', True)], 'readonly':[('state','not in','draft')]}"/>
+                                            </div>
+                                        </div>
+                                        <label for= "holidays_check" string="Feriado Trabajado"/>
+                                        <div>
+                                            <div class="address_format">
+                                                <field name="holidays_check" style="width: 15%%"/>
+                                                <field name="holidays_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('holidays_check', '!=', True)], 'readonly':[('state','not in','draft')]}"/>
+                                            </div>
+                                        </div>
+                                        <label for= "bono_vac_check" string="Bono vacacional Acumulado"/>
+                                        <div>
+                                            <div class="address_format">
+                                                <field name="bono_vac_check" style="width: 15%%"/>
+                                                <field name="bono_vac_acum" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('bono_vac_check', '!=', True)], 'readonly':[('state','not in','draft')]}"/>
+                                            </div>
+                                        </div>
+                                        <label for= "cant_dias_check" string="Dias Laborados en el Mes"/>
+                                        <div>
+                                            <div class="address_format">
+                                                <field name="cant_dias_check" style="width: 15%%"/>
+                                                <field name="cant_dias_labor" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('cant_dias_check', '!=', True)], 'readonly':[('state','not in','draft')]}"/>
+                                            </div>
+                                        </div>
+                                        <label for= "indemn_check" string="Indemnización Art.92"/>
+                                        <div>
+                                            <div class="address_format">
+                                                <field name="indemn_check" style="width: 15%%"/>
+                                                <field name="indemn_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('indemn_check', '!=', True)], 'readonly':[('state','not in','draft')]}"/>
+                                            </div>
+                                        </div>
+                                        <label for= "retroactivo_check" string="Retroactivo Art.142"/>
+                                        <div>
+                                            <div class="address_format">
+                                                <field name="retroactivo_check" style="width: 15%%"/>
+                                                <field name="retroactivo_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('retroactivo_check', '!=', True)], 'readonly':[('state','not in','draft')]}"/>
+                                            </div>
+                                        </div>
+
+                                    </group>
+                                </group>
+
+                            </page>
+                             <page string="Datos de cálculo">
+                                 <group>
+                                     <group name="payoff_aditional_fields_1">
+                                         <label for= "salario_basico" string="Salario Básico Mensual" />
+                                         <div>
+                                             <div class="address_format">
+                                                 <field name="salario_basico" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+                                         <label for= "salario_basico_diario" string="Salario Básico Diario" />
+                                         <div>
+                                             <div class="address_format">
+                                                 <field name="salario_basico_diario" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+                                         <label for= "salario_prom_mensual" string="Salario Promedio Integral Mensual" />
+                                         <div>
+                                             <div class="address_format">
+                                                 <field name="salario_prom_mensual" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+                                         <label for= "salario_prom_diairo" string="Salario Promedio Integral Diario" />
+                                         <div>
+                                             <div class="address_format">
+                                                 <field name="salario_prom_diairo" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+
+                                         <label for= "alic_bono_vac_liq" string="Alícuota de Bono Vacacional" />
+                                         <div>
+                                             <div class="address_format">
+                                                 <field name="alic_bono_vac_liq" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+                                         <label for= "alic_util_liq" string="Alícuota de Utilidades" />
+                                         <div>
+                                             <div class="address_format">
+                                                 <field name="alic_util_liq" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+                                         <label for= "salario_integral" string="Salario Integral Diario"/>
+                                         <div>
+                                             <div class="address_format">
+                                                 <field name="salario_integral" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+                                         <label for="vacaciones_fracc" string="Días de las Vacaciones Fraccionadas"/>
+                                         <div>
+                                             <div>
+                                                 <field name="vacaciones_fracc" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+                                          <label for="utilidades_fracc" string="Utilidades Fraccionadas"/>
+                                         <div>
+                                             <div>
+                                                 <field name="utilidades_fracc" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+                                     </group>
+
+
+                                     <group>
+                                         <label for="literal_c" string="Cálculo Literal C Art. 142"/>
+                                         <div>
+                                             <div>
+                                                 <field name="literal_c" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+
+                                             </div>
+                                         </div>
+                                         <label for="dias_prestaciones_acum" string="Días Acumulados de Prestaciones Sociales"/>
+                                         <div>
+                                             <div>
+                                                 <field name="dias_prestaciones_acum" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+                                          <label for="monto_gps" string="Garantía de Prestaciones Sociales"/>
+                                         <div>
+                                             <div>
+                                                 <field name="monto_gps" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+                                         <label for="dias_prestaciones_adi" string="Días Adicionales de Prestaciones Sociales"/>
+                                         <div>
+                                             <div>
+                                                 <field name="dias_prestaciones_adi" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+
+                                         <label for="aporte_dias_adicionales" string="Días Adicionales de la Garantía de Prestaciones Sociales"/>
+                                         <div>
+                                             <div>
+                                                 <field name="aporte_dias_adicionales" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+                                         <label for="interes_anual" string="Intereses sobre la Garantía de Prestaciones Sociales"/>
+                                         <div>
+                                             <div>
+                                                 <field name="interes_anual" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+                                         <label for="anticipo_prestaciones" string="Anticipo de Prestaciones Sociales"/>
+                                         <div>
+                                             <div>
+                                                 <field name="anticipo_prestaciones" class="oe_no_button" style="width: 65%%" attrs="{'invisible':[('state','in','draft')], 'readonly':[('state','not in','draft')]}"/>
+                                             </div>
+                                         </div>
+                                     </group>
+                                 </group>
+                             </page>
+                        </notebook>
+                        <group col="2">
+                            <field name="notes"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!--  vista Formulario fin-->
+
+        <record model="ir.ui.view" id="hr_payroll_payoff_search">
+			<field name="name">hr.payroll.payoff.search</field>
+			<field name="model">hr.payslip</field>
+			<field name="arch" type="xml">
+                <search string="Liquidaciones">
+					<field name="employee_id"/>
+                    <filter name="payoff_true" string="Liquidaciones" icon="terp-stock_effects-object-colorize" domain="[('is_payoff','=','True')]"/>
+                </search>
+			</field>
+		 </record>
+
+         <record id="action_hr_payroll_payoff" model="ir.actions.act_window">
+            <field name="name">Liquidaciones</field>
+            <field name="res_model">hr.payslip</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+             <field name="context">{"search_default_payoff_true":1,'is_payoff':True}</field>
+            <field name="view_id" ref="hr_payroll_payoff_list_view"/>
+            <field name="help" type="html">
+
+              <p class="oe_view_nocontent_create">
+                <!-- Add Text Here -->
+                  Lista de nominas de liquidacion
+              </p><p>
+                <!-- More details about what a user can do with this object will be OK -->
+              </p>
+            </field>
+        </record>
+        <menuitem id="menu_hr_payroll_payoff" name="Liquidaciones" action="action_hr_payroll_payoff" parent="hr_payroll.menu_hr_payroll_root" sequence="15"/>
+        <!--  fin liquidaciones -->
+    </data>
+</odoo>

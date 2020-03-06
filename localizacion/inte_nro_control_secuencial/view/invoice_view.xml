@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data>
+        <!--record id="account_invoice_nro_control" model="ir.ui.view">
+                <field name="name">account.invoice.nro.control.secuencial</field>
+                <field name="model">account.invoice</field>
+                <field name="inherit_id" ref="account.invoice_form"/>
+                <field name="arch" type="xml">
+
+                    <xpath expr="//field[@name='partner_id']" position="after">
+                        <field name="nro_ctrl" string="numero de control" required="0" attrs="{'readonly': [('state','=','open')]}"/>
+                    </xpath>
+                </field>
+        </record-->
+    </data>
+</odoo>

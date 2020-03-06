@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+ 
+
+    <record id="account_invoice__inherit_for" model="ir.ui.view">
+        <field name="name">account.invoice.line.inherit.for</field>
+        <field name="model">account.invoice.line</field>
+        <field name="inherit_id" ref="account.view_invoice_line_tree"/>
+        <field name="arch" type="xml">         
+           <xpath expr="//tree" position="inside">
+               <field name="nro_lote" string="Nro. de Lote"/>
+           </xpath>           
+        </field>
+    </record>
+
+    <record id="account_invoice__inherit_for2" model="ir.ui.view">
+      <field name="name">account.invoice.line.inherit.for2</field>
+      <field name="model">account.invoice</field>
+      <field name="inherit_id" ref="account.invoice_form"/>
+      <field name="arch" type="xml">   
+
+         <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='quantity']" position="before">
+           <field name="nro_lote" string="Nro. de Lote"/>                    
+         </xpath>
+
+      </field>
+    </record>
+ 
+</odoo>

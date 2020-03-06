@@ -1,0 +1,1 @@
+from . import int_hr_report_resumen_nomina

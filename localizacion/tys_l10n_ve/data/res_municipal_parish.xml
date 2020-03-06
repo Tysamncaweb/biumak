@@ -1,0 +1,4558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">1</field>
+		<field name="name">Alto Orinoco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">1</field>
+		<field name="name">Huachamacare Acanaña</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">1</field>
+		<field name="name">Marawaka Toky Shamanaña</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">1</field>
+		<field name="name">Mavaka Mavaka</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">1</field>
+		<field name="name">Sierra Parima Parimabé</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">2</field>
+		<field name="name">Ucata Laja Lisa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">2</field>
+		<field name="name">Yapacana Macuruco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">2</field>
+		<field name="name">Caname Guarinuma</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">3</field>
+		<field name="name">Fernando Girón Tovar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">3</field>
+		<field name="name">Luis Alberto Gómez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">3</field>
+		<field name="name">Pahueña Limón de Parhueña</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">3</field>
+		<field name="name">Platanillal Platanillal</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">4</field>
+		<field name="name">Samariapo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">4</field>
+		<field name="name">Sipapo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">4</field>
+		<field name="name">Munduapo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">4</field>
+		<field name="name">Guayapo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">5</field>
+		<field name="name">Alto Ventuari</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">5</field>
+		<field name="name">Medio Ventuari</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">5</field>
+		<field name="name">Bajo Ventuari</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">6</field>
+		<field name="name">Victorino</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">6</field>
+		<field name="name">Comunidad</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">7</field>
+		<field name="name">Casiquiare</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">7</field>
+		<field name="name">Cocuy</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">7</field>
+		<field name="name">San Carlos de Río Negro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">7</field>
+		<field name="name">Solano</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">8</field>
+		<field name="name">Anaco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">8</field>
+		<field name="name">San Joaquín</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">9</field>
+		<field name="name">Cachipo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">9</field>
+		<field name="name">Aragua de Barcelona</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">11</field>
+		<field name="name">Lechería</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">11</field>
+		<field name="name">El Morro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">12</field>
+		<field name="name">Puerto Píritu</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">12</field>
+		<field name="name">San Miguel</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">12</field>
+		<field name="name">Sucre</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">13</field>
+		<field name="name">Valle de Guanape</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">13</field>
+		<field name="name">Santa Bárbara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">14</field>
+		<field name="name">El Chaparro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">14</field>
+		<field name="name">Tomás Alfaro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">14</field>
+		<field name="name">Calatrava</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">15</field>
+		<field name="name">Guanta</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">15</field>
+		<field name="name">Chorrerón</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">16</field>
+		<field name="name">Mamo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">16</field>
+		<field name="name">Soledad</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">17</field>
+		<field name="name">Mapire</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">17</field>
+		<field name="name">Piar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">17</field>
+		<field name="name">Santa Clara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">17</field>
+		<field name="name">San Diego de Cabrutica</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">17</field>
+		<field name="name">Uverito</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">17</field>
+		<field name="name">Zuata</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">18</field>
+		<field name="name">Puerto La Cruz</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">18</field>
+		<field name="name">Pozuelos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">19</field>
+		<field name="name">Onoto</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">19</field>
+		<field name="name">San Pablo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">20</field>
+		<field name="name">San Mateo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">20</field>
+		<field name="name">El Carito</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">20</field>
+		<field name="name">Santa Inés</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">20</field>
+		<field name="name">La Romereña</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">21</field>
+		<field name="name">Atapirire</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">21</field>
+		<field name="name">Boca del Pao</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">21</field>
+		<field name="name">El Pao</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">21</field>
+		<field name="name">Pariaguán</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">22</field>
+		<field name="name">Cantaura</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">22</field>
+		<field name="name">Libertador</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">22</field>
+		<field name="name">Santa Rosa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">22</field>
+		<field name="name">Urica</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">23</field>
+		<field name="name">Píritu</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">23</field>
+		<field name="name">San Francisco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">24</field>
+		<field name="name">San José de Guanipa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">25</field>
+		<field name="name">Boca de Uchire</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">25</field>
+		<field name="name">Boca de Chávez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">26</field>
+		<field name="name">Pueblo Nuevo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">26</field>
+		<field name="name">Santa Ana</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">27</field>
+		<field name="name">Bergatín</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">27</field>
+		<field name="name">Caigua</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">27</field>
+		<field name="name">El Carmen</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">27</field>
+		<field name="name">El Pilar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">27</field>
+		<field name="name">Naricual</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">27</field>
+		<field name="name">San Crsitóbal</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">28</field>
+		<field name="name">Edmundo Barrios</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">28</field>
+		<field name="name">Miguel Otero Silva</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">29</field>
+		<field name="name">Achaguas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">29</field>
+		<field name="name">Apurito</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">29</field>
+		<field name="name">El Yagual</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">29</field>
+		<field name="name">Guachara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">29</field>
+		<field name="name">Mucuritas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">29</field>
+		<field name="name">Queseras del medio</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">30</field>
+		<field name="name">Biruaca</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">31</field>
+		<field name="name">Bruzual</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">31</field>
+		<field name="name">Mantecal</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">31</field>
+		<field name="name">Quintero</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">31</field>
+		<field name="name">Rincón Hondo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">31</field>
+		<field name="name">San Vicente</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">32</field>
+		<field name="name">Guasdualito</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">32</field>
+		<field name="name">Aramendi</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">32</field>
+		<field name="name">El Amparo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">32</field>
+		<field name="name">San Camilo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">32</field>
+		<field name="name">Urdaneta</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">33</field>
+		<field name="name">San Juan de Payara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">33</field>
+		<field name="name">Codazzi</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">33</field>
+		<field name="name">Cunaviche</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">34</field>
+		<field name="name">Elorza</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">34</field>
+		<field name="name">La Trinidad</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">35</field>
+		<field name="name">San Fernando</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">35</field>
+		<field name="name">El Recreo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">35</field>
+		<field name="name">Peñalver</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">35</field>
+		<field name="name">San Rafael de Atamaica</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">36</field>
+		<field name="name">Pedro José Ovalles</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">36</field>
+		<field name="name">Joaquín Crespo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">36</field>
+		<field name="name">José Casanova Godoy</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">36</field>
+		<field name="name">Madre María de San José</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">36</field>
+		<field name="name">Andrés Eloy Blanco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">36</field>
+		<field name="name">Los Tacarigua</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">36</field>
+		<field name="name">Las Delicias</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">36</field>
+		<field name="name">Choroní</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">37</field>
+		<field name="name">Bolívar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">38</field>
+		<field name="name">Camatagua</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">38</field>
+		<field name="name">Carmen de Cura</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">39</field>
+		<field name="name">Santa Rita</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">39</field>
+		<field name="name">Francisco de Miranda</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">39</field>
+		<field name="name">Moseñor Feliciano González</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">40</field>
+		<field name="name">Santa Cruz</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">41</field>
+		<field name="name">José Félix Ribas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">41</field>
+		<field name="name">Castor Nieves Ríos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">41</field>
+		<field name="name">Las Guacamayas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">41</field>
+		<field name="name">Pao de Zárate</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">41</field>
+		<field name="name">Zuata</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">42</field>
+		<field name="name">José Rafael Revenga</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">43</field>
+		<field name="name">Palo Negro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">43</field>
+		<field name="name">San Martín de Porres</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">44</field>
+		<field name="name">El Limón</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">44</field>
+		<field name="name">Caña de Azúcar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">45</field>
+		<field name="name">Ocumare de la Costa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">46</field>
+		<field name="name">San Casimiro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">46</field>
+		<field name="name">Güiripa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">46</field>
+		<field name="name">Ollas de Caramacate</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">46</field>
+		<field name="name">Valle Morín</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">47</field>
+		<field name="name">San Sebastían</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">48</field>
+		<field name="name">Turmero</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">48</field>
+		<field name="name">Arevalo Aponte</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">48</field>
+		<field name="name">Chuao</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">48</field>
+		<field name="name">Samán de Güere</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">48</field>
+		<field name="name">Alfredo Pacheco Miranda</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">49</field>
+		<field name="name">Santos Michelena</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">49</field>
+		<field name="name">Tiara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">50</field>
+		<field name="name">Cagua</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">50</field>
+		<field name="name">Bella Vista</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">51</field>
+		<field name="name">Tovar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">52</field>
+		<field name="name">Urdaneta</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">52</field>
+		<field name="name">Las Peñitas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">52</field>
+		<field name="name">San Francisco de Cara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">52</field>
+		<field name="name">Taguay</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">53</field>
+		<field name="name">Zamora</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">53</field>
+		<field name="name">Magdaleno</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">53</field>
+		<field name="name">San Francisco de Asís</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">53</field>
+		<field name="name">Valles de Tucutunemo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">53</field>
+		<field name="name">Augusto Mijares</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">54</field>
+		<field name="name">Sabaneta</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">54</field>
+		<field name="name">Juan Antonio Rodríguez Domínguez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">55</field>
+		<field name="name">El Cantón</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">55</field>
+		<field name="name">Santa Cruz de Guacas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">55</field>
+		<field name="name">Puerto Vivas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">56</field>
+		<field name="name">Ticoporo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">56</field>
+		<field name="name">Nicolás Pulido</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">56</field>
+		<field name="name">Andrés Bello</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">57</field>
+		<field name="name">Arismendi</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">57</field>
+		<field name="name">Guadarrama</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">57</field>
+		<field name="name">La Unión</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">57</field>
+		<field name="name">San Antonio</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">58</field>
+		<field name="name">Barinas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">58</field>
+		<field name="name">Alberto Arvelo Larriva</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">58</field>
+		<field name="name">San Silvestre</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">58</field>
+		<field name="name">Santa Inés</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">58</field>
+		<field name="name">Santa Lucía</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">58</field>
+		<field name="name">Torumos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">58</field>
+		<field name="name">El Carmen</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">58</field>
+		<field name="name">Rómulo Betancourt</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">58</field>
+		<field name="name">Corazón de Jesús</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">58</field>
+		<field name="name">Ramón Ignacio Méndez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">58</field>
+		<field name="name">Alto Barinas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">58</field>
+		<field name="name">Manuel Palacio Fajardo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">58</field>
+		<field name="name">Juan Antonio Rodríguez Domínguez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">58</field>
+		<field name="name">Dominga Ortiz de Páez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">59</field>
+		<field name="name">Barinitas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">59</field>
+		<field name="name">Altamira de Cáceres</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">59</field>
+		<field name="name">Calderas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">60</field>
+		<field name="name">Barrancas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">60</field>
+		<field name="name">El Socorro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">60</field>
+		<field name="name">Mazparrito</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">61</field>
+		<field name="name">Santa Bárbara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">61</field>
+		<field name="name">Pedro Briceño Méndez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">61</field>
+		<field name="name">Ramón Ignacio Méndez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">61</field>
+		<field name="name">José Ignacio del Pumar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">62</field>
+		<field name="name">Obispos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">62</field>
+		<field name="name">Guasimitos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">62</field>
+		<field name="name">El Real</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">62</field>
+		<field name="name">La Luz</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">63</field>
+		<field name="name">Ciudad Bolívia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">63</field>
+		<field name="name">José Ignacio Briceño</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">63</field>
+		<field name="name">José Félix Ribas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">63</field>
+		<field name="name">Páez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">64</field>
+		<field name="name">Libertad</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">64</field>
+		<field name="name">Dolores</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">64</field>
+		<field name="name">Santa Rosa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">64</field>
+		<field name="name">Palacio Fajardo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">65</field>
+		<field name="name">Ciudad de Nutrias</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">65</field>
+		<field name="name">El Regalo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">65</field>
+		<field name="name">Puerto Nutrias</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">65</field>
+		<field name="name">Santa Catalina</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">66</field>
+		<field name="name">Cachamay</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">66</field>
+		<field name="name">Chirica</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">66</field>
+		<field name="name">Dalla Costa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">66</field>
+		<field name="name">Once de Abril</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">66</field>
+		<field name="name">Simón Bolívar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">66</field>
+		<field name="name">Unare</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">66</field>
+		<field name="name">Universidad</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">66</field>
+		<field name="name">Vista al Sol</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">66</field>
+		<field name="name">Pozo Verde</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">66</field>
+		<field name="name">Yocoima</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">66</field>
+		<field name="name">5 de Julio</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">67</field>
+		<field name="name">Cedeño</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">67</field>
+		<field name="name">Altagracia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">67</field>
+		<field name="name">Ascensión Farreras</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">67</field>
+		<field name="name">Guaniamo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">67</field>
+		<field name="name">La Urbana</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">67</field>
+		<field name="name">Pijiguaos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">68</field>
+		<field name="name">El Callao</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">69</field>
+		<field name="name">Gran Sabana</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">69</field>
+		<field name="name">Ikabarú</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">70</field>
+		<field name="name">Catedral</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">70</field>
+		<field name="name">Zea</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">70</field>
+		<field name="name">Orinoco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">70</field>
+		<field name="name">José Antonio Páez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">70</field>
+		<field name="name">Marhuanta</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">70</field>
+		<field name="name">Agua Salada</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">70</field>
+		<field name="name">Vista Hermosa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">70</field>
+		<field name="name">La Sabanita</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">70</field>
+		<field name="name">Panapana</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">71</field>
+		<field name="name">Andrés Eloy Blanco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">71</field>
+		<field name="name">Pedro Cova</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">72</field>
+		<field name="name">Raúl Leoni</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">72</field>
+		<field name="name">Barceloneta</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">72</field>
+		<field name="name">Santa Bárbara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">72</field>
+		<field name="name">San Francisco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">73</field>
+		<field name="name">Roscio</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">73</field>
+		<field name="name">Salóm</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">74</field>
+		<field name="name">Sifontes</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">74</field>
+		<field name="name">Dalla Costa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">74</field>
+		<field name="name">San Isidro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">75</field>
+		<field name="name">Sucre</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">75</field>
+		<field name="name">Aripao</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">75</field>
+		<field name="name">Guarataro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">75</field>
+		<field name="name">Las Majadas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">75</field>
+		<field name="name">Moitaco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">76</field>
+		<field name="name">Padre Pedro Chien</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">76</field>
+		<field name="name">Río Grande</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">77</field>
+		<field name="name">Bejuma</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">77</field>
+		<field name="name">Canoabo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">77</field>
+		<field name="name">Simón Bolívar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">78</field>
+		<field name="name">Güigüe</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">78</field>
+		<field name="name">Carabobo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">78</field>
+		<field name="name">Tacarigua</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">79</field>
+		<field name="name">Mariara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">79</field>
+		<field name="name">Aguas Calientes</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">80</field>
+		<field name="name">Ciudad Alianza</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">80</field>
+		<field name="name">Guacara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">80</field>
+		<field name="name">Yagua</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">81</field>
+		<field name="name">Morón</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">81</field>
+		<field name="name">Yagua</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">82</field>
+		<field name="name">Tocuyito</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">82</field>
+		<field name="name">Independencia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">83</field>
+		<field name="name">Los Guayos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">84</field>
+		<field name="name">Miranda</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">85</field>
+		<field name="name">Montalbán</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">86</field>
+		<field name="name">Naguanagua</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">87</field>
+		<field name="name">Bartolomé Salóm</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">87</field>
+		<field name="name">Democracia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">87</field>
+		<field name="name">Fraternidad</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">87</field>
+		<field name="name">Goaigoaza</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">87</field>
+		<field name="name">Juan José Flores</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">87</field>
+		<field name="name">Unión</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">87</field>
+		<field name="name">Borburata</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">87</field>
+		<field name="name">Patanemo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">88</field>
+		<field name="name">San Diego</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">89</field>
+		<field name="name">San Joaquín</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">90</field>
+		<field name="name">Candelaria</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">90</field>
+		<field name="name">Catedral</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">90</field>
+		<field name="name">El Socorro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">90</field>
+		<field name="name">Miguel Peña</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">90</field>
+		<field name="name">Rafael Urdaneta</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">90</field>
+		<field name="name">San Blas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">90</field>
+		<field name="name">San José</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">90</field>
+		<field name="name">Santa Rosa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">90</field>
+		<field name="name">Negro Primero</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">91</field>
+		<field name="name">Cojedes</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">91</field>
+		<field name="name">Juan de Mata Suárez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">92</field>
+		<field name="name">Tinaquillo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">93</field>
+		<field name="name">El Baúl</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">93</field>
+		<field name="name">Sucre</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">94</field>
+		<field name="name">La Aguadita</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">94</field>
+		<field name="name">Macapo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">95</field>
+		<field name="name">El Pao</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">96</field>
+		<field name="name">El Amparo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">96</field>
+		<field name="name">Libertad de Cojedes</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">97</field>
+		<field name="name">Rómulo Gallegos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">98</field>
+		<field name="name">San Carlos de Austria</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">98</field>
+		<field name="name">Juan Ángel Bravo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">98</field>
+		<field name="name">Manuel Manrique</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">99</field>
+		<field name="name">General en Jefe José Laurencio Silva</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">100</field>
+		<field name="name">Curiapo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">100</field>
+		<field name="name">Almirante Luis Brión</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">100</field>
+		<field name="name">Francisco Aniceto Lugo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">100</field>
+		<field name="name">Manuel Renaud</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">100</field>
+		<field name="name">Padre Barral</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">100</field>
+		<field name="name">Santos de Abelgas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">101</field>
+		<field name="name">Imataca</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">101</field>
+		<field name="name">Cinco de Julio</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">101</field>
+		<field name="name">Juan Bautista Arismendi</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">101</field>
+		<field name="name">Manuel Piar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">101</field>
+		<field name="name">Rómulo Gallegos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">102</field>
+		<field name="name">Pedernales</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">102</field>
+		<field name="name">Luis Beltrán Prieto Figueroa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">103</field>
+		<field name="name">San José (Delta Amacuro)</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">103</field>
+		<field name="name">José Vidal Marcano</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">103</field>
+		<field name="name">Juan Millán</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">103</field>
+		<field name="name">Leonardo Ruíz Pineda</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">103</field>
+		<field name="name">Mariscal Antonio José de Sucre</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">103</field>
+		<field name="name">Monseñor Argimiro García</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">103</field>
+		<field name="name">San Rafael (Delta Amacuro)</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">103</field>
+		<field name="name">Virgen del Valle</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">10</field>
+		<field name="name">Clarines</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">10</field>
+		<field name="name">Guanape</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">10</field>
+		<field name="name">Sabana de Uchire</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">104</field>
+		<field name="name">Capadare</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">104</field>
+		<field name="name">La Pastora</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">104</field>
+		<field name="name">Libertador</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">104</field>
+		<field name="name">San Juan de los Cayos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">105</field>
+		<field name="name">Aracua</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">105</field>
+		<field name="name">La Peña</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">105</field>
+		<field name="name">San Luis</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">106</field>
+		<field name="name">Bariro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">106</field>
+		<field name="name">Borojó</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">106</field>
+		<field name="name">Capatárida</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">106</field>
+		<field name="name">Guajiro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">106</field>
+		<field name="name">Seque</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">106</field>
+		<field name="name">Zazárida</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">106</field>
+		<field name="name">Valle de Eroa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">107</field>
+		<field name="name">Cacique Manaure</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">108</field>
+		<field name="name">Norte</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">108</field>
+		<field name="name">Carirubana</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">108</field>
+		<field name="name">Santa Ana</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">108</field>
+		<field name="name">Urbana Punta Cardón</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">109</field>
+		<field name="name">La Vela de Coro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">109</field>
+		<field name="name">Acurigua</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">109</field>
+		<field name="name">Guaibacoa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">109</field>
+		<field name="name">Las Calderas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">109</field>
+		<field name="name">Macoruca</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">110</field>
+		<field name="name">Dabajuro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">111</field>
+		<field name="name">Agua Clara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">111</field>
+		<field name="name">Avaria</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">111</field>
+		<field name="name">Pedregal</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">111</field>
+		<field name="name">Piedra Grande</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">111</field>
+		<field name="name">Purureche</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">112</field>
+		<field name="name">Adaure</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">112</field>
+		<field name="name">Adícora</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">112</field>
+		<field name="name">Baraived</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">112</field>
+		<field name="name">Buena Vista</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">112</field>
+		<field name="name">Jadacaquiva</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">112</field>
+		<field name="name">El Vínculo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">112</field>
+		<field name="name">El Hato</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">112</field>
+		<field name="name">Moruy</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">112</field>
+		<field name="name">Pueblo Nuevo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">113</field>
+		<field name="name">Agua Larga</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">113</field>
+		<field name="name">El Paují</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">113</field>
+		<field name="name">Independencia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">113</field>
+		<field name="name">Mapararí</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">114</field>
+		<field name="name">Agua Linda</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">114</field>
+		<field name="name">Araurima</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">114</field>
+		<field name="name">Jacura</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">115</field>
+		<field name="name">Tucacas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">115</field>
+		<field name="name">Boca de Aroa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">116</field>
+		<field name="name">Los Taques</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">116</field>
+		<field name="name">Judibana</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">117</field>
+		<field name="name">Mene de Mauroa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">117</field>
+		<field name="name">San Félix</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">117</field>
+		<field name="name">Casigua</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">118</field>
+		<field name="name">Guzmán Guillermo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">118</field>
+		<field name="name">Mitare</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">118</field>
+		<field name="name">Río Seco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">118</field>
+		<field name="name">Sabaneta</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">118</field>
+		<field name="name">San Antonio</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">118</field>
+		<field name="name">San Gabriel</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">118</field>
+		<field name="name">Santa Ana</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">119</field>
+		<field name="name">Boca del Tocuyo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">119</field>
+		<field name="name">Chichiriviche</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">119</field>
+		<field name="name">Tocuyo de la Costa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">120</field>
+		<field name="name">Palmasola</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">121</field>
+		<field name="name">Cabure</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">121</field>
+		<field name="name">Colina</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">121</field>
+		<field name="name">Curimagua</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">122</field>
+		<field name="name">San José de la Costa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">122</field>
+		<field name="name">Píritu</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">123</field>
+		<field name="name">San Francisco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">124</field>
+		<field name="name">Sucre</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">124</field>
+		<field name="name">Pecaya</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">125</field>
+		<field name="name">Tocópero</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">126</field>
+		<field name="name">El Charal</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">126</field>
+		<field name="name">Las Vegas del Tuy</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">126</field>
+		<field name="name">Santa Cruz de Bucaral</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">127</field>
+		<field name="name">Bruzual</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">127</field>
+		<field name="name">Urumaco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">128</field>
+		<field name="name">Puerto Cumarebo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">128</field>
+		<field name="name">La Ciénaga</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">128</field>
+		<field name="name">La Soledad</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">128</field>
+		<field name="name">Pueblo Cumarebo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">128</field>
+		<field name="name">Zazárida</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">113</field>
+		<field name="name">Churuguara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">129</field>
+		<field name="name">Camaguán</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">129</field>
+		<field name="name">Puerto Miranda</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">129</field>
+		<field name="name">Uverito</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">130</field>
+		<field name="name">Chaguaramas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">131</field>
+		<field name="name">El Socorro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">132</field>
+		<field name="name">Tucupido</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">132</field>
+		<field name="name">San Rafael de Laya</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">133</field>
+		<field name="name">Altagracia de Orituco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">133</field>
+		<field name="name">San Rafael de Orituco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">133</field>
+		<field name="name">San Francisco Javier de Lezama</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">133</field>
+		<field name="name">Paso Real de Macaira</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">133</field>
+		<field name="name">Carlos Soublette</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">133</field>
+		<field name="name">San Francisco de Macaira</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">133</field>
+		<field name="name">Libertad de Orituco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">134</field>
+		<field name="name">Cantaclaro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">134</field>
+		<field name="name">San Juan de los Morros</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">134</field>
+		<field name="name">Parapara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">135</field>
+		<field name="name">El Sombrero</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">135</field>
+		<field name="name">Sosa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">136</field>
+		<field name="name">Las Mercedes</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">136</field>
+		<field name="name">Cabruta</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">136</field>
+		<field name="name">Santa Rita de Manapire</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">137</field>
+		<field name="name">Valle de la Pascua</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">137</field>
+		<field name="name">Espino</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">138</field>
+		<field name="name">San José de Unare</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">138</field>
+		<field name="name">Zaraza</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">139</field>
+		<field name="name">San José de Tiznados</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">139</field>
+		<field name="name">San Francisco de Tiznados</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">139</field>
+		<field name="name">San Lorenzo de Tiznados</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">139</field>
+		<field name="name">Ortiz</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">140</field>
+		<field name="name">Guayabal</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">140</field>
+		<field name="name">Cazorla</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">141</field>
+		<field name="name">San José de Guaribe</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">141</field>
+		<field name="name">Uveral</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">142</field>
+		<field name="name">Santa María de Ipire</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">142</field>
+		<field name="name">Altamira</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">143</field>
+		<field name="name">El Calvario</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">143</field>
+		<field name="name">El Rastro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">143</field>
+		<field name="name">Guardatinajas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">143</field>
+		<field name="name">Capital Urbana Calabozo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">144</field>
+		<field name="name">Quebrada Honda de Guache</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">144</field>
+		<field name="name">Pío Tamayo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">144</field>
+		<field name="name">Yacambú</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">145</field>
+		<field name="name">Fréitez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">145</field>
+		<field name="name">José María Blanco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">146</field>
+		<field name="name">Catedral</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">146</field>
+		<field name="name">Concepción</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">146</field>
+		<field name="name">El Cují</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">146</field>
+		<field name="name">Juan de Villegas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">146</field>
+		<field name="name">Santa Rosa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">146</field>
+		<field name="name">Tamaca</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">146</field>
+		<field name="name">Unión</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">146</field>
+		<field name="name">Aguedo Felipe Alvarado</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">146</field>
+		<field name="name">Buena Vista</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">146</field>
+		<field name="name">Juárez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">147</field>
+		<field name="name">Juan Bautista Rodríguez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">147</field>
+		<field name="name">Cuara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">147</field>
+		<field name="name">Diego de Lozada</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">147</field>
+		<field name="name">Paraíso de San José</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">147</field>
+		<field name="name">San Miguel</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">147</field>
+		<field name="name">Tintorero</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">147</field>
+		<field name="name">José Bernardo Dorante</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">147</field>
+		<field name="name">Coronel Mariano Peraza </field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">148</field>
+		<field name="name">Bolívar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">148</field>
+		<field name="name">Anzoátegui</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">148</field>
+		<field name="name">Guarico</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">148</field>
+		<field name="name">Hilario Luna y Luna</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">148</field>
+		<field name="name">Humocaro Alto</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">148</field>
+		<field name="name">Humocaro Bajo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">148</field>
+		<field name="name">La Candelaria</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">148</field>
+		<field name="name">Morán</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">149</field>
+		<field name="name">Cabudare</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">149</field>
+		<field name="name">José Gregorio Bastidas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">149</field>
+		<field name="name">Agua Viva</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">150</field>
+		<field name="name">Sarare</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">150</field>
+		<field name="name">Buría</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">150</field>
+		<field name="name">Gustavo Vegas León</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">151</field>
+		<field name="name">Trinidad Samuel</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">151</field>
+		<field name="name">Antonio Díaz</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">151</field>
+		<field name="name">Camacaro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">151</field>
+		<field name="name">Castañeda</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">151</field>
+		<field name="name">Cecilio Zubillaga</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">151</field>
+		<field name="name">Chiquinquirá</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">151</field>
+		<field name="name">El Blanco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">151</field>
+		<field name="name">Espinoza de los Monteros</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">151</field>
+		<field name="name">Lara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">151</field>
+		<field name="name">Las Mercedes</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">151</field>
+		<field name="name">Manuel Morillo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">151</field>
+		<field name="name">Montaña Verde</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">151</field>
+		<field name="name">Montes de Oca</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">151</field>
+		<field name="name">Torres</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">151</field>
+		<field name="name">Heriberto Arroyo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">151</field>
+		<field name="name">Reyes Vargas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">151</field>
+		<field name="name">Altagracia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">152</field>
+		<field name="name">Siquisique</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">152</field>
+		<field name="name">Moroturo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">152</field>
+		<field name="name">San Miguel</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">152</field>
+		<field name="name">Xaguas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">179</field>
+		<field name="name">Presidente Betancourt</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">179</field>
+		<field name="name">Presidente Páez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">179</field>
+		<field name="name">Presidente Rómulo Gallegos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">179</field>
+		<field name="name">Gabriel Picón González</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">179</field>
+		<field name="name">Héctor Amable Mora</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">179</field>
+		<field name="name">José Nucete Sardi</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">179</field>
+		<field name="name">Pulido Méndez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">180</field>
+		<field name="name">La Azulita</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">181</field>
+		<field name="name">Santa Cruz de Mora</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">181</field>
+		<field name="name">Mesa Bolívar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">181</field>
+		<field name="name">Mesa de Las Palmas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">182</field>
+		<field name="name">Aricagua</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">182</field>
+		<field name="name">San Antonio</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">183</field>
+		<field name="name">Canagua</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">183</field>
+		<field name="name">Capurí</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">183</field>
+		<field name="name">Chacantá</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">183</field>
+		<field name="name">El Molino</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">183</field>
+		<field name="name">Guaimaral</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">183</field>
+		<field name="name">Mucutuy</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">183</field>
+		<field name="name">Mucuchachí</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">184</field>
+		<field name="name">Fernández Peña</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">184</field>
+		<field name="name">Matriz</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">184</field>
+		<field name="name">Montalbán</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">184</field>
+		<field name="name">Acequias</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">184</field>
+		<field name="name">Jají</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">184</field>
+		<field name="name">La Mesa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">184</field>
+		<field name="name">San José del Sur</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">185</field>
+		<field name="name">Tucaní</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">185</field>
+		<field name="name">Florencio Ramírez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">186</field>
+		<field name="name">Santo Domingo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">186</field>
+		<field name="name">Las Piedras</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">187</field>
+		<field name="name">Guaraque</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">187</field>
+		<field name="name">Mesa de Quintero</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">187</field>
+		<field name="name">Río Negro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">188</field>
+		<field name="name">Arapuey</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">188</field>
+		<field name="name">Palmira</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">189</field>
+		<field name="name">San Cristóbal de Torondoy</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">189</field>
+		<field name="name">Torondoy</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">190</field>
+		<field name="name">Antonio Spinetti Dini</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">190</field>
+		<field name="name">Arias</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">190</field>
+		<field name="name">Caracciolo Parra Pérez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">190</field>
+		<field name="name">Domingo Peña</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">190</field>
+		<field name="name">El Llano</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">190</field>
+		<field name="name">Gonzalo Picón Febres</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">190</field>
+		<field name="name">Jacinto Plaza</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">190</field>
+		<field name="name">Juan Rodríguez Suárez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">190</field>
+		<field name="name">Lasso de la Vega</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">190</field>
+		<field name="name">Mariano Picón Salas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">190</field>
+		<field name="name">Milla</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">190</field>
+		<field name="name">Osuna Rodríguez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">190</field>
+		<field name="name">Sagrario</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">190</field>
+		<field name="name">El Morro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">190</field>
+		<field name="name">Los Nevados</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">191</field>
+		<field name="name">Andrés Eloy Blanco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">191</field>
+		<field name="name">La Venta</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">191</field>
+		<field name="name">Piñango</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">191</field>
+		<field name="name">Timotes</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">192</field>
+		<field name="name">Eloy Paredes</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">192</field>
+		<field name="name">San Rafael de Alcázar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">192</field>
+		<field name="name">Santa Elena de Arenales</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">193</field>
+		<field name="name">Santa María de Caparo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">194</field>
+		<field name="name">Pueblo Llano</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">195</field>
+		<field name="name">Cacute</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">195</field>
+		<field name="name">La Toma</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">195</field>
+		<field name="name">Mucuchíes</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">195</field>
+		<field name="name">Mucurubá</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">195</field>
+		<field name="name">San Rafael</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">196</field>
+		<field name="name">Gerónimo Maldonado</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">196</field>
+		<field name="name">Bailadores</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">197</field>
+		<field name="name">Tabay</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">198</field>
+		<field name="name">Chiguará</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">198</field>
+		<field name="name">Estánquez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">198</field>
+		<field name="name">Lagunillas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">198</field>
+		<field name="name">La Trampa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">198</field>
+		<field name="name">Pueblo Nuevo del Sur</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">198</field>
+		<field name="name">San Juan</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">199</field>
+		<field name="name">El Amparo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">199</field>
+		<field name="name">El Llano</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">199</field>
+		<field name="name">San Francisco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">199</field>
+		<field name="name">Tovar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">200</field>
+		<field name="name">Independencia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">200</field>
+		<field name="name">María de la Concepción Palacios Blanco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">200</field>
+		<field name="name">Nueva Bolivia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">200</field>
+		<field name="name">Santa Apolonia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">201</field>
+		<field name="name">Caño El Tigre</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">201</field>
+		<field name="name">Zea</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">223</field>
+		<field name="name">Aragüita</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">223</field>
+		<field name="name">Arévalo González</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">223</field>
+		<field name="name">Capaya</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">223</field>
+		<field name="name">Caucagua</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">223</field>
+		<field name="name">Panaquire</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">223</field>
+		<field name="name">Ribas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">223</field>
+		<field name="name">El Café</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">223</field>
+		<field name="name">Marizapa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">224</field>
+		<field name="name">Cumbo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">224</field>
+		<field name="name">San José de Barlovento</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">225</field>
+		<field name="name">El Cafetal</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">225</field>
+		<field name="name">Las Minas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">225</field>
+		<field name="name">Nuestra Señora del Rosario</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">226</field>
+		<field name="name">Higuerote</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">226</field>
+		<field name="name">Curiepe</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">226</field>
+		<field name="name">Tacarigua de Brión</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">227</field>
+		<field name="name">Mamporal</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">228</field>
+		<field name="name">Carrizal</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">229</field>
+		<field name="name">Chacao</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">230</field>
+		<field name="name">Charallave</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">230</field>
+		<field name="name">Las Brisas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">231</field>
+		<field name="name">El Hatillo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">232</field>
+		<field name="name">Altagracia de la Montaña</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">232</field>
+		<field name="name">Cecilio Acosta</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">232</field>
+		<field name="name">Los Teques</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">232</field>
+		<field name="name">El Jarillo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">232</field>
+		<field name="name">San Pedro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">232</field>
+		<field name="name">Tácata</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">232</field>
+		<field name="name">Paracotos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">233</field>
+		<field name="name">Cartanal</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">233</field>
+		<field name="name">Santa Teresa del Tuy</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">234</field>
+		<field name="name">La Democracia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">234</field>
+		<field name="name">Ocumare del Tuy</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">234</field>
+		<field name="name">Santa Bárbara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">235</field>
+		<field name="name">San Antonio de los Altos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">236</field>
+		<field name="name">Río Chico</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">236</field>
+		<field name="name">El Guapo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">236</field>
+		<field name="name">Tacarigua de la Laguna</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">236</field>
+		<field name="name">Paparo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">236</field>
+		<field name="name">San Fernando del Guapo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">237</field>
+		<field name="name">Santa Lucía del Tuy</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">238</field>
+		<field name="name">Cúpira</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">238</field>
+		<field name="name">Machurucuto</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">239</field>
+		<field name="name">Guarenas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">240</field>
+		<field name="name">San Antonio de Yare</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">240</field>
+		<field name="name">San Francisco de Yare</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">241</field>
+		<field name="name">Leoncio Martínez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">241</field>
+		<field name="name">Petare</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">241</field>
+		<field name="name">Caucagüita</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">241</field>
+		<field name="name">Filas de Mariche</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">241</field>
+		<field name="name">La Dolorita</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">242</field>
+		<field name="name">Cúa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">242</field>
+		<field name="name">Nueva Cúa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">243</field>
+		<field name="name">Guatire</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">243</field>
+		<field name="name">Bolívar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">258</field>
+		<field name="name">San Antonio de Maturín</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">258</field>
+		<field name="name">San Francisco de Maturín</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">259</field>
+		<field name="name">Aguasay</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">260</field>
+		<field name="name">Caripito</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">261</field>
+		<field name="name">El Guácharo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">261</field>
+		<field name="name">La Guanota</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">261</field>
+		<field name="name">Sabana de Piedra</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">261</field>
+		<field name="name">San Agustín</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">261</field>
+		<field name="name">Teresen</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">261</field>
+		<field name="name">Caripe</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">262</field>
+		<field name="name">Areo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">262</field>
+		<field name="name">Capital Cedeño</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">262</field>
+		<field name="name">San Félix de Cantalicio</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">262</field>
+		<field name="name">Viento Fresco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">263</field>
+		<field name="name">El Tejero</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">263</field>
+		<field name="name">Punta de Mata</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">264</field>
+		<field name="name">Chaguaramas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">264</field>
+		<field name="name">Las Alhuacas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">264</field>
+		<field name="name">Tabasca</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">264</field>
+		<field name="name">Temblador</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">265</field>
+		<field name="name">Alto de los Godos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">265</field>
+		<field name="name">Boquerón</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">265</field>
+		<field name="name">Las Cocuizas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">265</field>
+		<field name="name">La Cruz</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">265</field>
+		<field name="name">San Simón</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">265</field>
+		<field name="name">El Corozo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">265</field>
+		<field name="name">El Furrial</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">265</field>
+		<field name="name">Jusepín</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">265</field>
+		<field name="name">La Pica</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">265</field>
+		<field name="name">San Vicente</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">266</field>
+		<field name="name">Aparicio</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">266</field>
+		<field name="name">Aragua de Maturín</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">266</field>
+		<field name="name">Chaguamal</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">266</field>
+		<field name="name">El Pinto</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">266</field>
+		<field name="name">Guanaguana</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">266</field>
+		<field name="name">La Toscana</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">266</field>
+		<field name="name">Taguaya</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">267</field>
+		<field name="name">Cachipo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">267</field>
+		<field name="name">Quiriquire</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">268</field>
+		<field name="name">Santa Bárbara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">269</field>
+		<field name="name">Barrancas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">269</field>
+		<field name="name">Los Barrancos de Fajardo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">270</field>
+		<field name="name">Uracoa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">271</field>
+		<field name="name">Antolín del Campo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">272</field>
+		<field name="name">Arismendi</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">273</field>
+		<field name="name">García</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">273</field>
+		<field name="name">Francisco Fajardo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">274</field>
+		<field name="name">Bolívar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">274</field>
+		<field name="name">Guevara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">274</field>
+		<field name="name">Matasiete</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">274</field>
+		<field name="name">Santa Ana</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">274</field>
+		<field name="name">Sucre</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">275</field>
+		<field name="name">Aguirre</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">275</field>
+		<field name="name">Maneiro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">276</field>
+		<field name="name">Adrián</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">276</field>
+		<field name="name">Juan Griego</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">276</field>
+		<field name="name">Yaguaraparo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">277</field>
+		<field name="name">Porlamar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">278</field>
+		<field name="name">San Francisco de Macanao</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">278</field>
+		<field name="name">Boca de Río</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">279</field>
+		<field name="name">Tubores</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">279</field>
+		<field name="name">Los Baleales</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">280</field>
+		<field name="name">Vicente Fuentes</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">280</field>
+		<field name="name">Villalba</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">281</field>
+		<field name="name">San Juan Bautista</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">281</field>
+		<field name="name">Zabala</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">283</field>
+		<field name="name">Capital Araure</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">283</field>
+		<field name="name">Río Acarigua</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">284</field>
+		<field name="name">Capital Esteller</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">284</field>
+		<field name="name">Uveral</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">285</field>
+		<field name="name">Guanare</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">285</field>
+		<field name="name">Córdoba</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">285</field>
+		<field name="name">San José de la Montaña</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">285</field>
+		<field name="name">San Juan de Guanaguanare</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">285</field>
+		<field name="name">Virgen de la Coromoto</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">286</field>
+		<field name="name">Guanarito</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">286</field>
+		<field name="name">Trinidad de la Capilla</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">286</field>
+		<field name="name">Divina Pastora</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">287</field>
+		<field name="name">Monseñor José Vicente de Unda</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">287</field>
+		<field name="name">Peña Blanca</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">288</field>
+		<field name="name">Capital Ospino</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">288</field>
+		<field name="name">Aparición</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">288</field>
+		<field name="name">La Estación</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">289</field>
+		<field name="name">Páez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">289</field>
+		<field name="name">Payara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">289</field>
+		<field name="name">Pimpinela</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">289</field>
+		<field name="name">Ramón Peraza</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">290</field>
+		<field name="name">Papelón</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">290</field>
+		<field name="name">Caño Delgadito</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">291</field>
+		<field name="name">San Genaro de Boconoito</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">291</field>
+		<field name="name">Antolín Tovar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">292</field>
+		<field name="name">San Rafael de Onoto</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">292</field>
+		<field name="name">Santa Fe</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">292</field>
+		<field name="name">Thermo Morles</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">293</field>
+		<field name="name">Santa Rosalía</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">293</field>
+		<field name="name">Florida</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">294</field>
+		<field name="name">Sucre</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">294</field>
+		<field name="name">Concepción</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">294</field>
+		<field name="name">San Rafael de Palo Alzado</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">294</field>
+		<field name="name">Uvencio Antonio Velásquez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">294</field>
+		<field name="name">San José de Saguaz</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">294</field>
+		<field name="name">Villa Rosa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">295</field>
+		<field name="name">Turén</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">295</field>
+		<field name="name">Canelones</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">295</field>
+		<field name="name">Santa Cruz</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">295</field>
+		<field name="name">San Isidro Labrador</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">296</field>
+		<field name="name">Mariño</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">296</field>
+		<field name="name">Rómulo Gallegos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">297</field>
+		<field name="name">San José de Aerocuar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">297</field>
+		<field name="name">Tavera Acosta</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">298</field>
+		<field name="name">Río Caribe</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">298</field>
+		<field name="name">Antonio José de Sucre</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">298</field>
+		<field name="name">El Morro de Puerto Santo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">298</field>
+		<field name="name">Puerto Santo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">298</field>
+		<field name="name">San Juan de las Galdonas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">299</field>
+		<field name="name">El Pilar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">299</field>
+		<field name="name">El Rincón</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">299</field>
+		<field name="name">General Francisco Antonio Váquez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">299</field>
+		<field name="name">Guaraúnos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">299</field>
+		<field name="name">Tunapuicito</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">299</field>
+		<field name="name">Unión</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">300</field>
+		<field name="name">Santa Catalina</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">300</field>
+		<field name="name">Santa Rosa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">300</field>
+		<field name="name">Santa Teresa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">300</field>
+		<field name="name">Bolívar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">300</field>
+		<field name="name">Maracapana</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">302</field>
+		<field name="name">Libertad</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">302</field>
+		<field name="name">El Paujil</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">302</field>
+		<field name="name">Yaguaraparo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">303</field>
+		<field name="name">Cruz Salmerón Acosta</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">303</field>
+		<field name="name">Chacopata</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">303</field>
+		<field name="name">Manicuare</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">304</field>
+		<field name="name">Tunapuy</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">304</field>
+		<field name="name">Campo Elías</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">305</field>
+		<field name="name">Irapa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">305</field>
+		<field name="name">Campo Claro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">305</field>
+		<field name="name">Maraval</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">305</field>
+		<field name="name">San Antonio de Irapa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">305</field>
+		<field name="name">Soro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">306</field>
+		<field name="name">Mejía</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">307</field>
+		<field name="name">Cumanacoa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">307</field>
+		<field name="name">Arenas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">307</field>
+		<field name="name">Aricagua</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">307</field>
+		<field name="name">Cogollar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">307</field>
+		<field name="name">San Fernando</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">307</field>
+		<field name="name">San Lorenzo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">308</field>
+		<field name="name">Villa Frontado (Muelle de Cariaco)</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">308</field>
+		<field name="name">Catuaro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">308</field>
+		<field name="name">Rendón</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">308</field>
+		<field name="name">San Cruz</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">308</field>
+		<field name="name">Santa María</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">309</field>
+		<field name="name">Altagracia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">309</field>
+		<field name="name">Santa Inés</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">309</field>
+		<field name="name">Valentín Valiente</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">309</field>
+		<field name="name">Ayacucho</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">309</field>
+		<field name="name">San Juan</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">309</field>
+		<field name="name">Raúl Leoni</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">309</field>
+		<field name="name">Gran Mariscal</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">310</field>
+		<field name="name">Cristóbal Colón</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">310</field>
+		<field name="name">Bideau</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">310</field>
+		<field name="name">Punta de Piedras</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">310</field>
+		<field name="name">Güiria</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">341</field>
+		<field name="name">Andrés Bello</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">342</field>
+		<field name="name">Antonio Rómulo Costa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">343</field>
+		<field name="name">Ayacucho</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">343</field>
+		<field name="name">Rivas Berti</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">343</field>
+		<field name="name">San Pedro del Río</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">344</field>
+		<field name="name">Bolívar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">344</field>
+		<field name="name">Palotal</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">344</field>
+		<field name="name">General Juan Vicente Gómez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">344</field>
+		<field name="name">Isaías Medina Angarita</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">345</field>
+		<field name="name">Cárdenas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">345</field>
+		<field name="name">Amenodoro Ángel Lamus</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">345</field>
+		<field name="name">La Florida</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">346</field>
+		<field name="name">Córdoba</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">347</field>
+		<field name="name">Fernández Feo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">347</field>
+		<field name="name">Alberto Adriani</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">347</field>
+		<field name="name">Santo Domingo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">348</field>
+		<field name="name">Francisco de Miranda</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">349</field>
+		<field name="name">García de Hevia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">349</field>
+		<field name="name">Boca de Grita</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">349</field>
+		<field name="name">José Antonio Páez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">350</field>
+		<field name="name">Guásimos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">351</field>
+		<field name="name">Independencia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">351</field>
+		<field name="name">Juan Germán Roscio</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">351</field>
+		<field name="name">Román Cárdenas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">352</field>
+		<field name="name">Jáuregui</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">352</field>
+		<field name="name">Emilio Constantino Guerrero</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">352</field>
+		<field name="name">Monseñor Miguel Antonio Salas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">353</field>
+		<field name="name">José María Vargas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">354</field>
+		<field name="name">Junín</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">354</field>
+		<field name="name">La Petrólea</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">354</field>
+		<field name="name">Quinimarí</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">354</field>
+		<field name="name">Bramón</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">355</field>
+		<field name="name">Libertad</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">355</field>
+		<field name="name">Cipriano Castro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">355</field>
+		<field name="name">Manuel Felipe Rugeles</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">356</field>
+		<field name="name">Libertador</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">356</field>
+		<field name="name">Doradas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">356</field>
+		<field name="name">Emeterio Ochoa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">356</field>
+		<field name="name">San Joaquín de Navay</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">357</field>
+		<field name="name">Lobatera</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">357</field>
+		<field name="name">Constitución</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">358</field>
+		<field name="name">Michelena</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">359</field>
+		<field name="name">Panamericano</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">359</field>
+		<field name="name">La Palmita</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">360</field>
+		<field name="name">Pedro María Ureña</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">360</field>
+		<field name="name">Nueva Arcadia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">361</field>
+		<field name="name">Delicias</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">361</field>
+		<field name="name">Pecaya</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">362</field>
+		<field name="name">Samuel Darío Maldonado</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">362</field>
+		<field name="name">Boconó</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">362</field>
+		<field name="name">Hernández</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">363</field>
+		<field name="name">La Concordia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">363</field>
+		<field name="name">San Juan Bautista</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">363</field>
+		<field name="name">Pedro María Morantes</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">363</field>
+		<field name="name">San Sebastián</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">363</field>
+		<field name="name">Dr. Francisco Romero Lobo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">364</field>
+		<field name="name">Seboruco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">365</field>
+		<field name="name">Simón Rodríguez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">366</field>
+		<field name="name">Sucre</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">366</field>
+		<field name="name">Eleazar López Contreras</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">366</field>
+		<field name="name">San Pablo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">367</field>
+		<field name="name">Torbes</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">368</field>
+		<field name="name">Uribante</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">368</field>
+		<field name="name">Cárdenas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">368</field>
+		<field name="name">Juan Pablo Peñalosa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">368</field>
+		<field name="name">Potosí</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">369</field>
+		<field name="name">San Judas Tadeo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">370</field>
+		<field name="name">Araguaney</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">370</field>
+		<field name="name">El Jaguito</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">370</field>
+		<field name="name">La Esperanza</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">370</field>
+		<field name="name">Santa Isabel</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">371</field>
+		<field name="name">Boconó</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">371</field>
+		<field name="name">El Carmen</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">371</field>
+		<field name="name">Mosquey</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">371</field>
+		<field name="name">Ayacucho</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">371</field>
+		<field name="name">Burbusay</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">371</field>
+		<field name="name">General Ribas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">371</field>
+		<field name="name">Guaramacal</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">371</field>
+		<field name="name">Vega de Guaramacal</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">371</field>
+		<field name="name">Monseñor Jáuregui</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">371</field>
+		<field name="name">Rafael Rangel</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">371</field>
+		<field name="name">San Miguel</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">371</field>
+		<field name="name">San José</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">372</field>
+		<field name="name">Sabana Grande</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">372</field>
+		<field name="name">Cheregüé</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">372</field>
+		<field name="name">Granados</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">373</field>
+		<field name="name">Arnoldo Gabaldón</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">373</field>
+		<field name="name">Bolivia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">373</field>
+		<field name="name">Carrillo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">373</field>
+		<field name="name">Cegarra</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">373</field>
+		<field name="name">Chejendé</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">373</field>
+		<field name="name">Manuel Salvador Ulloa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">373</field>
+		<field name="name">San José</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">374</field>
+		<field name="name">Carache</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">374</field>
+		<field name="name">La Concepción</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">374</field>
+		<field name="name">Cuicas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">374</field>
+		<field name="name">Panamericana</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">374</field>
+		<field name="name">Santa Cruz</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">375</field>
+		<field name="name">Escuque</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">375</field>
+		<field name="name">La Unión</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">375</field>
+		<field name="name">Santa Rita</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">375</field>
+		<field name="name">Sabana Libre</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">376</field>
+		<field name="name">El Socorro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">376</field>
+		<field name="name">Los Caprichos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">376</field>
+		<field name="name">Antonio José de Sucre</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">377</field>
+		<field name="name">Campo Elías</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">377</field>
+		<field name="name">Arnoldo Gabaldón</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">378</field>
+		<field name="name">Santa Apolonia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">378</field>
+		<field name="name">El Progreso</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">378</field>
+		<field name="name">La Ceiba</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">378</field>
+		<field name="name">Tres de Febrero</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">379</field>
+		<field name="name">El Dividive</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">379</field>
+		<field name="name">Agua Santa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">379</field>
+		<field name="name">Agua Caliente</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">379</field>
+		<field name="name">El Cenizo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">379</field>
+		<field name="name">Valerita</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">380</field>
+		<field name="name">Monte Carmelo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">380</field>
+		<field name="name">Buena Vista</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">380</field>
+		<field name="name">Santa María del Horcón</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">381</field>
+		<field name="name">Motatán</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">381</field>
+		<field name="name">El Baño</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">381</field>
+		<field name="name">Jalisco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">382</field>
+		<field name="name">Pampán</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">382</field>
+		<field name="name">Flor de Patria</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">382</field>
+		<field name="name">La Paz</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">382</field>
+		<field name="name">Santa Ana</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">383</field>
+		<field name="name">Pampanito</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">383</field>
+		<field name="name">La Concepción</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">383</field>
+		<field name="name">Pampanito II</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">384</field>
+		<field name="name">Betijoque</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">384</field>
+		<field name="name">José Gregorio Hernández</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">384</field>
+		<field name="name">La Pueblita</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">384</field>
+		<field name="name">Los Cedros</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">385</field>
+		<field name="name">Carvajal</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">385</field>
+		<field name="name">Campo Alegre</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">385</field>
+		<field name="name">Antonio Nicolás Briceño</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">385</field>
+		<field name="name">José Leonardo Suárez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">386</field>
+		<field name="name">Sabana de Mendoza</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">386</field>
+		<field name="name">Junín</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">386</field>
+		<field name="name">Valmore Rodríguez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">386</field>
+		<field name="name">El Paraíso</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">387</field>
+		<field name="name">Andrés Linares</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">387</field>
+		<field name="name">Chiquinquirá</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">387</field>
+		<field name="name">Cristóbal Mendoza</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">387</field>
+		<field name="name">Cruz Carrillo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">387</field>
+		<field name="name">Matriz</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">387</field>
+		<field name="name">Monseñor Carrillo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">387</field>
+		<field name="name">Tres Esquinas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">388</field>
+		<field name="name">Cabimbú</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">388</field>
+		<field name="name">Jajó</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">388</field>
+		<field name="name">La Mesa de Esnujaque</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">388</field>
+		<field name="name">Santiago</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">388</field>
+		<field name="name">Tuñame</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">388</field>
+		<field name="name">La Quebrada</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">389</field>
+		<field name="name">Juan Ignacio Montilla</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">389</field>
+		<field name="name">La Beatriz</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">389</field>
+		<field name="name">La Puerta</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">389</field>
+		<field name="name">Mendoza del Valle de Momboy</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">389</field>
+		<field name="name">Mercedes Díaz</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">389</field>
+		<field name="name">San Luis</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">390</field>
+		<field name="name">Caraballeda</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">390</field>
+		<field name="name">Carayaca</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">390</field>
+		<field name="name">Carlos Soublette</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">390</field>
+		<field name="name">Caruao Chuspa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">390</field>
+		<field name="name">Catia La Mar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">390</field>
+		<field name="name">El Junko</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">390</field>
+		<field name="name">La Guaira</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">390</field>
+		<field name="name">Macuto</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">390</field>
+		<field name="name">Maiquetía</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">390</field>
+		<field name="name">Naiguatá</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">390</field>
+		<field name="name">Urimare</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">391</field>
+		<field name="name">Arístides Bastidas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">392</field>
+		<field name="name">Bolívar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">407</field>
+		<field name="name">Chivacoa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">407</field>
+		<field name="name">Campo Elías</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">408</field>
+		<field name="name">Cocorote</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">409</field>
+		<field name="name">Independencia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">410</field>
+		<field name="name">José Antonio Páez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">411</field>
+		<field name="name">La Trinidad</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">412</field>
+		<field name="name">Manuel Monge</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">413</field>
+		<field name="name">Salóm</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">413</field>
+		<field name="name">Temerla</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">413</field>
+		<field name="name">Nirgua</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">414</field>
+		<field name="name">San Andrés</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">414</field>
+		<field name="name">Yaritagua</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">415</field>
+		<field name="name">San Javier</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">415</field>
+		<field name="name">Albarico</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">415</field>
+		<field name="name">San Felipe</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">416</field>
+		<field name="name">Sucre</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">417</field>
+		<field name="name">Urachiche</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">418</field>
+		<field name="name">El Guayabo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">418</field>
+		<field name="name">Farriar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">441</field>
+		<field name="name">Isla de Toas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">441</field>
+		<field name="name">Monagas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">442</field>
+		<field name="name">San Timoteo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">442</field>
+		<field name="name">General Urdaneta</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">442</field>
+		<field name="name">Libertador</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">442</field>
+		<field name="name">Marcelino Briceño</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">442</field>
+		<field name="name">Pueblo Nuevo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">442</field>
+		<field name="name">Manuel Guanipa Matos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">443</field>
+		<field name="name">Ambrosio</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">443</field>
+		<field name="name">Carmen Herrera</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">443</field>
+		<field name="name">La Rosa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">443</field>
+		<field name="name">Germán Ríos Linares</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">443</field>
+		<field name="name">San Benito</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">443</field>
+		<field name="name">Rómulo Betancourt</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">443</field>
+		<field name="name">Jorge Hernández</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">443</field>
+		<field name="name">Punta Gorda</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">443</field>
+		<field name="name">Arístides Calvani</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">444</field>
+		<field name="name">Encontrados</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">444</field>
+		<field name="name">Udón Pérez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">445</field>
+		<field name="name">Moralito</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">445</field>
+		<field name="name">San Carlos del Zulia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">445</field>
+		<field name="name">Santa Cruz del Zulia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">445</field>
+		<field name="name">Santa Bárbara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">445</field>
+		<field name="name">Urribarrí</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">446</field>
+		<field name="name">Carlos Quevedo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">446</field>
+		<field name="name">Francisco Javier Pulgar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">446</field>
+		<field name="name">Simón Rodríguez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">446</field>
+		<field name="name">Guamo-Gavilanes</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">448</field>
+		<field name="name">La Concepción</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">448</field>
+		<field name="name">San José</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">448</field>
+		<field name="name">Mariano Parra León</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">448</field>
+		<field name="name">José Ramón Yépez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">449</field>
+		<field name="name">Jesús María Semprún</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">449</field>
+		<field name="name">Barí</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">450</field>
+		<field name="name">Concepción</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">450</field>
+		<field name="name">Andrés Bello</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">450</field>
+		<field name="name">Chiquinquirá</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">450</field>
+		<field name="name">El Carmelo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">450</field>
+		<field name="name">Potreritos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">451</field>
+		<field name="name">Libertad</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">451</field>
+		<field name="name">Alonso de Ojeda</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">451</field>
+		<field name="name">Venezuela</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">451</field>
+		<field name="name">Eleazar López Contreras</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">451</field>
+		<field name="name">Campo Lara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">452</field>
+		<field name="name">Bartolomé de las Casas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">452</field>
+		<field name="name">Libertad</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">452</field>
+		<field name="name">Río Negro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">452</field>
+		<field name="name">San José de Perijá</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">453</field>
+		<field name="name">San Rafael</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">453</field>
+		<field name="name">La Sierrita</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">453</field>
+		<field name="name">Las Parcelas</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">453</field>
+		<field name="name">Luis de Vicente</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">453</field>
+		<field name="name">Monseñor Marcos Sergio Godoy</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">453</field>
+		<field name="name">Ricaurte</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">453</field>
+		<field name="name">Tamare</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">454</field>
+		<field name="name">Antonio Borjas Romero</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">454</field>
+		<field name="name">Bolívar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">454</field>
+		<field name="name">Cacique Mara</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">454</field>
+		<field name="name">Carracciolo Parra Pérez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">454</field>
+		<field name="name">Cecilio Acosta</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">454</field>
+		<field name="name">Cristo de Aranza</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">454</field>
+		<field name="name">Coquivacoa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">454</field>
+		<field name="name">Chiquinquirá</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">454</field>
+		<field name="name">Francisco Eugenio Bustamante</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">454</field>
+		<field name="name">Idelfonzo Vásquez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">454</field>
+		<field name="name">Juana de Ávila</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">454</field>
+		<field name="name">Luis Hurtado Higuera</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">454</field>
+		<field name="name">Manuel Dagnino</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">454</field>
+		<field name="name">Olegario Villalobos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">454</field>
+		<field name="name">Raúl Leoni</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">454</field>
+		<field name="name">Santa Lucía</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">454</field>
+		<field name="name">Venancio Pulgar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">454</field>
+		<field name="name">San Isidro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">455</field>
+		<field name="name">Altagracia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">455</field>
+		<field name="name">Faría</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">455</field>
+		<field name="name">Ana María Campos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">455</field>
+		<field name="name">San Antonio</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">455</field>
+		<field name="name">San José</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">456</field>
+		<field name="name">Donaldo García</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">456</field>
+		<field name="name">El Rosario</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">456</field>
+		<field name="name">Sixto Zambrano</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">457</field>
+		<field name="name">San Francisco</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">457</field>
+		<field name="name">El Bajo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">457</field>
+		<field name="name">Domitila Flores</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">457</field>
+		<field name="name">Francisco Ochoa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">457</field>
+		<field name="name">Los Cortijos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">457</field>
+		<field name="name">Marcial Hernández</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">458</field>
+		<field name="name">Santa Rita</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">458</field>
+		<field name="name">El Mene</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">458</field>
+		<field name="name">Pedro Lucas Urribarrí</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">458</field>
+		<field name="name">José Cenobio Urribarrí</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">459</field>
+		<field name="name">Rafael Maria Baralt</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">459</field>
+		<field name="name">Manuel Manrique</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">459</field>
+		<field name="name">Rafael Urdaneta</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">460</field>
+		<field name="name">Bobures</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">460</field>
+		<field name="name">Gibraltar</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">460</field>
+		<field name="name">Heras</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">460</field>
+		<field name="name">Monseñor Arturo Álvarez</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">460</field>
+		<field name="name">Rómulo Gallegos</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">460</field>
+		<field name="name">El Batey</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">461</field>
+		<field name="name">Rafael Urdaneta</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">461</field>
+		<field name="name">La Victoria</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">461</field>
+		<field name="name">Raúl Cuenca</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">447</field>
+		<field name="name">Sinamaica</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">447</field>
+		<field name="name">Alta Guajira</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">447</field>
+		<field name="name">Elías Sánchez Rubio</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">447</field>
+		<field name="name">Guajira</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">Altagracia</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">Antímano</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">Caricuao</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">Catedral</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">Coche</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">El Junquito</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">El Paraíso</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">El Recreo</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">El Valle</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">La Candelaria</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">La Pastora</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">La Vega</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">Macarao</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">San Agustín</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">San Bernardino</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">San José</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">San Juan</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">San Pedro</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">Santa Rosalía</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">Santa Teresa</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">Sucre (Catia)</field>
+	</record> 
+	<record model="res.municipal.parish">
+		<field name="res_state_municipal_id">462</field>
+		<field name="name">23 de enero</field>
+	</record> 
+
+    </data>
+</odoo>

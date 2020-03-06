@@ -1,0 +1,2496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+	<record model="res.country.city">
+		<field name="res_country_state_id">1</field>
+		<field name="name">Maroa</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">1</field>
+		<field name="name">PuertoAyacucho</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">1</field>
+		<field name="name">SanFernandodeAtabapo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">Anaco</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">AraguadeBarcelona</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">Barcelona</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">BocadeUchire</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">Cantaura</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">Clarines</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">ElChaparro</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">ElPaoAnzoátegui</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">ElTigre</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">ElTigrito</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">Guanape</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">Guanta</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">Lechería</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">Onoto</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">Pariaguán</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">Píritu</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">PuertoLaCruz</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">PuertoPíritu</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">SabanadeUchire</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">SanMateoAnzoátegui</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">SanPabloAnzoátegui</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">SanTomé</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">SantaAnadeAnzoátegui</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">SantaFeAnzoátegui</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">SantaRosa</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">Soledad</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">Urica</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">2</field>
+		<field name="name">ValledeGuanape</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">3</field>
+		<field name="name">Achaguas</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">3</field>
+		<field name="name">Biruaca</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">3</field>
+		<field name="name">Bruzual</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">3</field>
+		<field name="name">ElAmparo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">3</field>
+		<field name="name">ElNula</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">3</field>
+		<field name="name">Elorza</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">3</field>
+		<field name="name">Guasdualito</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">3</field>
+		<field name="name">Mantecal</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">3</field>
+		<field name="name">PuertoPáez</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">3</field>
+		<field name="name">SanFernandodeApure</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">3</field>
+		<field name="name">SanJuandePayara</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">4</field>
+		<field name="name">Barbacoas</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">4</field>
+		<field name="name">Cagua</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">4</field>
+		<field name="name">Camatagua</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">4</field>
+		<field name="name">Choroní</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">4</field>
+		<field name="name">ColoniaTovar</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">4</field>
+		<field name="name">ElConsejo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">4</field>
+		<field name="name">LaVictoria</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">4</field>
+		<field name="name">LasTejerías</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">4</field>
+		<field name="name">Magdaleno</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">4</field>
+		<field name="name">Maracay</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">4</field>
+		<field name="name">OcumaredeLaCosta</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">4</field>
+		<field name="name">PaloNegro</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">4</field>
+		<field name="name">SanCasimiro</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">4</field>
+		<field name="name">SanMateo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">4</field>
+		<field name="name">SanSebastián</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">4</field>
+		<field name="name">SantaCruzdeAragua</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">4</field>
+		<field name="name">Tocorón</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">4</field>
+		<field name="name">Turmero</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">4</field>
+		<field name="name">VilladeCura</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">4</field>
+		<field name="name">Zuata</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">5</field>
+		<field name="name">Barinas</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">5</field>
+		<field name="name">Barinitas</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">5</field>
+		<field name="name">Barrancas</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">5</field>
+		<field name="name">Calderas</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">5</field>
+		<field name="name">Capitanejo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">5</field>
+		<field name="name">CiudadBolivia</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">5</field>
+		<field name="name">ElCantón</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">5</field>
+		<field name="name">LasVeguitas</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">5</field>
+		<field name="name">LibertaddeBarinas</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">5</field>
+		<field name="name">Sabaneta</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">5</field>
+		<field name="name">SantaBárbaradeBarinas</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">5</field>
+		<field name="name">Socopó</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">6</field>
+		<field name="name">CaicaradelOrinoco</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">6</field>
+		<field name="name">Canaima</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">6</field>
+		<field name="name">CiudadBolívar</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">6</field>
+		<field name="name">CiudadPiar</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">6</field>
+		<field name="name">ElCallao</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">6</field>
+		<field name="name">ElDorado</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">6</field>
+		<field name="name">ElManteco</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">6</field>
+		<field name="name">ElPalmar</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">6</field>
+		<field name="name">ElPao</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">6</field>
+		<field name="name">Guasipati</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">6</field>
+		<field name="name">Guri</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">6</field>
+		<field name="name">LaParagua</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">6</field>
+		<field name="name">Matanzas</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">6</field>
+		<field name="name">PuertoOrdaz</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">6</field>
+		<field name="name">SanFélix</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">6</field>
+		<field name="name">SantaElenadeUairén</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">6</field>
+		<field name="name">Tumeremo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">6</field>
+		<field name="name">Unare</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">6</field>
+		<field name="name">Upata</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">Bejuma</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">Belén</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">CampodeCarabobo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">Canoabo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">CentralTacarigua</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">Chirgua</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">CiudadAlianza</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">ElPalito</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">Guacara</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">Guigue</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">LasTrincheras</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">LosGuayos</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">Mariara</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">Miranda</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">Montalbán</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">Morón</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">Naguanagua</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">PuertoCabello</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">SanJoaquín</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">Tocuyito</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">Urama</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">Valencia</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">7</field>
+		<field name="name">Vigirimita</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">8</field>
+		<field name="name">Aguirre</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">8</field>
+		<field name="name">ApartaderosCojedes</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">8</field>
+		<field name="name">Arismendi</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">8</field>
+		<field name="name">Camuriquito</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">8</field>
+		<field name="name">ElBaúl</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">8</field>
+		<field name="name">ElLimón</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">8</field>
+		<field name="name">ElPaoCojedes</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">8</field>
+		<field name="name">ElSocorro</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">8</field>
+		<field name="name">LaAguadita</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">8</field>
+		<field name="name">LasVegas</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">8</field>
+		<field name="name">LibertaddeCojedes</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">8</field>
+		<field name="name">Mapuey</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">8</field>
+		<field name="name">Piñedo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">8</field>
+		<field name="name">Samancito</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">8</field>
+		<field name="name">SanCarlos</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">8</field>
+		<field name="name">Sucre</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">8</field>
+		<field name="name">Tinaco</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">8</field>
+		<field name="name">Tinaquillo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">8</field>
+		<field name="name">Vallecito</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">9</field>
+		<field name="name">Tucupita</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">24</field>
+		<field name="name">Caracas</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">24</field>
+		<field name="name">ElJunquito</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">Adícora</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">BocadeAroa</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">Cabure</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">Capadare</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">Capatárida</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">Chichiriviche</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">Churuguara</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">Coro</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">Cumarebo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">Dabajuro</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">Judibana</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">LaCruzdeTaratara</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">LaVeladeCoro</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">LosTaques</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">Maparari</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">MenedeMauroa</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">Mirimire</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">Pedregal</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">PírituFalcón</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">PuebloNuevoFalcón</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">PuertoCumarebo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">PuntaCardón</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">PuntoFijo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">SanJuandeLosCayos</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">SanLuis</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">SantaAnaFalcón</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">SantaCruzDeBucaral</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">Tocopero</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">TocuyodeLaCosta</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">Tucacas</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">10</field>
+		<field name="name">Yaracal</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">11</field>
+		<field name="name">AltagraciadeOrituco</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">11</field>
+		<field name="name">Cabruta</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">11</field>
+		<field name="name">Calabozo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">11</field>
+		<field name="name">Camaguán</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">11</field>
+		<field name="name">ChaguaramasGuárico</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">11</field>
+		<field name="name">ElSocorro</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">11</field>
+		<field name="name">ElSombrero</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">11</field>
+		<field name="name">LasMercedesdeLosLlanos</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">11</field>
+		<field name="name">Lezama</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">11</field>
+		<field name="name">Onoto</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">11</field>
+		<field name="name">Ortíz</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">11</field>
+		<field name="name">SanJosédeGuaribe</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">11</field>
+		<field name="name">SanJuandeLosMorros</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">11</field>
+		<field name="name">SanRafaeldeLaya</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">11</field>
+		<field name="name">SantaMaríadeIpire</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">11</field>
+		<field name="name">Tucupido</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">11</field>
+		<field name="name">ValledeLaPascua</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">11</field>
+		<field name="name">Zaraza</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">AguadaGrande</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">Atarigua</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">Barquisimeto</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">Bobare</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">Cabudare</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">Carora</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">Cubiro</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">Cují</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">Duaca</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">ElManzano</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">ElTocuyo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">Guaríco</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">HumocaroAlto</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">HumocaroBajo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">LaMiel</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">Moroturo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">Quíbor</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">RíoClaro</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">Sanare</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">SantaInés</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">Sarare</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">Siquisique</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">12</field>
+		<field name="name">Tintorero</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">ApartaderosMérida</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">Arapuey</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">Bailadores</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">CajaSeca</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">Canaguá</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">Chachopo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">Chiguara</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">Ejido</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">ElVigía</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">LaAzulita</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">LaPlaya</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">LagunillasMérida</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">Mérida</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">MesadeBolívar</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">Mucuchíes</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">Mucujepe</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">Mucuruba</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">NuevaBolivia</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">Palmarito</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">PuebloLlano</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">SantaCruzdeMora</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">SantaElenadeArenales</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">SantoDomingo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">Tabáy</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">Timotes</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">Torondoy</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">Tovar</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">Tucani</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">13</field>
+		<field name="name">Zea</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">Araguita</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">Carrizal</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">Caucagua</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">ChaguaramasMiranda</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">Charallave</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">Chirimena</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">Chuspa</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">Cúa</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">Cupira</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">Curiepe</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">ElGuapo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">ElJarillo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">FilasdeMariche</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">Guarenas</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">Guatire</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">Higuerote</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">LosAnaucos</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">LosTeques</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">OcumaredelTuy</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">Panaquire</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">Paracotos</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">RíoChico</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">SanAntoniodeLosAltos</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">SanDiegodeLosAltos</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">SanFernandodelGuapo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">SanFranciscodeYare</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">SanJosédeLosAltos</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">SanJosédeRíoChico</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">SanPedrodeLosAltos</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">SantaLucía</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">SantaTeresa</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">TacariguadeLaLaguna</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">TacariguadeMamporal</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">Tácata</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">14</field>
+		<field name="name">Turumo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">Aguasay</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">AraguadeMaturín</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">BarrancasdelOrinoco</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">CaicaradeMaturín</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">Caripe</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">Caripito</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">Chaguaramal</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">ChaguaramasMonagas</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">ElFurrial</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">ElTejero</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">Jusepín</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">LaToscana</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">Maturín</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">Miraflores</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">PuntadeMata</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">Quiriquire</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">SanAntoniodeMaturín</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">SanVicenteMonagas</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">SantaBárbara</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">Temblador</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">Teresen</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">15</field>
+		<field name="name">Uracoa</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">16</field>
+		<field name="name">Altagracia</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">16</field>
+		<field name="name">BocadePozo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">16</field>
+		<field name="name">BocadeRío</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">16</field>
+		<field name="name">ElEspinal</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">16</field>
+		<field name="name">ElValledelEspírituSanto</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">16</field>
+		<field name="name">ElYaque</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">16</field>
+		<field name="name">Juangriego</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">16</field>
+		<field name="name">LaAsunción</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">16</field>
+		<field name="name">LaGuardia</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">16</field>
+		<field name="name">Pampatar</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">16</field>
+		<field name="name">Porlamar</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">16</field>
+		<field name="name">PuertoFermín</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">16</field>
+		<field name="name">PuntadePiedras</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">16</field>
+		<field name="name">SanFranciscodeMacanao</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">16</field>
+		<field name="name">SanJuanBautista</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">16</field>
+		<field name="name">SanPedrodeCoche</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">16</field>
+		<field name="name">SantaAnadeNuevaEsparta</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">16</field>
+		<field name="name">VillaRosa</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">17</field>
+		<field name="name">Acarigua</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">17</field>
+		<field name="name">AguaBlanca</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">17</field>
+		<field name="name">Araure</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">17</field>
+		<field name="name">Biscucuy</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">17</field>
+		<field name="name">Boconoito</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">17</field>
+		<field name="name">CampoElías</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">17</field>
+		<field name="name">Chabasquén</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">17</field>
+		<field name="name">Guanare</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">17</field>
+		<field name="name">Guanarito</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">17</field>
+		<field name="name">LaAparición</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">17</field>
+		<field name="name">LaMisión</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">17</field>
+		<field name="name">MesadeCavacas</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">17</field>
+		<field name="name">Ospino</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">17</field>
+		<field name="name">Papelón</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">17</field>
+		<field name="name">Payara</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">17</field>
+		<field name="name">Pimpinela</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">17</field>
+		<field name="name">PíritudePortuguesa</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">17</field>
+		<field name="name">SanRafaeldeOnoto</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">17</field>
+		<field name="name">SantaRosalía</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">17</field>
+		<field name="name">Turén</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">AltosdeSucre</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">Araya</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">Cariaco</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">Carúpano</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">Casanay</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">Cumaná</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">Cumanacoa</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">ElMorroPuertoSanto</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">ElPilar</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">ElPoblado</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">Guaca</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">Guiria</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">Irapa</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">Manicuare</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">Mariguitar</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">RíoCaribe</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">SanAntoniodelGolfo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">SanJosédeAerocuar</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">SanVicentedeSucre</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">SantaFedeSucre</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">Tunapuy</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">Yaguaraparo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">18</field>
+		<field name="name">Yoco</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">Abejales</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">Borota</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">Bramon</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">Capacho</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">Colón</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">Coloncito</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">Cordero</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">ElCobre</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">ElPinal</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">Independencia</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">LaFría</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">LaGrita</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">LaPedrera</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">LaTendida</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">LasDelicias</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">LasHernández</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">Lobatera</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">Michelena</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">Palmira</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">Pregonero</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">Queniquea</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">Rubio</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">SanAntoniodelTachira</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">SanCristobal</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">SanJosédeBolívar</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">SanJosecito</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">SanPedrodelRío</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">SantaAnaTáchira</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">Seboruco</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">Táriba</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">Umuquena</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">19</field>
+		<field name="name">Ureña</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">Batatal</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">Betijoque</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">Boconó</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">Carache</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">Chejende</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">Cuicas</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">ElDividive</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">ElJaguito</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">Escuque</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">Isnotú</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">Jajó</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">LaCeiba</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">LaConcepcióndeTrujllo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">LaMesadeEsnujaque</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">LaPuerta</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">LaQuebrada</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">MendozaFría</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">MesetadeChimpire</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">Monay</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">Motatán</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">Pampán</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">Pampanito</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">SabanadeMendoza</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">SanLázaro</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">SantaAnadeTrujillo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">Tostós</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">Trujillo</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">20</field>
+		<field name="name">Valera</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">21</field>
+		<field name="name">Carayaca</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">21</field>
+		<field name="name">Litoral</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">25</field>
+		<field name="name">ArchipiélagoLosRoques</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">22</field>
+		<field name="name">Aroa</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">22</field>
+		<field name="name">Boraure</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">22</field>
+		<field name="name">CampoElíasdeYaracuy</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">22</field>
+		<field name="name">Chivacoa</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">22</field>
+		<field name="name">Cocorote</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">22</field>
+		<field name="name">Farriar</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">22</field>
+		<field name="name">Guama</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">22</field>
+		<field name="name">Marín</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">22</field>
+		<field name="name">Nirgua</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">22</field>
+		<field name="name">SabanadeParra</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">22</field>
+		<field name="name">Salom</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">22</field>
+		<field name="name">SanFelipe</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">22</field>
+		<field name="name">SanPablodeYaracuy</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">22</field>
+		<field name="name">Urachiche</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">22</field>
+		<field name="name">Yaritagua</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">22</field>
+		<field name="name">Yumare</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">Bachaquero</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">Bobures</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">Cabimas</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">CampoConcepción</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">CampoMara</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">CampoRojo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">Carrasquero</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">Casigua</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">Chiquinquirá</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">CiudadOjeda</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">ElBatey</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">ElCarmelo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">ElChivo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">ElGuayabo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">ElMene</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">ElVenado</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">Encontrados</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">Gibraltar</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">IsladeToas</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">LaConcepcióndelZulia</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">LaPaz</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">LaSierrita</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">LagunillasdelZulia</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">LasPiedrasdePerijá</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">LosCortijos</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">Machiques</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">Maracaibo</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">MeneGrande</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">Palmarejo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">Paraguaipoa</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">Potrerito</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">PuebloNuevodelZulia</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">PuertosdeAltagracia</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">PuntaGorda</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">SabanetadePalma</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">SanFrancisco</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">SanJosédePerijá</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">SanRafaeldelMoján</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">SanTimoteo</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">SantaBárbaraDelZulia</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">SantaCruzdeMara</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">SantaCruzdelZulia</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">SantaRita</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">Sinamaica</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">Tamare</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">TíaJuana</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">23</field>
+		<field name="name">VilladelRosario</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">21</field>
+		<field name="name">LaGuaira</field>
+		<field name="is_capital">True</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">21</field>
+		<field name="name">CatiaLaMar</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">21</field>
+		<field name="name">Macuto</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">21</field>
+		<field name="name">Naiguatá</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">25</field>
+		<field name="name">ArchipiélagoLosMonjes</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">25</field>
+		<field name="name">IslaLaTortugayCayosadyacentes</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">25</field>
+		<field name="name">IslaLaSola</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">25</field>
+		<field name="name">IslasLosTestigos</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">25</field>
+		<field name="name">IslasLosFrailes</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">25</field>
+		<field name="name">IslaLaOrchila</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">25</field>
+		<field name="name">ArchipiélagoLasAves</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">25</field>
+		<field name="name">IsladeAves</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">25</field>
+		<field name="name">IslaLaBlanquilla</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">25</field>
+		<field name="name">IsladePatos</field>
+		<field name="is_capital">False</field>
+	</record> 
+	<record model="res.country.city">
+		<field name="res_country_state_id">25</field>
+		<field name="name">IslasLosHermanos</field>
+		<field name="is_capital">False</field>
+	</record> 
+
+    </data>
+</odoo>

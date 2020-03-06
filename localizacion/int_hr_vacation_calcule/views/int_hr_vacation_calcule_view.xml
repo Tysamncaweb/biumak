@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="hr_vacation_calcule_view_inherit" model="ir.ui.view">
+            <field name="name">hr.vacation.calcule.view.inherit</field>
+            <field name="model">hr.holidays</field>
+            <field name="inherit_id" ref="hr_holidays.edit_holiday_new"/>
+            <field name="arch" type="xml">
+               <xpath expr="//field[@name='holiday_status_id']" position="after">
+                           <field name="vacation" string="¿Ausencia Vacaciones?" widget="toggle_button"/>
+                           <field name="bono_vacacional" string="Anticipo Bono Vacacional" widget="toggle_button"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="hr_vacation_calcule_contract_view_inherit" model="ir.ui.view">
+            <field name="name">hr.dvacation.calcule.contract.view.inherit</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract_add_fields.hr_contract_view_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@name='asignaciones_deducciones']" position="after">
+                    <page string="Control Días de Vacaciones">
+                        <group col="2">
+                            <group string="Control Días de Vacaciones">
+                               <label for= "control_vacaciones_check" string="Días correspondientes por tiempo de servicio"/>
+                                      <div class="address_format">
+                                        <field name="acumulado" style="width: 15%%" readonly="1"/>
+                                      </div>
+                               <label for= "control_vacaciones_check" string="Días Totales disfrutados"/>
+                                      <div class="address_format">
+                                        <field name="solicitado" style="width: 15%%" readonly="1"/>
+                                      </div>
+                               <label for= "control_vacaciones_check" string="Días restantes disponibles a disfrutar"/>
+                                      <div class="address_format">
+                                        <field name="dias_totales" style="width: 15%%" readonly="1"/>
+                                      </div>
+                               <button name="calculo_dias_vacaciones" string="Calcular" type="object" class="oe_highlight" />
+
+                            </group>
+                            <group string="Configuración para Cálculo de las Vacaciones">
+                                <label for="comision_check" string="Gana Comisión?"/>
+                                     <div class="address_format">
+                                        <field name="comision_check"/>
+                                      </div>
+                                <label for="salary_assignment_check" string="Adicionales por Contrato"/>
+                                     <div class="address_format">
+                                        <field name="salary_assignment_check" style="width: 15%%"/>
+                                        <field name="salary_assignment_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('salary_assignment_check', '!=', True)]}"/>
+                                      </div>
+                                <label for="otras_asig_check" string="Otras Asignaciones"/>
+                                     <div class="address_format">
+                                        <field name="otras_asig_check" style="width: 15%%"/>
+                                        <field name="otras_asig_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('otras_asig_check', '!=', True)]}"/>
+                                      </div>
+                                <label for="otras_ded_check" string="Otras Deducciones"/>
+                                     <div class="address_format">
+                                        <field name="otras_ded_check" style="width: 15%%"/>
+                                        <field name="otras_ded_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('otras_ded_check', '!=', True)]}"/>
+                                      </div>
+                            </group>
+                       </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
+

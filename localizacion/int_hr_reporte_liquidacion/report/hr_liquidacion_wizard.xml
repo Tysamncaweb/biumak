@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record id="view_hr_liquidacion" model="ir.ui.view">
+            <field name="name">hr.liquidacion.form</field>
+            <field name="model">hr.liquidacion</field>
+            <field name="arch" type="xml">
+                <form string="Leaves Summary">
+                    <group >
+                        <field name="gerente"  style="width: 35%%"/>
+
+                    </group>
+                    <footer>
+                        <button name="print_report" string="Imprimir" type="object" class="btn-primary"/>
+                        <button string="Cancelar" class="btn-default" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_hr_liquidacion" model="ir.actions.act_window">
+            <field name="name">Reporte de Liquidación</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.liquidacion</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="hr_payroll.model_hr_payslip" />
+            <field name="binding_type">report</field>
+        </record>
+</odoo>

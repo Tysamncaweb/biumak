@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="hr_contract_view_anticipo" model="ir.ui.view">
+            <field name="name">hr.contract.view.anticipo</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract_add_fields.hr_contract_view_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@name='asignaciones_deducciones']" position="after">
+                    <page string="Anticipos">
+                        <group>
+                            <!--ANTICIPO DE UTILIDADES-->
+                            <group name="anticipo_utilidades" string="Anticipo de Utilidades">
+                                <field name="total_anticipo" string="Total Monto Solicitado"/>
+                                <field name="ultimo_anticipo" string="Monto Último Anticipo"/>
+                            </group>
+                            <!--PERIODO DE ANTICIPOS-->
+                            <group name="periodo_anticipo" string="Tipo de Nómina Especial">
+                                <field name="struct_id_anticipo" string="Tipo de Nómina" readonly="1" force_save="1" />
+                                <label for="start_date" string="Período de Nómina" readonly="1" force_save="1"/>
+                                 <div>
+                                       <field name="start_date" class="oe_inline" readonly="1" force_save="1" /> - <field name="end_date" class="oe_inline" readonly="1" force_save="1"/>
+                                 </div>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

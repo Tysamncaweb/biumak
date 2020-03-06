@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="res_users_allowed_form_view" model="ir.ui.view">
+        <field name="name">res.users.allowed.form.view</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="point_of_sale.res_users_form_view" />
+        <field name="arch" type="xml">
+            <field name="barcode" position="before">
+                <field name="pos_config_id">
+                  <tree>
+                    <field name="name"/>
+                  </tree>  
+                </field>
+            </field>
+        </field>
+    </record>
+</odoo>

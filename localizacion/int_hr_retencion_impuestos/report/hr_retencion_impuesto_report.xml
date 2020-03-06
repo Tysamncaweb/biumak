@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+        <record model="report.paperformat" id="paperformat_retencion_report">
+
+        <field name="name">paperformat.retencion.report</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">30</field>
+        <field name="margin_right">7</field>
+        <field name="margin_bottom">25</field>
+        <field name="margin_left">7</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">30</field>
+        <field name="dpi">90</field>
+
+    </record>
+
+    <template id="template_retencion_report" >
+        <div class="page">
+            <t t-foreach="docs" t-as="doc">
+                <div class="article">
+                    <h4 class="text-center"><b>ARC-V</b></h4>
+                    <h5 class="text-center"><b>COMPROBANTE DE RETENCIÓN DE IMPUESTO SOBRE LA RENTA</b></h5>
+                    <h5 class="text-center"><b>POR CONCEPTO DE SUELDOS,SALARIOS Y DEMÁS REMUNERACIONES SIMILARES</b></h5>
+
+                <table style="width:100%;">
+                    <tr  style="border:1px solid black; background-color:#999999;">
+                        <td colspan="2" style="width:100%;"><p class="text-center"> <b>PERIODO FISCAL</b></p></td>
+                    </tr>
+                    <tr>
+                        <td style="width:50%;border:1px solid black;"><p class="text-center"><b>DESDE</b>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; <span t-esc="doc['date_from']"/></p></td>
+                        <td style="width:50%;border:1px solid black;"><p class="text-center"><b>HASTA</b>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; <span t-esc="doc['date_to']"/></p></td>
+                    </tr>
+                </table>
+                    <table style="width:100%;">
+                           <tr  style="border:1px solid black; background-color:#999999;">
+                        <td colspan="3" style="width:100%;"><p class="text-center"> <b>AGENTE DE RETENCIÓN</b></p></td>
+                    </tr>
+                    <tr>
+                        <td style="width:70%;border:1px solid black;"><p class="text-center"><b>RAZON SOCIAL</b></p></td>
+                        <td colspan="2" style="width:30%;border:1px solid black;"><p class="text-center"><b>RIF</b></p></td>
+                    </tr>
+                    <tr>
+                        <td style="width:70%;border:1px solid black;"><p class="text-center"><span t-esc="doc['agente_razon']"/></p></td>
+                        <td colspan="2" style="width:30%;border:1px solid black;"><p class="text-center"><span t-esc="doc['agente_rif']"/></p></td>
+                    </tr>
+                        <tr>
+                            <td colspan="3" style="width:100%;border:1px solid black;"><p class="text-center"> <b>DIRECCIÓN FISCAL</b></p></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="width:100%;border:1px solid black;"><p class="text-center"><span t-esc="doc['agente_direccion']"/></p></td>
+                        </tr>
+                        <tr  style="border:1px solid black; background-color:#999999;">
+                            <td colspan="3" style="width:100%;border:1px solid black;"><p class="text-center"> <b>BENEFICIARIO DE LAS REMUNERACIONES</b></p></td>
+                        </tr>
+                        <tr>
+                            <td  style="width:70%;border:1px solid black;"><p class="text-center"> <b>NOMBRE</b></p></td>
+                            <td  style="width:15%;border:1px solid black;"><p class="text-center"> <b>RIF</b></p></td>
+                            <td  style="width:15%;border:1px solid black;"><p class="text-center"> <b>CEDULA DE IDENTIDAD</b></p></td>
+
+                        </tr>
+                        <tr>
+                            <td  style="width:70%;border:1px solid black;"><p class="text-center"><span t-esc="doc['beneficiario_nombre']"/></p></td>
+                            <td  style="width:15%;border:1px solid black;"><p class="text-center"> <span t-esc="doc['beneficiario_rif']"/></p></td>
+                            <td  style="width:15%;border:1px solid black;"><p class="text-center"> V-<span t-esc="doc['beneficiario_cedula']"/></p></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="width:100%;border:1px solid black;"><p class="text-center"> <b>DIRECCIÓN FISCAL</b></p></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="width:100%;border:1px solid black;"><p class="text-center"><span t-esc="doc['beneficiario_direccion']"/></p></td>
+                        </tr>
+                        <tr  style="border:1px solid black; background-color:#999999;">
+                            <td colspan="3" style="width:100%;border:1px solid black;"><p class="text-center"> <b>REMUNERACIONES PAGADAS E IMPUESTO RETENIDA</b></p></td>
+                        </tr>
+                    </table>
+                    <table style="width:100%;">
+                        <tr>
+                            <td style="width:17,5%;border:1px solid black;"><p class="text-center"><b>MES</b></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><b>REMUNERACIONES PAGADAS</b></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><b>PORCENTAJE DE RETENCIÓN</b></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><b>IMPUESTO RETENIDO</b></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><b>REMUNERACIONES ACUMULADA</b></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><b>IMPUESTO ACUMULADO</b></p></td>
+                        </tr>
+                        <t t-foreach="docs2" t-as="doc2">
+                            <tr>
+                            <td style="width:17,5%;border:1px solid black;"><p class="text-center">ENERO</p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['salario_enero']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['porcentaje_enero']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['impuesto_enero']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['remuneracion_enero']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['acumulado_enero']"/></p></td>
+                        </tr>
+                            <tr>
+                            <td style="width:17,5%;border:1px solid black;"><p class="text-center">FEBRERO</p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['salario_febrero']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['porcentaje_febrero']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['impuesto_febrero']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['remuneracion_febrero']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['acumulado_febrero']"/></p></td>
+                        </tr>
+                            <tr>
+                            <td style="width:17,5%;border:1px solid black;"><p class="text-center">MARZO</p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['salario_marzo']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['porcentaje_marzo']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['impuesto_marzo']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['remuneracion_marzo']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['acumulado_marzo']"/></p></td>
+                        </tr>
+                            <tr>
+                            <td style="width:17,5%;border:1px solid black;"><p class="text-center">ABRIL</p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['salario_abril']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['porcentaje_abril']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['impuesto_abril']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['remuneracion_abril']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['acumulado_abril']"/></p></td>
+                        </tr>
+                            <tr>
+                            <td style="width:17,5%;border:1px solid black;"><p class="text-center">MAYO</p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['salario_mayo']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['porcentaje_mayo']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['impuesto_mayo']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['remuneracion_mayo']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['acumulado_mayo']"/></p></td>
+                        </tr>
+                            <tr>
+                            <td style="width:17,5%;border:1px solid black;"><p class="text-center">JUNIO</p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['salario_junio']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['porcentaje_junio']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['impuesto_junio']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['remuneracion_junio']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['acumulado_junio']"/></p></td>
+                        </tr>
+                            <tr>
+                            <td style="width:17,5%;border:1px solid black;"><p class="text-center">JULIO</p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['salario_julio']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['porcentaje_julio']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['impuesto_julio']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['remuneracion_julio']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['acumulado_julio']"/></p></td>
+                        </tr>
+                            <tr>
+                            <td style="width:17,5%;border:1px solid black;"><p class="text-center">AGOSTO</p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['salario_agosto']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['porcentaje_agosto']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['impuesto_agosto']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['remuneracion_agosto']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['acumulado_agosto']"/></p></td>
+                        </tr>
+                            <tr>
+                            <td style="width:17,5%;border:1px solid black;"><p class="text-center">SEPTIEMBRE</p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['salario_septiembre']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['porcentaje_septiembre']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['impuesto_septiembre']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['remuneracion_septiembre']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['acumulado_septiembre']"/></p></td>
+                        </tr>
+                            <tr>
+                            <td style="width:17,5%;border:1px solid black;"><p class="text-center">OCTUBRE</p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['salario_octubre']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['porcentaje_octubre']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['impuesto_octubre']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['remuneracion_octubre']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['acumulado_octubre']"/></p></td>
+                        </tr>
+                            <tr>
+                            <td style="width:17,5%;border:1px solid black;"><p class="text-center">NOVIEMBRE</p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['salario_noviembre']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['porcentaje_noviembre']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['impuesto_noviembre']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['remuneracion_noviembre']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['acumulado_noviembre']"/></p></td>
+                        </tr>
+                            <tr>
+                            <td style="width:17,5%;border:1px solid black;"><p class="text-center">DICIEMBRE</p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['salario_diciembre']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['porcentaje_diciembre']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['impuesto_diciembre']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['remuneracion_diciembre']"/></p></td>
+                            <td style="width:16,5%;border:1px solid black;"><p class="text-center"><span t-esc="doc2['acumulado_diciembre']"/></p></td>
+                        </tr>
+
+
+
+                        </t>
+
+                    </table>
+                </div>
+            </t>
+         </div>
+    </template>
+
+    <report
+            id="action_hr_report_retencion_reporte"
+            string="retencion de Trabajo"
+            model="hr.retencion.report"
+            report_type="qweb-pdf"
+            name="int_hr_retencion_impuestos.template_retencion_report"
+            file="int_hr_retencion_impuestos.template_retencion_report"
+            paperformat="paperformat_retencion_report"
+    />
+</odoo>

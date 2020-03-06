@@ -1,0 +1,141 @@
+<odoo>
+	<data>
+         <record model="ir.ui.view" id="purchase_order_form_inherit">
+             <field name="name">purchase.order.form.inherit</field>
+             <field name="model">purchase.order</field>
+             <field name="inherit_id" ref="purchase.purchase_order_form"/>
+             <field name="arch" type="xml">
+                 <xpath expr="//form/sheet/group/group/field[@name='partner_id']" position="after" >
+                     <field name="Rif_prueba"/>
+                     <field name="phone" widget="phone"/>
+                     <label string="Dirección Fiscal"/>
+                     <div class="o_address_format">
+                        <field name="adress_purchase" placeholder="Dirección completa"/><br/>
+                        <field name="city_purchase" placeholder="Ciudad"/><br/>
+                         <field name="state_purchase" placeholder="Estado"/><br/>
+                         <field name="country_purchase" placeholder="País"/>
+                     </div>
+                 </xpath>
+                 <xpath expr="//form/sheet/notebook/page/field/tree" position="replace">
+                            <tree string="Productos" editable="bottom">
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="name" invisible="1" required="False"/>
+                                    <field name="state" invisible="1"/>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="num_product" invisible="0" string="Nro."/>
+                                    <field name="product_id" string="Cod. producto / Descripción" attrs="{'readonly': [('state', 'in', ('purchase', 'to approve','done', 'cancel'))]}" context="{'partner_id':parent.partner_id, 'quantity':product_qty,'uom':product_uom, 'company_id': parent.company_id}" force_save="1"/>
+                                    <field name="product_qty" invisible="0"/>
+                                    <field name="product_uom" groups="product.group_uom" attrs="{'readonly': [('state', 'in', ('purchase', 'done', 'cancel'))]}" force_save="1"/>
+                                    <field name="price_unit" required="0"/>
+				    <field name="taxes_id" />
+                                    <field name="taxes_id" widget="many2many_tags" domain="[('type_tax_use','=','purchase')]" context="{'default_type_tax_use': 'purchase'}" options="{'no_create': True}" invisible="1" />
+                                    <field name="price_subtotal" widget="monetary" />
+                                    <field name="price_total" widget="monetary" string="Precio total"/>
+                            </tree>
+                  </xpath>
+
+                  <xpath expr="//form/sheet/notebook/page/group/div" position="replace">
+                        <div class="oe_subtotal_footer_separator oe_inline">
+                                    <label for="amount_total"  string='Monto Total'/>
+                        </div>
+                  </xpath>
+                  <xpath expr="//form/sheet/notebook/page/field[@name='notes']" position="replace">
+                        <field name="notes" class="oe_inline" placeholder="Define your terms and conditions ..."/>
+                            <div class="oe_clear"/>
+                  </xpath>
+                 <xpath expr="//group[2]/field[@name='date_order']" position="attributes">
+                        <attribute name='string'> Fecha de Elaboración </attribute>
+                  </xpath>
+                 <xpath expr="//h1" position="replace">
+                        <h1> Nuevo </h1>
+                  </xpath>
+             </field>
+         </record>
+
+
+        <record id="purchase_order_tree_inherit" model="ir.ui.view">
+            <field name="name">purchase.order.tree.inherit</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[@name='partner_id']" position="after" >
+                    <field name="Rif_prueba"/>
+                </xpath>
+            </field>
+        </record>
+
+
+           <record model="ir.ui.view" id="sale_order_form_inherit">
+             <field name="name">sale.order.form.inherit</field>
+             <field name="model">sale.order</field>
+             <field name="inherit_id" ref="sale.view_order_form"/>
+             <field name="arch" type="xml">
+                  <xpath expr="//field[@name='order_line']/tree/field[@name='layout_category_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                 <xpath expr="//field[@name='order_line']/tree/field[@name='name']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='order_line']/tree/field[@name='analytic_tag_ids']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="before">
+                   <field name="num_product_sale" string="Nro."/>
+                </xpath>
+                 <xpath expr="//field[@name='order_line']/tree/field[@name='product_uom']" position="after">
+                    <field name="num_lot" string="Nro. de Lote" invisible="1"/>
+                 </xpath>
+                 <xpath expr="//field[@name='order_line']/tree/field[@name='price_unit']" position="attributes">
+                    <attribute name="required">0</attribute>
+                 </xpath>
+                 <xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="attributes">
+                    <attribute name='string'> Cod. producto / Descripción </attribute>
+                 </xpath>
+                 <xpath expr="//field[@name='order_line']/tree/field[@name='product_uom']" position="attributes">
+                    <attribute name='string'> Unidad de medida del producto </attribute>
+                 </xpath>
+                 <xpath expr="//field[@name='order_line']/tree/field[@name='product_uom_qty']" position="attributes">
+                    <attribute name='string'> Cantidad </attribute>
+                 </xpath>
+
+             </field>
+           </record>
+
+
+
+          <record model="ir.ui.view" id="view_partner_short_form">
+             <field name="name">res.partner.form</field>
+             <field name="model">res.partner</field>
+             <field name="inherit_id" ref="base.view_partner_form"/>
+             <field name="arch" type="xml">
+                 <xpath expr="//field[@name='vat']" position="attributes">
+                    <attribute name='string'> RIF </attribute>
+                 </xpath>
+                 <xpath expr="//sheet/group/group/div" position="replace">
+                            <div class="o_address_format">
+                                <div class="oe_edit_only">
+                                    <button name="open_parent" type="object" string="(edit)" class="oe_link"
+                                        attrs="{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'contact')]}"/>
+                                </div>
+                                <field name="street" placeholder="Street..." class="o_address_street"
+                                    attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)], 'required': [('international_supplier', '!=', True)]}" />
+                                <field name="street2" placeholder="Street 2..." class="o_address_street"
+                                    attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)],'required': [('international_supplier', '!=', True)]}" />
+                                <field name="city" placeholder="City" class="o_address_city"
+                                    attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)], 'required': [('international_supplier', '!=', True)]}"/>
+                                <field name="state_id" class="o_address_state" placeholder="State" options='{"no_open": True}'
+                                    attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)], 'required': [('international_supplier', '!=', True)]}" context="{'country_id': country_id, 'zip': zip}"/>
+                                <field name="zip" placeholder="ZIP" class="o_address_zip"
+                                    attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)], 'required': [('international_supplier', '!=', True)]}"/>
+                                <field name="country_id" placeholder="Country" class="o_address_country" options='{"no_open": True, "no_create": True}'
+                                    attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" required="1"/>
+                            </div>
+                     </xpath>
+                     <xpath expr="//sheet/group/group[1]/label[@for='street']" position="replace">
+                            <label for="street" string="Dirección Fiscal"/>
+                     </xpath>
+             </field>
+          </record>
+
+	</data>
+</odoo>
