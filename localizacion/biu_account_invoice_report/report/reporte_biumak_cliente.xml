@@ -405,20 +405,20 @@
                              <t t-if="compañia == 'Biumak Pharmaceuticals, C.A.'">
                                  <table style="width:100%;">
                                      <tr>
-                                        <td colspan="5" ><p class="text-left">&amp;nbsp;</p></td>
-                                        <td colspan="2" class="text-center" style=" vertical-align: middle; border: 1px solid #000000; "> <b>NOTA DE CREDITO</b> </td>
+                                        <td colspan="4" ><p class="text-left">&amp;nbsp;</p></td>
+                                        <td colspan="3" class="text-center" style=" vertical-align: middle; border: 1px solid #000000; "> <b>NOTA DE CREDITO</b> </td>
                                     </tr>
                                     <tr>
-                                        <td colspan="5" ><p class="text-left">&amp;nbsp;</p></td>
-                                        <td colspan="2" class="text-center" style=" vertical-align: middle; border: 1px solid #000000; "> <span t-esc="info['n_factura']"/> </td>
+                                        <td colspan="4" ><p class="text-left">&amp;nbsp;</p></td>
+                                        <td colspan="3" class="text-center" style=" vertical-align: middle; border: 1px solid #000000; "> <span t-esc="info['n_factura']"/> </td>
                                     </tr>
                                     <tr>
-                                        <td colspan="5" ><p class="text-left">&amp;nbsp;</p></td>
-                                        <td colspan="2" class="text-left" style=" vertical-align: middle; border: 1px solid #000000;border-bottom:0px"> <b>&amp;nbsp;Fecha: </b><span t-esc="info['fecha']"/> </td>
+                                        <td colspan="4" ><p class="text-left">&amp;nbsp;</p></td>
+                                        <td colspan="3" class="text-left" style=" vertical-align: middle; border: 1px solid #000000;border-bottom:0px"> <b>&amp;nbsp;Fecha: </b><span t-esc="info['fecha']"/> </td>
                                     </tr>
                                     <tr>
-                                        <td colspan="5" ><p class="text-left">&amp;nbsp;</p></td>
-                                        <td colspan="2" class="text-left" style=" vertical-align: middle; border: 1px solid #000000; "> <b>&amp;nbsp;Factura que afecta: &amp;nbsp;&amp;nbsp;</b><span t-esc="origin_number"/> </td></tr>
+                                        <td colspan="4" ><p class="text-left">&amp;nbsp;</p></td>
+                                        <td colspan="3" class="text-left" style=" vertical-align: middle; border: 1px solid #000000; "> <b>&amp;nbsp;Factura que afecta: &amp;nbsp;&amp;nbsp;</b><span t-esc="origin_number"/> </td></tr>
 
                                     <tr><td>&amp;nbsp;</td></tr>
                                     <tr><td>&amp;nbsp;</td></tr>
