@@ -1,2 +1,2 @@
 # Biumak
-Proyecto para Biumak Farmaceutica
+Proyecto para Biumak Farmacéutica
