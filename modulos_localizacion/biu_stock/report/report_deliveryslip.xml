@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="deliveryslip_layout_headers_reception">
+        <div class="header">
+            <table align="left" style="width:30%; height:120px;margin-top:25px;">
+                <tr>
+                    <td style="width:20%;">
+                        <img t-att-src="'data:image/png;base64,%s' %(to_text(res_company.logo))" style="width:220px; text-align:center; height:120px; margin-top:0px; margin-bottom:0px;"/>
+                    </td>
+                </tr>
+            </table>
+            <table align="right" style="width:70%; height:120px;margin-top:29px;">
+                <tr style="height:50%;">
+                    <td colspan="2" style="width:100%;">
+                        <h4><b>ORDEN DE RECEPCIÓN DE PRODUCTOS</b></h4>
+                    </td>
+                </tr>
+                <tr style ="height:50%;">
+                    <td style="width:30%;"></td>
+                    <td style="width:70%;">
+                        <p style="font-size:16px">
+                            <b>Fecha: </b> <span t-field="o.date" t-field-options = '{"format": "d/M/Y"}'/><br/>
+                            <b>N° de Control: </b> <span t-field="o.name"/><br/>
+                            <b>Documento de Origen: </b> <span t-field="o.origin"/><br/>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </template>
+
+    <template id="deliveryslip_layout_headers_order">
+        <div class="header">
+            <table align="left" style="width:30%; height:120px;margin-top:25px;">
+                <tr>
+                    <td style="width:20%;">
+                        <img t-att-src="'data:image/png;base64,%s' %(to_text(res_company.logo))" style="width:220px; text-align:center; height:120px; margin-top:0px; margin-bottom:0px;"/>
+                    </td>
+                </tr>
+            </table>
+            <table align="right" style="width:70%; height:120px;margin-top:29px;">
+                <tr style="height:50%;">
+                    <td colspan="2" style="width:100%;">
+                        <h4><b>ORDEN DE ENTREGA</b></h4>
+                    </td>
+                </tr>
+                <tr style ="height:50%;">
+                    <td style="width:30%;"></td>
+                    <td style="width:70%;">
+                        <p style="font-size:16px">
+                            <b>Fecha: </b> <span t-field="o.date" t-field-options = '{"format": "d/M/Y"}'/><br/>
+                            <b>N° de Control: </b> <span t-field="o.name"/><br/>
+                            <b>Documento de Origen: </b> <span t-field="o.origin"/><br/>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </template>
+
+    <template id="deliveryslip_layout_footer">
+        <div class="footer" style="height:280px;">
+            <table style="width:100%;border-collapse: collapse; height:250px;">
+                    <tbody>
+                        <tr style="border:1px solid black; height:12%;">
+                            <td colspan="2" style="width:50%;text-align:center;vertical-align: middle;border-right:1px solid black;font-size:16px;"><b>ENTREGA</b></td>
+                            <td colspan="2" style="width:50%;text-align:center;vertical-align: middle;font-size:16px;"><b>RECIBE</b></td>
+                        </tr>
+                        <tr style="border-right:1px solid black; border-left:1px solid black;height:15%;border-bottom:1px solid black;">
+                            <td style="width:15%;text-align:left;vertical-align: middle;border-right:1px solid black;font-size:16px;">&amp;nbsp;Nombre:</td>
+                            <td style="width:35%;border-right:1px solid black;">&amp;nbsp;</td>
+                            <td style="width:15%;text-align:left;vertical-align: middle;border-right:1px solid black;font-size:16px;">&amp;nbsp;Nombre:</td>
+                            <td style="width:35%;">&amp;nbsp;</td>
+                        </tr>
+                        <tr style="border-right:1px solid black; border-left:1px solid black;height:15%;border-bottom:1px solid black;">
+                            <td style="width:15%;text-align:left;vertical-align: middle;border-right:1px solid black;font-size:16px;">&amp;nbsp;Firma:</td>
+                            <td style="width:35%;border-right:1px solid black;">&amp;nbsp;</td>
+                            <td style="width:15%;text-align:left;vertical-align: middle;border-right:1px solid black;font-size:16px;">&amp;nbsp;Firma:</td>
+                            <td style="width:35%;">&amp;nbsp;</td>
+                        </tr>
+                        <tr style="border-right:1px solid black; border-left:1px solid black;height:15%;border-bottom:1px solid black;">
+                            <td style="width:15%;text-align:left;vertical-align: middle;border-right:1px solid black;font-size:16px;">&amp;nbsp;Fecha:</td>
+                            <td style="width:35%;border-right:1px solid black;">&amp;nbsp;</td>
+                            <td style="width:15%;text-align:left;vertical-align: middle;border-right:1px solid black;font-size:16px;;">&amp;nbsp;Fecha:</td>
+                            <td style="width:35%;">&amp;nbsp;</td>
+                        </tr>
+                        <tr style="border-right:1px solid black; border-left:1px solid black;border-bottom:1px solid black;height:43%;">
+                            <td style="width:15%;text-align:left;vertical-align: middle;border-right:1px solid black;font-size:16px;">&amp;nbsp;Sello:</td>
+                            <td style="width:35%;border-right:1px solid black;">&amp;nbsp;</td>
+                            <td style="width:15%;text-align:left;vertical-align: middle;border-right:1px solid black;font-size:16px;">&amp;nbsp;Sello:</td>
+                            <td style="width:35%;">&amp;nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            <br/>
+            <table style="width:100%; height:30px;">
+                <tr>
+                    <td style="width:100%;">
+                        <p style="text-align:center;"><b><span t-field="o.company_id.street"/>, <span t-field="o.company_id.city"/> - <span t-field="o.company_id.country_id.name"/> ZP <span t-field="o.company_id.zip"/>. <br/>
+                        Oficinas (+58-212) <span t-field="o.company_id.phone"/> / 261.41.90 - Email: <span t-field="o.company_id.email"/></b></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </template>
+
+    <template id="report_delivery_reception">
+        <t t-call= "biu_stock.deliveryslip_layout_headers_reception"/>
+        <div class="page">
+            <div class="article">
+                <table style="width:100%; height:110px;margin-left:40px;">
+                    <tbody>
+                        <tr>
+                            <td style="width:20%;" >
+                                <span style="font-size:16px;text-align: ;"><b>Proveedor:</b></span>
+                            </td>
+                            <td style="width:80%;">
+                                <span t-field="o.partner_id.name" style="font-size:16px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:20%;" >
+                                <span style="font-size:16px;text-align: ;"><b>Dirección:</b></span>
+                            </td>
+                            <td style="width:80%;">
+                                <span t-field="o.partner_id.street" style="font-size:16px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:20%;">
+                                <span style="font-size:16px;text-align: left;"><b>R.I.F.:</b></span>
+                            </td>
+                            <td style="width:80%;">
+                                <span t-field="o.partner_id.vat" style="font-size:16px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:20%;">
+                                <span style="font-size:16px;text-align: left;"><b>Teléfono:</b></span>
+                            </td>
+                            <td style="width:20%;">
+                                <span t-field="o.partner_id.phone" style="font-size:16px;"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br/>
+                <table style="width:100%;border-collapse: collapse;">
+                    <thead>
+                        <tr>
+                            <th style="width:5%;text-align:center; vertical-align: middle;border: 1px solid black;font-size:16px;">ITEM</th>
+                            <th style="width:15%;text-align:center;vertical-align: middle;border: 1px solid black;font-size:16px;">Código del Producto</th>
+                            <th style="width:35%;text-align:center;vertical-align: middle;border: 1px solid black;font-size:16px;">Descripción</th>
+                            <th style="width:15%;text-align:center;vertical-align: middle;border: 1px solid black;font-size:16px;">Cantidad Pedida</th>
+                            <th style="width:15%;text-align:center;vertical-align: middle;border: 1px solid black;font-size:16px;">Cantidad Entregada</th>
+                            <th style="width:15%;text-align:center;vertical-align: middle;border: 1px solid black;font-size:16px;">N° de Lote / Serie</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-set="cont" t-value="0"/>
+                            <tr t-foreach="o.move_lines" t-as="lines" style="height:20px;">
+                                <t t-set="total_departmento" t-value="(lines.product_uom_qty - lines.quantity_done)"/>
+                                <t t-set="cont" t-value="cont + 1"/>
+                                <td style="width:5%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-esc="cont"/></td>
+                                <td style="width:15%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-esc="lines.product_id.code"/></td>
+                                <td style="width:35%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-field="lines.product_id.name"/></td>
+                                <td style="width:15%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-esc="'%.0f'% lines.product_uom_qty"/> <span t-field="lines.product_uom"/></td>
+                                <td style="width:15%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-esc="'%.0f'% lines.quantity_done"/> <span t-field="lines.product_uom"/></td>
+                                <td style="width:15%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-esc="lines.move_line_ids.lot_name"/></td>
+                            </tr>
+                    </tbody>
+                </table>
+                <br/>
+            </div>
+        </div>
+        <t t-call= "biu_stock.deliveryslip_layout_footer"/>
+    </template>
+
+    <template id="report_delivery_order">
+        <t t-call= "biu_stock.deliveryslip_layout_headers_order"/>
+        <div class="page">
+            <div class="article">
+                <table style="width:100%; height:110px;margin-left:40px;">
+                    <tbody>
+                        <tr>
+                            <td style="width:20%;" >
+                                <span style="font-size:16px;text-align: ;"><b>Cliente:</b></span>
+                            </td>
+                            <td style="width:80%;">
+                                <span t-field="o.partner_id.name" style="font-size:16px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:20%;" >
+                                <span style="font-size:16px;text-align: ;"><b>Dirección:</b></span>
+                            </td>
+                            <td style="width:80%;">
+                                <span t-field="o.partner_id.street" style="font-size:16px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:20%;">
+                                <span style="font-size:16px;text-align: left;"><b>R.I.F.:</b></span>
+                            </td>
+                            <td style="width:80%;">
+                                <span t-field="o.partner_id.vat" style="font-size:16px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:20%;">
+                                <span style="font-size:16px;text-align: left;"><b>Teléfono:</b></span>
+                            </td>
+                            <td style="width:20%;">
+                                <span t-field="o.partner_id.phone" style="font-size:16px;"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br/>
+                <table style="width:100%;border-collapse: collapse;">
+                    <thead>
+                        <tr>
+                            <th style="width:12,5%;text-align:center;vertical-align: middle;border: 1px solid black;font-size:16px;">Código del Producto</th>
+                            <th style="width:25%;text-align:center;vertical-align: middle;border: 1px solid black;font-size:16px;">Descripción</th>
+                            <th style="width:12%;text-align:center;vertical-align: middle;border: 1px solid black;font-size:16px;">Cantidad Solicitada</th>
+                            <th style="width:12,5%;text-align:center;vertical-align: middle;border: 1px solid black;font-size:16px;">N° de Lote / Serie</th>
+                            <th style="width:12%;text-align:center;vertical-align: middle;border: 1px solid black;font-size:16px;">Cantidad Entregada</th>
+                            <th style="width:13%;text-align:center;vertical-align: middle;border: 1px solid black;font-size:16px;">Precio Unitario</th>
+                            <th style="width:13%;text-align:center;vertical-align: middle;border: 1px solid black;font-size:16px;">Precio Total</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-set="cont" t-value="0"/>
+                        <t t-set="total" t-value="0"/>
+                            <t t-foreach="o.move_lines" t-as="lines">
+
+                                <t t-if="len(lines.move_line_ids) > 1">
+                                    <t t-set="cont1" t-value="1"/>
+                                    <t t-foreach="lines.move_line_ids" t-as="line_lote">
+                                        <t t-if="cont1 == 1">
+                                            <tr style="height:20px;">
+                                                <t t-set="total_departmento" t-value="(lines.product_uom_qty - lines.quantity_done)"/>
+                                                <td style="width:12,5%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-esc="lines.product_id.code"/></td>
+                                                <td style="width:25%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-field="lines.product_id.name"/></td>
+                                                <td style="width:12,5%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-esc="'%.0f'% lines.product_uom_qty"/> <span t-field="lines.product_uom"/></td>
+                                                <td style="width:12,5%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-esc="line_lote.lot_id.name"/></td>
+                                                <td style="width:12,5%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-esc="'%.0f'% line_lote.qty_done"/> <span t-field="lines.product_uom"/></td>
+                                                <td style="width:12,5%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-field="lines.product_id.list_price"/></td>
+                                                <t t-set="price_total" t-value="(lines.product_id.list_price * line_lote.qty_done)"/>
+                                                <td style="width:12,5%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-esc="'{0:,.2f}'.format(price_total).replace(',', 'X').replace('.', ',').replace('X', '.')"/></td>
+                                                <t t-set="total" t-value="(total + price_total)"/>
+                                                <t t-set="cont1" t-value="cont1+1"/>
+                                            </tr>
+                                        </t>
+                                        <t t-else="">
+                                            <tr style="height:20px;">
+                                                <t t-set="total_departmento" t-value="(lines.product_uom_qty - lines.quantity_done)"/>
+                                                <td colspan="3"></td>
+                                                <td style="width:12,5%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-esc="line_lote.lot_id.name"/></td>
+                                                <td style="width:12,5%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-esc="'%.0f'% line_lote.qty_done"/> <span t-field="lines.product_uom"/></td>
+                                                <td style="width:12,5%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-field="lines.product_id.list_price"/></td>
+                                                <t t-set="price_total" t-value="(lines.product_id.list_price * line_lote.qty_done)"/>
+                                                <td style="width:12,5%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-esc="'{0:,.2f}'.format(price_total).replace(',', 'X').replace('.', ',').replace('X', '.')"/></td>
+                                                <t t-set="total" t-value="(total + price_total)"/>
+                                            </tr>
+                                        </t>
+                                    </t>
+                                </t>
+                                <t t-else="">
+                                    <tr style="height:20px;">
+                                        <t t-set="total_departmento" t-value="(lines.product_uom_qty - lines.quantity_done)"/>
+                                        <td style="width:12,5%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-esc="lines.product_id.code"/></td>
+                                        <td style="width:25%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-field="lines.product_id.name"/></td>
+                                        <td style="width:12,5%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-esc="'%.0f'% lines.product_uom_qty"/> <span t-field="lines.product_uom"/></td>
+                                        <td style="width:12,5%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-esc="lines.move_line_ids.lot_id.name"/></td>
+                                        <td style="width:12,5%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-esc="'%.0f'% lines.quantity_done"/> <span t-field="lines.product_uom"/></td>
+                                        <td style="width:12,5%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-field="lines.product_id.list_price"/></td>
+                                        <t t-set="price_total" t-value="(lines.product_id.list_price * lines.quantity_done)"/>
+                                        <td style="width:12,5%;text-align:center;vertical-align: middle;border: 1px solid black;height:15px;font-size:15px;"><span t-esc="'{0:,.2f}'.format(price_total).replace(',', 'X').replace('.', ',').replace('X', '.')"/></td>
+                                        <t t-set="total" t-value="(total + price_total)"/>
+                                    </tr>
+                                </t>
+                            </t>
+                        <tr>
+                            <td colspan="5" style="width:75%;"></td>
+                            <td style="width:12,5%;text-align:center;vertical-align: middle;border: 1px solid black;font-size:15px;">Total:</td>
+                            <td style="width:12,5%;text-align:center;vertical-align: middle;border: 1px solid black;font-size:15px;"><span t-esc="'{0:,.2f}'.format(total).replace(',', 'X').replace('.', ',').replace('X', '.')"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br/>
+            </div>
+        </div>
+        <t t-call= "biu_stock.deliveryslip_layout_footer"/>
+    </template>
+
+    <template id="report_deliveryslip_inherit" inherit_id="stock.report_deliveryslip">
+        <t t-foreach="docs" t-as="o" position="replace">
+            <t t-foreach="docs" t-as="o">
+                <t t-if="o['var_id'] == '1'">
+                    <t t-call="biu_stock.report_delivery_reception"/>
+                </t>
+                <t t-elif="o['var_id'] == '2'">
+                    <t t-call="biu_stock.report_delivery_order"/>
+                </t>
+                <t t-elif="o['var_id'] == '3'">
+                    <t t-call="stock.report_delivery_document"/>
+                </t>
+                <!--En la local el var_id = 1 - es report_delivery_document y el var_id = 3 - es report_delivery_reception-->
+            </t>
+        </t>
+    </template>
+
+</odoo>

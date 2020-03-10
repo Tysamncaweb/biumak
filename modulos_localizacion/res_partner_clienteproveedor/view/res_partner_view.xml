@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_account_config_settings" model="ir.ui.view">
+            <field name="name">account settings</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='category_id']" position="after">
+                    <field name="international_supplier"  attrs="{'invisible': [('company_type','in', 'person')]}"/>
+                 </xpath>
+                <xpath expr="//field[@name='vat']" position="replace">
+                    <field name="vat" placeholder="Ej.: V-012345678" string="RIF"
+                    attrs="{'required': [('international_supplier', '!=', True)], 'invisible':[('international_supplier','=',True)]}"/>
+                 </xpath>
+                <xpath expr="//field[@name='people_type']" position="before">
+                    <field name="num_cliente"  string="Numero de Cliente"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

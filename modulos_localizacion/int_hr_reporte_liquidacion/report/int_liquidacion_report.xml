@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<odoo>
+
+        <record model="report.paperformat" id="paperformat_liquidacion_trabajo">
+
+        <field name="name">paperformat.liquidacion.trabajo</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">20</field>
+        <field name="margin_right">20</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">20</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">0</field>
+        <field name="dpi">0</field>
+
+    </record>
+
+    <template id="template_liquidacion_trabajo" >
+        <div class="page">
+                <div class="article">
+                    <h4 class="text-center"><b>LIQUIDACIÓN DE PRESTACIONES SOCIALES</b></h4>
+                    <br/>
+                    <t t-foreach="docs" t-as="doc">
+
+
+                        <table style="width:100%; border:1px solid">
+
+                                 <tr style="background:#878787; border:1px solid;">
+                                           <td colspan="4" style="width:100%; vertical-align: middle;font-size: 11px;">
+                                               <p class="text-center"><b>DATOS DEL TRABAJADOR</b></p>
+                                           </td>
+                                 </tr>
+
+                                 <tr>
+                                    <td style="width:15%; border:1px solid;font-size: 11px;"><p  class="text-left">&amp;nbsp;<b>Nombres:</b> </p></td>
+                                    <td style="width:25%; border:1px solid;font-size: 11px;"><p  class="text-center"><span t-esc="doc['nombres_empleado']"/></p></td>
+                                    <td style="width:5%;  border:1px solid;font-size: 11px;"><p  class="text-left">&amp;nbsp;<b>Apellidos:</b></p></td>
+                                    <td style="width:60%; border:1px solid;font-size: 11px;"><p  class="text-center"><span t-esc="doc['apellidos_empleado']"/></p></td>
+                                </tr>
+                                 <tr>
+                                    <td style="width:15%; border:1px solid;font-size: 11px;"><p  class="text-left">&amp;nbsp;<b>Cédula de Identidad: </b></p></td>
+                                    <td style="width:25%; border:1px solid;font-size: 11px;"><p  class="text-center"><span t-esc="doc['ci_empleado']"/></p></td>
+                                    <td style="width:5%;  border:1px solid;font-size: 11px;"><p  class="text-left">&amp;nbsp;<b>Cargo:</b></p></td>
+                                    <td style="width:60%; border:1px solid;font-size: 11px;"><p  class="text-center"><span t-esc="doc['cargo']"/></p></td>
+                                </tr>
+                            <tr>
+                                    <td style="width:15%; border:1px solid;font-size: 11px;"><p  class="text-left">&amp;nbsp;<b>Ubicación:</b></p></td>
+                                    <td style="width:25%; border:1px solid;font-size: 11px;"><p  class="text-center"><span t-esc="doc['ubication_dep']"/></p></td>
+                                    <td style="width:5%;  border:1px solid;font-size: 11px;"><p  class="text-left">&amp;nbsp;<b>Motivo:</b></p></td>
+                                    <td style="width:60%; border:1px solid;font-size: 11px;"><p  class="text-center"><span t-esc="doc['motivo']"/></p></td>
+                                </tr>
+                            <tr>
+                                   <td colspan="2" style="width:50%; border:1px solid; vertical-align: middle;font-size: 11px; background:#d6d6d6;">
+                                       <p class="text-center"><b>PERIODO DE LIQUIDACIÓN</b></p>
+                                   </td>
+                            </tr>
+
+                            <tr>
+                                    <td style="width:25%; border:1px solid; font-size: 11px;"><p class="text-left">&amp;nbsp;<b>Fecha de Ingreso:</b> </p></td>
+                                    <td style="width:25%; border:1px solid; font-size: 11px;"><p class="text-center"><span t-esc="doc['fecha_ingreso']"/></p></td>
+
+
+                            </tr>
+                            <tr>
+                                <td style="width:25%; border:1px solid; font-size: 11px;"><p class="text-left">&amp;nbsp;<b>Fecha de Egreso:</b></p></td>
+                                <td style="width:25%; border:1px solid; font-size: 11px;"><p class="text-center"><span t-esc="doc['fecha_egreso']"/></p></td>
+
+                            </tr>
+
+                            <tr style="border:1px solid; vertical-align: middle;">
+                                   <th colspan="3" style="width:100%; border-right:1px solid; vertical-align: middle;font-size: 11px;background:#d6d6d6;">
+                                       <p class="text-center"><b>TIEMPO TOTAL LABORADO</b></p>
+                                   </th>
+                            </tr>
+
+                            <tr>
+                                <td style="width:25%; border: 1px solid #000000;font-size: 11px;"><p class="text-center"><b>Años </b></p></td>
+                                <td style="width:25%; border: 1px solid #000000;font-size: 11px;"><p class="text-center"><b>Meses</b></p></td>
+                                <td style="width:25%; border: 1px solid #000000;font-size: 11px;"><p class="text-center"><b>Días </b></p></td>
+                                
+                            </tr>
+                            <tr style="border:1px solid;">
+                                <td style="width:25%; border:1px solid; font-size: 11px;"><p class="text-center"><span t-esc="doc['años_servicio']"/></p></td>
+                                <td style="width:25%; border:1px solid; font-size: 11px;"><p class="text-center"><span t-esc="doc['meses_servicio']"/></p></td>
+                                <td style="width:25%; border:1px solid; border-right: 1px solid #000000;font-size: 11px;"><p class="text-center"><span t-esc="doc['dias_servicio']"/></p></td>
+
+                            </tr>
+
+                            <tr style="border:1px solid; vertical-align: middle;">
+                                   <td colspan="3" style="width:100%; border-right:1px solid; vertical-align: middle;font-size: 11px;background:#d6d6d6;">
+                                       <p class="text-center"><b>SALARIO BASE DE LIQUIDACIÓN</b></p>
+                                   </td>
+                            </tr >
+                            <tr>
+                                <td style="width:25%; border:1px solid;font-size: 11px;"><p class="text-center"><b>Conceptos:</b></p></td>
+                                <td style="width:25%; border:1px solid;font-size: 11px;"><p class="text-center"><b>Mensual   </b></p></td>
+                                <td style="width:25%; border-right:1px solid;font-size: 11px;"><p class="text-center"><b>Diario</b></p></td>
+
+                            </tr>
+                            <tr style="border:1px solid;">
+                                    <td style="width:25%;  border-right:1px solid;font-size: 11px;"><p  class="text-left">&amp;nbsp;&amp;nbsp;Salario Básico Mensual</p></td>
+                                    <td style="width:25%;  border-right:1px solid;font-size: 11px;"><p  class="text-center"><span t-esc="doc['salario_mensual']"/></p></td>
+                                    <td style="width:25%;  border-right:1px solid;font-size: 11px;"><p  class="text-center"><span t-esc="doc['salario_diario']"/></p></td>
+                            </tr>
+                            <tr style="border:1px solid;">
+                                    <td style="width:25%;  border-right:1px solid;font-size: 11px;"><p  class="text-left">&amp;nbsp;&amp;nbsp;Sueldo Variable</p></td>
+                                    <td style="width:25%;  border-right:1px solid;font-size: 11px;"><p  class="text-center"><span t-esc="doc['salario_mensual']"/></p></td>
+                                    <td style="width:25%;  border-right:1px solid;font-size: 11px;"><p  class="text-center"><span t-esc="doc['salario_diario']"/></p></td>
+                            </tr>
+                             <tr style="border:1px solid;">
+                                    <td style="width:25%; border:1px solid; font-size: 11px;"><p  class="text-left">&amp;nbsp;&amp;nbsp;Sueldo Integral Diario</p></td>
+                                    <td colspan="2" style="width:100%;  border-right:1px solid; vertical-align: middle;font-size: 11px;">
+                                       <p class="text-center"><span t-esc="doc['salario_integral']"/></p>
+                                    </td>
+                             </tr>
+                            <tr style="border:1px solid;">
+                                    <td style="width:25%; border:1px solid; font-size: 11px;"><p  class="text-left">&amp;nbsp;&amp;nbsp;Alicuota de Utilidad</p></td>
+                                    <td colspan="2" style="width:100%;font-size: 11px;  border-right:1px solid; vertical-align: middle;">
+                                       <p class="text-center"><span t-esc="doc['alicuota_util']"/></p>
+                                    </td>
+                             </tr>
+                            <tr style="border:1px solid;">
+                                    <td style="width:25%; border:1px solid; font-size: 11px;"><p  class="text-left">&amp;nbsp;&amp;nbsp;Alicuota de Bono Vacacional</p></td>
+                                    <td colspan="2" style="width:100%; font-size: 11px; border-right:1px solid; vertical-align: middle;">
+                                       <p class="text-center"><span t-esc="doc['alicuota_bv']"/></p>
+                                    </td>
+                             </tr>
+                        </table>
+
+
+                         <table style="width:100%; height: 32px;">
+
+                              <thead>
+                                    <tr style="background:#AED6F1; border:1px solid; height: 2px;">
+                                           <td colspan="4" style="width:100%; vertical-align: middle;font-size: 11px;background:#878787;">
+                                               <p class="text-center"><b>POR LOS SIGUIENTES CONCEPTOS(Antiguedad según Art. 142 LOTTT)</b></p>
+                                           </td>
+                                    </tr>
+                                    <tr style=" height: 2px;background:#d6d6d6;">
+                                         <td style="width:50%; border:1px solid;font-size: 11px;"><p class="text-left"><b>&amp;nbsp;&amp;nbsp;ASIGNACIONES</b></p></td>
+                                         <td style="border:1px solid;font-size: 11px;"><p class="text-center"><b>DÍAS A PAGAR</b></p></td>
+                                         <td style="border:1px solid;font-size: 11px;"><p class="text-center"><b>SALARIO DIARIO</b></p></td>
+                                         <td style="border:1px solid;font-size: 11px;"><p class="text-center"><b>TOTAL A PAGAR</b></p></td>
+                                    </tr>
+                              </thead>
+
+                             <tbody>
+                                <t t-foreach="asignaciones" t-as="asig">
+                                    <tr style="height: 11px;">
+                                        <td style="width:50%; border:1px solid;font-size: 11px;"><p class="text-left">&amp;nbsp;&amp;nbsp;<span t-esc="asig['nombre']"/></p></td>
+                                        <td style="border:1px solid; font-size: 11px;"><p class="text-center"><span t-esc="asig['dias_porcentaje']"/>&amp;nbsp;</p></td>
+                                        <td style="border:1px solid; font-size: 11px;"><p class="text-center"><span t-esc="asig['salario']"/>&amp;nbsp;</p></td>
+                                        <td style="border:1px solid; font-size: 11px;"><p class="text-center"><span t-esc="asig['monto']"/>&amp;nbsp;</p></td>
+                                    </tr>
+                                </t>
+                                <tr style="height: 2px;background:#d6d6d6;">
+                                    <td  style="border-left:1px solid;font-size: 11px;"><p class="text-center">&amp;nbsp;</p></td>
+                                    <td colspan="2" style="border-right:1px solid;font-size: 11px;"><p class="text-right"><b>Total Asignaciones.......</b></p></td>
+                                    <td style="border-right:1px solid;font-size: 11px;"><p class="text-right"><span t-esc="doc['total_asignaciones']"/>&amp;nbsp;&amp;nbsp;</p></td>
+                                </tr>
+
+                                <tr style="border:1px solid; vertical-align: middle; height: 2px;background:#878787;">
+                                   <td colspan="4" style="vertical-align: middle; width:100%; border:1px solid;font-size: 11px;">
+                                       <p class="text-left"><b>&amp;nbsp;&amp;nbsp;DEDUCCIONES</b></p>
+                                   </td>
+                                </tr>
+
+
+                                <t t-foreach="deducciones" t-as="ded">
+                                    <tr style="height: 11px;">
+                                        <td style="width:50%; border:1px solid; font-size: 11px;"><p class="text-left">&amp;nbsp;&amp;nbsp;<span t-esc="ded['nombre']"/></p></td>
+                                        <td style="border:1px solid; font-size: 11px;"><p class="text-center"><span t-esc="ded['dias_porcentaje']"/>&amp;nbsp;</p></td>
+                                        <td style="border:1px solid; font-size: 11px;"><p class="text-center"><span t-esc="ded['salario']"/>&amp;nbsp;</p></td>
+                                        <td style="border:1px solid; font-size: 11px;"><p class="text-center"><span t-esc="ded['monto']"/>&amp;nbsp;</p></td>
+                                    </tr>
+                                </t>
+
+                                <tr style="border:1px solid; height: 2px;background:#d6d6d6;">
+                                    <td  style="border-left:1px solid;font-size: 11px;"><p class="text-center">&amp;nbsp;</p></td>
+                                    <td colspan="2" style="border-right:1px solid;font-size: 11px;"><p class="text-right"><b>Total Deducciones.......</b></p></td>
+                                    <td style="border-right:1px solid;font-size: 11px;"><p class="text-right"><span t-esc="doc['total_deducciones']"/>&amp;nbsp;&amp;nbsp;</p></td>
+                                </tr>
+                                <tr style="border:1px solid; height: 2px;background:#878787;">
+                                    <td  style="border-left:1px solid;font-size: 11px;"><p class="text-center">&amp;nbsp;</p></td>
+                                    <td colspan="2" style="border-right:1px solid;font-size: 11px;"><p class="text-right"><b>Neto a Cobrar Bs.....</b></p></td>
+                                    <td style="border-:1px solid;font-size: 11px;"><p class="text-right"><span t-esc="doc['neto_pagar']"/>&amp;nbsp;&amp;nbsp;</p></td>
+                                </tr>
+                             </tbody>
+                         </table>
+                         <table>
+                             <tr style=" border:1px solid;">
+                                   <td colspan="4" style="width:100%; vertical-align: middle;font-size: 11px;">
+                                       <p class="text-justify">&amp;nbsp;YO, <b><span t-esc="doc['nombre_apellido']"/></b>,
+                                           TITULAR DE LA CEDULA DE IDENTIDAD N° <b><span t-esc="doc['ci_empleado']"/></b>,
+                                           POR LA PRESENTE DECLARO HABER RECIBIDO &amp;nbsp; &amp;nbsp;MI ENTERA SATISFACCIÓN DE LA EMPRESA <b><span t-esc="doc['empresa']"/></b>,
+                                           LA CANTIDAD AQUI SEÑALADA, POR CONCEPTOS DE SALARIOS E INDEMNIZACIONES &amp;nbsp;QUE ME CORRESPONDE POR LA FINALIZACIÓN DE LA RELACIÓN
+                                           LABORAL CON LA EMPRESA ARRIBA MENCIONADA SEGÚN LA LEY. POR LO &amp;nbsp;TANTO NO TENGO NADA QUE RECLAMAR A LA MISMA POR ESTOS CONCEPTOS
+                                           NI POR NINGÚN OTRO.
+                                       </p>
+                                   </td>
+
+                             </tr>
+                             <tr style=" border:1px solid;">
+                                 <td style="width:33,33%;border-right:1px solid; vertical-align: middle;font-size: 10px;">
+                                     <p class="text-center"><b>Elaborado/Procesado por: </b></p><p class="text-center">Gerente RRHH</p>
+                                 </td>
+                                 <td style="width:33,33%;border-right:1px solid;font-size: 10px;">
+                                     <p class="text-center"><b>Aprobado por:</b></p> <p class="text-center">Gerente General</p>
+                                 </td>
+                                 <td style="width:33,33%;border-right:1px solid; vertical-align: middle;font-size: 10px;">
+                                     <p class="text-center"><b>Recibido Conforme: </b></p><p class="text-center"><b>Trabajador</b></p>
+                                 </td>
+                             </tr>
+
+                             <tr style="border:1px solid; font-size: 30px;">
+                                   <td style="width:33,33%;border-right:1px solid;font-size: 10px;">
+                                       <p class="text-center">&amp;nbsp;</p>
+                                   </td>
+                                   <td style="width:33,33%;border-right:1px solid;font-size: 10px;">
+                                       <p class="text-center">&amp;nbsp;</p>
+                                   </td>
+                                   <td style="width:33,33%;border-right:1px solid;font-size: 10px;">
+                                       <p class="text-center">&amp;nbsp;</p>
+                                   </td>
+
+                             </tr>
+                         </table>
+
+                    </t>
+                </div>
+         </div>
+    </template>
+    <report
+            id="action_hr_report_liquidacion_reporte"
+            string="Reporte de Liquidación"
+            model="hr.payslip"
+            report_type="qweb-pdf"
+            name="int_hr_reporte_liquidacion.template_liquidacion_trabajo"
+            file="int_hr_reporte_liquidacion.template_liquidacion_trabajo"
+            paperformat="paperformat_liquidacion_trabajo"
+    />
+</odoo>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <!--Incluye pestaña de anticipo en la facturas de proveedores-->
+        <record id="account_invoice_supplier_advanced_id" model="ir.ui.view">
+            <field name="name">account.invoice.advanced</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//page[@name='other_info']" position="after">
+                    <page string="Anticipos">
+                        <field name="account_advance_ids"
+                               mode="tree"
+                        />
+                    </page>
+                </xpath>
+
+                <xpath expr="//field[@name='currency_id']" position="after">
+                    <field name="sum_amount_available" readonly="1" force_save="1"/>
+                </xpath>
+            </field>
+        </record>
+
+
+        <!--Incluye pestaña de anticipo en la facturas de cliente -->
+        <record id="account_invoice_advanced_id" model="ir.ui.view">
+            <field name="name">account.invoice.advanced</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//page[@name='other_info']" position="after">
+                    <page string="Anticipos">
+                        <field name="account_advance_ids"
+                               mode="tree"
+                        />
+                    </page>
+                </xpath>
+
+                <xpath expr="//field[@name='team_id']" position="after">
+                    <field name="sum_amount_available" readonly="1" force_save="1"/>
+                </xpath>
+            </field>
+        </record>
+        <!--Incluye monto de disponible en las facturas de cliente-->
+
+    </data>
+</odoo>

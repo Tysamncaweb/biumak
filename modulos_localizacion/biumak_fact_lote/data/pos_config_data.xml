@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Account Tax Group -->
+        <record id="tax_group_iva_0" model="ir.config_parameter">
+            <field name="key">max.nbr.sessions.per.user</field>
+            <field name="value">15</field>
+        </record>
+
+    </data>
+</odoo>

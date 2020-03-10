@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="report.paperformat" id="paperformat_recibo_cestaticket">
+
+        <field name="name">paperformat.recibo.cestaticket</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">30</field>
+        <field name="margin_right">5</field>
+        <field name="margin_bottom">25</field>
+        <field name="margin_left">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">0</field>
+        <field name="dpi">90</field>
+
+    </record>
+
+    <template id="template_recibo_cestaticket" >
+        <t t-foreach="docs" t-as="doc">
+        <div class="article">
+            <div class="page" style="page-break-before:always;">
+                <div class="text-left">
+                     <h3 class="text-center"><b>RECIBO DE PAGO CESTATICKET</b>
+          </h3> <br/><br/>
+                     <table class="table table-striped" style="width:100%">
+                        <tr>
+                              <td class="text-left" scope="col" style="width:40%;border: 1px solid #000000;">Nombre trajador: </td>
+                              <td class="text-center" scope="col" colspan="3" style="width:60%;border: 1px solid #000000;"> <span t-esc="doc['name']"/></td>
+                        </tr>
+                         <tr>
+                             <td class="text-left" scope="col" style="border: 1px solid #000000;">Fecha de Ingreso: </td>
+                             <td class="text-center" scope="col" colspan="3" style="border: 1px solid #000000;"> <span t-esc="doc['fecha_ingreso']"/></td>
+                         </tr>
+                         <tr>
+                             <td class="text-left" scope="col"  style="border: 1px solid #000000;">Período de pago del </td>
+                             <td  class="text-center" scope="col" style="width:25%;border: 1px solid #000000;"> <span t-esc="doc['date_from']"/></td>
+                             <td  class="text-center" scope="col" style="width:10%;border: 1px solid #000000;">AL</td>
+                             <td  class="text-center" scope="col" style="width:25%;border: 1px solid #000000;"> <span t-esc="doc['date_to']"/></td>
+                         </tr>
+                         <tr>
+                             <td class="text-left" scope="col" style="border: 1px solid #000000;">RIF:</td>
+                             <td class="text-center" scope="col" colspan="3" style="border: 1px solid #000000;"> V-<span t-esc="doc['rif']"/>-<span t-esc="doc['rif2']"/></td>
+                         </tr>
+                         <tr>
+                             <td class="text-left" scope="col" style="border: 1px solid #000000;">Cédula de Identidad:</td>
+                             <td class="text-center" scope="col" colspan="3" style="border: 1px solid #000000;"> <span t-esc="doc['cedula_letra']"/>-<span t-esc="doc['cedula']"/></td>
+                         </tr>
+                         <tr>
+                             <td class="text-left" scope="col" style="border: 1px solid #000000;">Cargo: </td>
+                             <td class="text-center" scope="col" colspan="3" style="border: 1px solid #000000;"> <span t-esc="doc['cargo']"/></td>
+                         </tr>
+                         <tr>
+                             <td class="text-left" scope="col" style="border: 1px solid #000000;">Datos de transferencia bancaria(BANCO Y N° DE CUENTA)</td>
+                             <td class="text-center" scope="col" style="border: 1px solid #000000;"> <span t-esc="doc['banco']"/></td>
+                             <td class="text-center" scope="col" colspan="2" style="border: 1px solid #000000;"> <span t-esc="doc['cuenta']"/></td>
+                         </tr>
+
+                     </table>
+                    <table class="table table-striped" style="width:100%">
+                    <tr>
+                             <td  class="text-center" scope="col"  style="border: 1px solid #000000;">CESTATICKET</td>
+                             <td  class="text-center" scope="col" style="width:25%;border: 1px solid #000000;">Número de días</td>
+                             <td  class="text-center" scope="col" style="width:10%;border: 1px solid #000000;">Salario Diario</td>
+                             <td  class="text-center" scope="col" style="width:25%;border: 1px solid #000000;">Monto</td>
+                    </tr>
+                    <tr>
+                             <td class="text-left" scope="col"  style="width:40%;border: 1px solid #000000;">CESTATICKET. Este concepto no tiene incidencia salarial alguna y, en consecuencia, no podrán efectuarse deducciones sobre
+éste, salvo las que expresamente autorice el trabajador.
+</td>
+                             <td  class="text-center" scope="col" style="width:20%;border: 1px solid #000000;"> <span t-esc="doc['n_dias']"/></td>
+                             <td  class="text-center" scope="col" style="width:20%;border: 1px solid #000000;"> <span t-esc="doc['salario_diario']"/></td>
+                             <td  class="text-center" scope="col" style="width:20%;border: 1px solid #000000;"> <span t-esc="doc['monto']"/></td>
+                    </tr>
+
+                    </table>
+
+                    <table style="width:100%">
+                        <tr style="height: 95px" >
+                            <td style="width:40%"></td>
+                            <td style="width:60%"></td>
+                        </tr>
+                        <tr>
+                            <td style="width:40%"></td>
+                            <td class="text-center" style="width:60%;border-top: 2px solid #000000;"><b>Firma por BIUMAK</b> </td>
+                        </tr>
+
+                    </table>
+                    <br/>
+
+                    <table class="table table-striped" style="width:100%">
+                        <tr>
+                            <td class="text-right" scope="col"  style="width:50%;border: 1px solid #000000;">Fecha:</td>
+                            <td class="text-right" scope="col"  style="width:50%;border: 1px solid #000000;"> <span t-esc="doc['fecha_genera']"/></td>
+
+                        </tr>
+                        <tr>
+                            <td class="text-right" scope="col"  style="width:50%;border: 1px solid #000000;">Nombre y Apellido:</td>
+                            <td class="text-right" scope="col"  style="width:50%;border: 1px solid #000000;"> <span t-esc="doc['responsable']"/></td>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+         </div>
+        </t>
+    </template>
+
+
+    <report
+            id="action_hr_report_recibo_cestaticket"
+            string="Recibo Cestaticket"
+            model="hr.payslip"
+            report_type="qweb-pdf"
+            name="int_hr_recibo_cestaticket.template_recibo_cestaticket"
+            file="int_hr_recibo_cestaticket.template_recibo_cestaticket"
+            paperformat="paperformat_recibo_cestaticket"
+    />
+
+</odoo>

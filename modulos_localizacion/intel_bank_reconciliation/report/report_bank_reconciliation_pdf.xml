@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="header_report_bank_reconciliation">
+            <div class="header">
+                 <table style="border-top: 1px solid black; width:100%; height:40px; font-size: 14px;">
+                     <tr style="height:30px; border-top: 1px solid black;">
+                         <td class="text-left" style="width:25%;"></td>
+                         <td style="width:60%;" class="text-right">
+                             Fecha:
+                         </td>
+                         <td style="width:15%;" class="text-right">
+                             <span t-esc="today" t-options="{'widget': 'date'}"/>
+                         </td>
+                     </tr>
+                     <tr style="height:30px;">
+                         <td class="text-left" style="width:25%;"></td>
+                         <td class="text-right" style="width:60%;" >
+                             <div class="footer">
+                                <div class="text-right">
+                                    <ul class="list-inline" style="margin-top:10px;">
+                                        <li>Página:</li>
+                                        <li>
+                                            <span class="page"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                         </td>
+                         <td style="width:15%;" class="text-right">
+                             <span t-esc="hora"/>
+                         </td>
+                     </tr>
+                     <tr style="height:30px;">
+                         <td class="text-left" style="width:20%;">
+                             Cajas y Bancos
+                         </td>
+                         <td class="text-center" style="width:60%;" >
+                             RESUMEN CONCILIACIÓN BANCARIA
+                         </td>
+                         <td style="width:15%;"></td>
+                     </tr>
+                     <tr style="height:30px;">
+                         <td class="text-left" style="width:25%;"></td>
+                         <td class="text-center" style="width:60%;" >
+                             Rangos:&amp;nbsp;Cuenta:&amp;nbsp;<span t-esc="account_account.code"/>;&amp;nbsp;Mes:&amp;nbsp;<span t-esc="mes"/>;&amp;nbsp;Año:&amp;nbsp;<span t-esc="ano"/>;
+                         </td>
+                         <td style="width:15%;"></td>
+                     </tr>
+                     <tr style="height:30px;">
+                         <td class="text-left" style="width:25%;"></td>
+                         <td class="text-center" style="width:60%;">
+                            Saldo Estado Cuenta: <span t-esc="'{0:,.2f}'.format(saldo_cuenta).replace(',', 'X').replace('.', ',').replace('X', '.')"/>
+                         </td>
+                         <td style="width:15%;"></td>
+                     </tr>
+                </table>
+            </div>
+        </template>
+
+        <record model="report.paperformat" id="paperformat_bank_reconciliation">
+            <field name="name">paperformat.bank.reconciliation</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_width">210</field>
+            <field name="page_height">297</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">40</field>
+            <field name="margin_right">10</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">10</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">40</field>
+            <field name="dpi">80</field>
+        </record>
+
+        <report
+            id="action_report_bank_reconciliation"
+            string="transacciones no Reconciliadas"
+            model="bank.reconciliation"
+            report_type="qweb-pdf"
+            name="intel_bank_reconciliation.report_bank_reconciliation"
+            file="intel_bank_reconciliation.report_bank_reconciliation"
+            paperformat ="paperformat_bank_reconciliation"
+        />
+
+
+        <template id="report_bank_reconciliation">
+            <div class="page">
+                <t t-call="intel_bank_reconciliation.header_report_bank_reconciliation"/>
+                <div class="article">
+                    <table class="table table-striped" style="width:100%; height:40px;">
+                        <thead>
+                            <tr>
+                                <th class="text-left" style="width:15%; vertical-align: middle; border-top: 1px solid #000000;">Cód. Cuenta</th>
+                                <th class="text-left" style="width:35%; vertical-align: middle; border-top: 1px solid #000000;">Nro. Cuenta</th>
+                                <th class="text-left" style="width:35%; vertical-align: middle; border-top: 1px solid #000000;">Descripción Banco</th>
+                                <th class="text-left" style="width:15%; vertical-align: middle; border-top: 1px solid #000000;">Moneda</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-left" style="vertical-align: middle; border-bottom: 1px solid #000000;">
+                                    <span t-esc="account_account.code"/>
+                                </td>
+                                <td class="text-left" style="vertical-align: middle; border-bottom: 1px solid #000000;">
+                                    <span t-esc="account_journal.bank_account_id.acc_number"/>
+                                </td>
+                                <td class="text-left" style="vertical-align: middle; border-bottom: 1px solid #000000;">
+                                    <span t-esc="account_journal.name"/>
+                                </td>
+                                <td class="text-left" style="vertical-align: middle; border-bottom: 1px solid #000000;">
+                                    <span t-esc="currency.symbol"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-striped" style="width:100%; height:40px;">
+                        <tbody>
+                             <tr style="height:30px;">
+                                 <td class="text-left" style="width:30%;">Saldo inicial conciliado</td>
+                                 <td class="text-right" style="width:20%;"><span t-esc="'{0:,.2f}'.format(amount_open).replace(',', 'X').replace('.', ',').replace('X', '.')"/></td>
+                                 <td style="width:50%;"></td>
+                             </tr>
+                            <tr style="height:30px;">
+                                 <td class="text-left" style="width:30%;">Abonos</td>
+                                 <td class="text-right" style="width:20%;"><span t-esc="'{0:,.2f}'.format(abono).replace(',', 'X').replace('.', ',').replace('X', '.')"/></td>
+                                 <td style="width:50%;"></td>
+                            </tr>
+                            <tr style="height:30px;">
+                                 <td class="text-left" style="width:30%;">Cargos</td>
+                                 <td class="text-right" style="width:20%;"><span t-esc="'{0:,.2f}'.format(cargo).replace(',', 'X').replace('.', ',').replace('X', '.')"/></td>
+                                 <td style="width:50%;"></td>
+                            </tr>
+                            <tr style="height:30px;">
+                                 <td class="text-left" style="width:30%;">Saldo final conciliado</td>
+                                 <td class="text-right" style="width:20%;"><span t-esc="'{0:,.2f}'.format(saldo_final).replace(',', 'X').replace('.', ',').replace('X', '.')"/></td>
+                                 <td style="width:50%;"></td>
+                            </tr>
+                            <tr style="height:30px;">
+                                 <td class="text-left" style="width:30%;">Saldo final estado de cuenta</td>
+                                 <td class="text-right" style="width:20%;"><span t-esc="'{0:,.2f}'.format(saldo_cuenta).replace(',', 'X').replace('.', ',').replace('X', '.')"/></td>
+                                 <td style="width:50%;"></td>
+                            </tr>
+                            <tr style="height:30px;">
+                                 <td class="text-left" style="width:30%;">Diferencia</td>
+                                 <td class="text-right" style="width:20%;"><span t-esc="'{0:,.2f}'.format(diferencia).replace(',', 'X').replace('.', ',').replace('X', '.')"/></td>
+                                 <td style="width:50%;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-striped"  style="width:100%;">
+                        <thead>
+                            <tr>
+                                <th style="vertical-align: middle; border-bottom: 1px solid #000000;" class="text-center" colspan="4"><h2>Resumen de Operaciones no Conciliadas</h2></th>
+                            </tr>
+                            <tr>
+                                <th style="width:15%; vertical-align: middle; border-bottom: 1px solid #000000; border-top: 1px solid #000000; border-left: 1px solid #000000;">Fecha</th>
+                                <th style="width:35%; vertical-align: middle; border-bottom: 1px solid #000000; border-top: 1px solid #000000;">Descripción</th>
+                                <th style="width:35%; vertical-align: middle; border-bottom: 1px solid #000000; border-top: 1px solid #000000;">Referencia</th>
+                                <th style="width:15%; vertical-align: middle; border-bottom: 1px solid #000000; border-top: 1px solid #000000; border-right: 1px solid #000000;">Importe</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="docs" t-as="doc">
+                                <tr style="height:30px;">
+                                    <td style="vertical-align: middle; border-bottom: 1px solid #000000; border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000;">
+                                        <span t-esc="doc['date']"/>
+                                    </td>
+                                    <td style="vertical-align: middle; border-bottom: 1px solid #000000; border-top: 1px solid #000000; border-right: 1px solid #000000;">
+                                        <span t-esc="doc['description']"/>
+                                    </td>
+                                    <td style="vertical-align: middle; border-bottom: 1px solid #000000; border-top: 1px solid #000000; border-right: 1px solid #000000;">
+                                        <span t-esc="doc['ref']"/>
+                                    </td>
+                                    <td class="text-right" style="vertical-align: middle; border-bottom: 1px solid #000000; border-top: 1px solid #000000; border-right: 1px solid #000000;">
+                                        <span t-esc="'{0:,.2f}'.format(doc['amount']).replace(',', 'X').replace('.', ',').replace('X', '.')"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </template>
+    </data>
+</odoo>

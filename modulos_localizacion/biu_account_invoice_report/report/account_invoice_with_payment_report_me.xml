@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="header_biumak_id" name="header_biumak">
+            <div class="header"><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <t t-foreach="docs" t-as="o">
+                    <div class="text-right" style=" font-size: 20px;">
+                        <strong><t t-if="o.type == 'out_refund'"><p style="font-family:Helvetica,Futura,Arial,Verdana,sans-serif; font-size:14px;">NOTA DE CRÉDITO <span t-field="o.number"/></p></t>
+                            <t t-if="o.type == 'in_refund'"><p style="font-family:Helvetica,Futura,Arial,Verdana,sans-serif; font-size:14px;">NOTA DE CRÉDITO <span t-field="o.supplier_invoice_number"/></p></t>
+                            <t t-if="o.type == 'out_invoice'"><p style="font-family:Helvetica,Futura,Arial,Verdana,sans-serif; font-size:14px;">FACTURA <span t-field="o.number"/></p></t>
+                            <t t-if="o.type == 'in_invoice'"><p style="font-family:Helvetica,Futura,Arial,Verdana,sans-serif; font-size:14px;">FACTURA <span t-field="o.supplier_invoice_number"/></p></t><br></br></strong>
+                    </div><br></br>
+                </t>
+            </div>
+        </template>
+        <report
+            id="action_account_invoice_with_payment_report_me"
+            string="Factura M/E"
+            model="account.invoice"
+            report_type="qweb-pdf"
+            name="biu_account_invoice_report.report_invoice_document_with_payment_me"
+            file="biu_account_invoice_report.report_invoice_document_with_payment_me"
+            paperformat ="biu_account_invoice_report.paperformat_account_invoice"
+            menu = "True"
+    />
+      <template id="report_invoice_document_with_payment_me">
+          <div class="page">
+              <t t-call="biu_account_invoice_report.header_biumak_id"/>
+               <div class="article">
+                   <t t-foreach="docs" t-as="o">
+                       <t t-set="moneda" t-value="any([l.price_subtotal for l in o.invoice_line_ids])"/>
+                       <t t-set="display_discount" t-value="any([l.discount for l in o.invoice_line_ids])"/>
+                        <table style="width:100%;">
+                            <thead>
+                                <tr class="text-center table-bordered" style="height:20px; border: 1px solid #000000; font-family:Helvetica,Futura,Arial,Verdana,sans-serif; font-size:10px;">
+                                    <th class="text-center table-bordered" style="width:10%; vertical-align: middle; border: 1px solid #000000; ">ITEM/COD</th>
+                                    <th class="text-center table-bordered" style="width:35%; vertical-align: middle; border: 1px solid #000000;">DESCRIPCIÓN</th>
+                                    <th class="text-center table-bordered" style="width:5%; vertical-align: middle; border: 1px solid #000000;">CANT.</th>
+                                    <th class="text-center table-bordered" style="width:10%; vertical-align: middle; border: 1px solid #000000;">UNID.</th>
+                                    <th t-if="display_discount" class="text-center table-bordered" style="width:10%; vertical-align: middle; border: 1px solid #000000;">DESC(%).</th>
+                                    <th class="text-center table-bordered" style="width:10%; vertical-align: middle; border: 1px solid #000000;">PRECIO UNIT.</th>
+                                    <th class="text-center table-bordered" style="width:15%; vertical-align: middle; border: 1px solid #000000;">PRECIO TOTAL Bs.</th>
+                                    <th t-if="moneda" class="text-center table-bordered" style="width:15%; vertical-align: middle; border: 1px solid #000000;">PRECIO TOTAL <span t-esc="o.currency_id.name"/>.</th>
+                                </tr>
+                            </thead>
+
+                            <tbody class="invoice_tbody">
+                                <t t-set="contador" t-value="1"/>
+                                <tr t-foreach="o.invoice_line_ids" t-as="l" style=" border: 1px solid #000000; height: 25px; font-family:Helvetica,Futura,Arial,Verdana,sans-serif; font-size:10px;" class="text-center">
+                                    <td style=" border: 1px solid #000000; vertical-align: middle; " ><span t-esc="l.product_id.default_code"/></td>
+                                    <td class="text-left" style=" border: 1px solid #000000; vertical-align: middle; "><span t-field="l.product_id.name"/></td>
+                                    <td style=" border: 1px solid #000000; vertical-align: middle;">
+                                        <span t-esc="str(l.quantity).replace('.0', '')"/>
+                                    </td>
+                                    <td style=" border: 1px solid #000000; vertical-align: middle;">
+                                        <span t-field="l.uom_id"/>
+                                    </td>
+                                    <td class="text-right" t-if="display_discount" style=" border: 1px solid #000000; vertical-align: middle;">
+                                        <span t-field="l.discount"/>
+                                    </td>
+                                    <td class="text-right" style=" border: 1px solid #000000; vertical-align: middle;" >
+                                        <span t-field="l.price_unit"/>
+                                    </td>
+                                   <td class="text-right" style=" border: 1px solid #000000; vertical-align: middle; ">
+                                        <span t-field="l.tasa_me"/>
+                                    </td>
+                                    <td class="text-right" t-if="moneda" style=" border: 1px solid #000000; vertical-align: middle; ">
+                                        <span t-field="l.price_subtotal" />
+                                    </td>
+                                    <t t-set="contador" t-value="contador+1"/>
+                                </tr>
+                            </tbody>
+                        </table>
+                       <div class="footer">
+                       <table width="100%">
+                           <tbody>
+                                <tr style="border-top: 1px solid black; font-family:Helvetica,Futura,Arial,Verdana,sans-serif; font-size:12px;" ><br/>
+                                    <td style="width:50%;"><p> &amp;nbsp;</p></td>
+                                    <td class="text-right" style="width:15%;"><strong>SUBTOTAL <!--span t-esc="o.currency_id.name"/--></strong></td>
+                                    <td class="text-right" style="width:15%;">
+                                       Bs. <span t-field="o.amount_untaxed_bs"/>
+                                    </td>
+                                    <td class="text-right" style="width:15%;">
+                                        <span t-field="o.amount_untaxed"/>
+                                    </td>
+                                </tr>
+                                <t t-foreach="o._get_tax_amount_by_group()" t-as="amount_by_group">
+                                    <tr style="font-family:Helvetica,Futura,Arial,Verdana,sans-serif; font-size:12px;">
+                                        <t t-if="len(o.tax_line_ids) == 1 and o.amount_untaxed == amount_by_group[2]">
+                                            <td style="width:50%;"><p> &amp;nbsp;</p></td>
+                                            <td class="text-right" style="width:15%;">
+                                                <strong>IMPUESTO&amp;nbsp;<span t-esc="amount_by_group[0]"/></strong>
+                                            </td>
+                                            <td class="text-right" style="width:15%;">
+                                               Bs. <span t-field="o.amount_tax_bs"/>
+                                            </td>
+                                            <td class="text-right" style="width:15%;">
+                                                <span t-esc="amount_by_group[3]"/>
+                                            </td>
+                                        </t>
+                                        <t t-else="">
+                                            <td style="width:50%;"><p> &amp;nbsp;</p></td>
+                                            <td class="text-right" style="width:15%;">
+                                                <strong>IMPUESTO&amp;nbsp;<span t-esc="amount_by_group[0]"/></strong>
+                                            </td>
+                                            <td class="text-right" style="width:15%;">
+                                               Bs. <span t-field="o.amount_tax_bs"/>
+                                            </td>
+                                            <td class="text-right" style="width:15%;">
+                                                <span t-esc="amount_by_group[3]"/>
+                                            </td>
+                                        </t>
+                                    </tr>
+                                </t>
+                                <tr style="font-family:Helvetica,Futura,Arial,Verdana,sans-serif; font-size:12px;">
+                                    <td style="width:50%;"><p> &amp;nbsp;</p></td>
+                                    <td class="text-right" style="width:15%;"><strong>PRECIO TOTAL <!--span t-esc="o.currency_id.name"/--></strong></td>
+                                    <td class="text-right" style="width:15%;">
+                                        <strong>Bs. <span t-field="o.amount_total_bs"/></strong>
+                                    </td>
+                                    <td class="text-right" style="width:15%;">
+                                        <strong><span t-field="o.amount_total"/></strong>
+                                    </td>
+                                </tr>
+                               <t t-set="payments_vals" t-value="o._get_payments_vals()"/>
+                                <t t-foreach="payments_vals" t-as="payment_vals">
+                                    <tr style="font-family:Helvetica,Futura,Arial,Verdana,sans-serif; font-size:10px;">
+                                        <td style="width:50%;"><p> &amp;nbsp;</p></td>
+                                        <td style="border-top: 1px solid black; width:15px;"><br></br>
+                                            <i class="oe_form_field text-right oe_payment_label">Cobro el <t t-esc="payment_vals['date']"  t-options="{'widget': 'date'}"/></i>
+                                        </td>
+                                        <td class="text-right" style="border-top: 1px solid black; width:15px;"><br></br>
+                                          Bs. <span t-esc="payment_vals['amount_bs']"/>
+                                        </td>
+                                        <td class="text-right" style="border-top: 1px solid black; width:15px;"><br></br>
+                                           <span t-esc="payment_vals['amount']" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                        </td>
+                                    </tr>
+                                </t>
+                                <t t-if="len(payments_vals) > 0">
+                                    <tr style="font-family:Helvetica,Futura,Arial,Verdana,sans-serif; font-size:12px;">
+                                        <td style="width:50%;"><p> &amp;nbsp;</p></td>
+                                        <td class="text-left" style="width:15%;"><strong>Saldo</strong></td>
+                                        <td class="text-right" style="width:15%;">
+                                            <t t-if="o.type == 'out_refund' or o.type == 'in_refund'">
+                                                <t t-set="residual_company_signed" t-value="o.residual_company_signed*-1"/>
+                                                <span t-esc="'{0:,.2f}'.format(residual_company_signed).replace(',', 'X').replace('.', ',').replace('X', '.')"/>
+                                            </t>
+                                            <t t-if="o.type == 'out_invoice' or o.type == 'in_invoice'">
+                                                    Bs. <span t-esc="'{0:,.2f}'.format(o.residual_bs).replace(',', 'X').replace('.', ',').replace('X', '.')"/>
+                                            </t>
+                                        </td>
+                                        <td class="text-right" style="width:15%;">
+                                            <span t-field="o.residual"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                           <p t-if="o.type == 'out_refund'" style="font-family:Helvetica,Futura,Arial,Verdana,sans-serif; font-size:14px;">
+                                <strong><h5>NOTA DE CRÉDITO AFECTA A LA FACTURA N° <span t-field="o.origin"/></h5></strong>
+                            </p>
+                            <p t-if="o.type == 'in_refund'" style="font-family:Helvetica,Futura,Arial,Verdana,sans-serif; font-size:14px;">
+                                <strong><h5>NOTA DE CRÉDITO AFECTA A LA FACTURA N° <span t-field="o.parent_id.supplier_invoice_number"/></h5></strong>
+                            </p>
+                        </div>
+                    </t>
+               </div>
+          </div>
+        </template>
+    </data>
+</odoo>

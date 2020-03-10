@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="header_report_analytic_account">
+            <div class="header">
+                <table border="0px" style="width:100%; height:10px; font-size: 12px;">
+                    <tr>
+                        <td class="text-left" width="30%">
+                            <strong>Fecha:</strong><span t-esc = "date_now"/>
+
+                        </td>
+                        <td class="text-center" width="40%">
+                            <h5><u><span t-esc="res_company.name" /></u></h5>
+                        </td>
+                        <td class="text-right" width="30%">
+                            <ul class="list-inline" style="margin-top:10px;">
+                                <li>Page:</li>
+                            <li>
+                                <span class="page"/>
+                            </li>
+                            <li>/</li>
+                            <li>
+                                <span class="topage"/>
+                            </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <table width="100%">
+                        <td><h3>Reporte Analítico por Cuenta</h3></td>
+                        <tr>
+                            <td width="25%"><strong>Fecha Desde:</strong><t t-esc="date_start"/></td>
+                            <td width="25%"><strong>Ver cuenta:</strong></td>
+                            <td width="25%"><strong>Movimiento Destino:</strong></td>
+                            <td width="25%"><strong>Ordenado por:</strong></td>
+                        </tr>
+                        <tr>
+                            <td width="25%"><strong>Fecha Hasta:</strong><t t-esc="date_end"/></td>
+                            <td width="25%">
+                                <span t-if="cuentas_contables == 'all'">Todas las cuentas</span>
+                                <span t-if="cuentas_contables == 'move'">cuentas con movimiento</span>
+                                <span t-if="cuentas_contables == 'saldo_cero'">Con saldo distinto a cero</span>
+                            </td>
+                            <td width="25%">
+                                <span t-if="move_dest == 'all'">Todos los asientos</span>
+                                <span t-if="move_dest == 'validate'">Todos los asientos validados</span>
+                            </td>
+                            <td width="25%"><t t-esc="ordenado_fecha"/></td>
+                        </tr>
+                    </table>
+                    <table width="100%">
+                        <td><h4>N° de cuenta: <t t-esc= "datos_cuentas['codigo']"/></h4></td>
+                        <td><h4>Nombre cuenta contable: <t t-esc= "datos_cuentas['nombre']"/></h4></td>
+                        <td><h4>Moneda: </h4></td>
+                        <td t-foreach="currency" t-as="c">
+                            <td><span t-esc="c.name"/></td>
+                        </td>
+                    </table>
+                </table>
+            </div>
+        </template>
+
+        <record model="report.paperformat" id="paperformat_report_analitico_cuenta">
+
+        <field name="name">paperformat.report.analitico.cuenta</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">40</field>
+        <field name="margin_right">5</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">40</field>
+        <field name="dpi">90</field>
+
+    </record>
+
+        <report
+            id = "action_reporte_analitico"
+            model = "wizard.report.analytic.account"
+            string = "Reporte analitico por cuenta"
+            report_type = "qweb-pdf"
+            paperformat="paperformat_report_analitico_cuenta"
+            name = "inte_report_analitico_cuenta.report_analytic_por_cuenta"
+            file = "inte_report_analitico_cuenta.report_analytic_por_cuenta"
+        />
+
+        <template id="report_analytic_por_cuenta" >
+             <div class="page" style="page-break-before:always;">
+                 <t t-call="inte_report_analitico_cuenta.header_report_analytic_account"/>
+
+                    <div class="article">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr class="text-center">
+                                    <th>Date</th>
+                                    <th>JRNL</th>
+                                    <th>Partner</th>
+                                    <th>Ref</th>
+                                    <th>Move</th>
+                                    <th>Entry Label</th>
+                                    <th>Analytic Code</th>
+                                    <t t-foreach="currency" t-as="c">
+                                        <span t-if="c.id == 4">
+                                            <th>Debit</th>
+                                            <th>Credit</th>
+                                            <th>Balance</th>
+                                         </span>
+                                    </t>
+                                        <t t-foreach="currency" t-as="c">
+                                            <span t-if="c.id == 3">
+                                                <th>Tasa_usd</th>
+                                                <th>Debit_usd</th>
+                                                <th>Credit_usd</th>
+                                                <th>Balance_usd</th>
+                                            </span>
+                                        </t>
+                                        <t t-foreach="currency" t-as="c">
+                                            <span t-if="c.id == 1">
+                                                <th>Tasa_eur</th>
+                                                <th>Debit_eur</th>
+                                                <th>Credit_eur</th>
+                                                <th>Balance_eur</th>
+                                            </span>
+                                        </t>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="Account" t-as="account">
+                                    <tr>
+                                        <td colspan="7">
+                                            <span style="color: white;" t-esc="'..'"/>
+                                            <span t-esc="account['code']"/>
+                                            <span t-esc="account['name']"/>
+                                        </td>
+                                        <t t-foreach="currency" t-as="c">
+                                            <span t-if="c.id == 4">
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="account['debit']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="account['credit']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="account['balance']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                            </span>
+                                        </t>
+                                        <t t-foreach="currency" t-as="c">
+                                            <span t-if="c.id == 3">
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="account['tasa_usd']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="account['debit_usd']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="account['credit_usd']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="account['balance_usd']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                            </span>
+                                        </t>
+                                        <t t-foreach="currency" t-as="c">
+                                            <span t-if="c.id == 1">
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="account['tasa_eur']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="account['debit_eur']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="account['credit_eur']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="account['balance_eur']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                            </span>
+                                        </t>
+                                        <td groups="base.group_multi_currency"/>
+                                    </tr>
+                                    <tr t-foreach="account['move_lines']" t-as="line">
+                                        <td><span t-esc="line['ldate']" t-options="{'widget': 'date'}"/></td>
+                                        <td><span t-esc="line['lcode']"/></td>
+                                        <td><span t-esc="line['partner_name']"/></td>
+                                        <td><span t-if="line['lref']" t-esc="line['lref']"/></td>
+                                        <td><span t-esc="line['move_name']"/></td>
+                                        <td><span t-esc="line['lname']"/></td>
+                                        <span t-if="line['lname'] != 'Initial Balance'">
+                                            <td><span t-esc="line['analytic_account_code']"/></td>
+                                        </span>
+                                        <span t-if="line['lname'] == 'Initial Balance'">
+                                            <td>&amp;nbsp;&amp;nbsp;&amp;nbsp;</td>
+                                        </span>
+                                        <t t-foreach="currency" t-as="c">
+                                            <span t-if="c.id == 4">
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="line['debit']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="line['credit']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="line['balance']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                            </span>
+                                        </t>
+                                        <t t-foreach="currency" t-as="c">
+                                            <span t-if="c.id == 3">
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="line['tasa_usd']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="line['debit_usd']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="line['credit_usd']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="line['balance_usd']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                            </span>
+                                        </t>
+                                        <t t-foreach="currency" t-as="c">
+                                            <span t-if="c.id == 1">
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="line['tasa_eur']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="line['debit_eur']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="line['credit_eur']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                                <td class="text-right" style="border-right:1px solid black; border-left:1px solid black; font-weight: bold;">
+                                                    <span t-esc="line['balance_eur']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                            </span>
+                                        </t>
+                                    </tr>
+                                </t>
+                                <!--Tabla de los totales para bolivares-->
+                                 <t t-foreach="currency" t-as="c">
+                                    <span t-if="c.id == 4">
+                                        <table class="table table-striped" style="width:700px; margin: 0 auto; border: 1px solid #000000; font-size: 15px;">
+                                            <tr>
+                                                <td>
+                                                    <strong>Total Crédito en Bs.:</strong><span t-esc="Totales['credit_total_bs']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>Total Débito en Bs.:</strong><span t-esc="Totales['debit_total_bs']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>Total Balance en Bs.:</strong><span t-esc="Totales['balance_total_bs']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                    </span>
+                                 </t>
+                                <!--Tabla de los totales para euros-->
+                                 <t t-foreach="currency" t-as="c">
+                                    <span t-if="c.id == 1">
+                                        <table class="table table-striped" style="width:700px; margin: 0 auto; border: 1px solid #000000; font-size: 15px;">
+                                            <tr>
+                                                <td>
+                                                    <strong>Total Crédito en Euros.:</strong><span t-esc="Totales['credit_total_eur']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>Total Débito en Euros.:</strong><span t-esc="Totales['debit_total_eur']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>Total Balance en Euros.:</strong><span t-esc="Totales['balance_total_eur']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                    </span>
+                                 </t>
+                                <!--Tabla de los totales para dólares-->
+                                 <t t-foreach="currency" t-as="c">
+                                    <span t-if="c.id == 3">
+                                        <table class="table table-striped" style="width:700px; margin: 0 auto; border: 1px solid #000000; font-size: 15px;">
+                                            <tr>
+                                                <td>
+                                                    <strong>Total Crédito en Dólares.:</strong><span t-esc="Totales['credit_total_usd']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>Total Débito en Dólares.:</strong><span t-esc="Totales['debit_total_usd']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>Total Balance en Dólares.:</strong><span t-esc="Totales['balance_total_usd']" t-options="{'widget': 'monetary', 'display_currency': c}"/>
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                    </span>
+                                 </t>
+
+                            </tbody>
+                        </table>
+                    </div>
+             </div>
+
+                <div class="footer">
+                    <div class="row text-center" style="border-top: 1px solid black;">
+                        <div class="col-xs-3 col-xs-offset-9 text-right">
+                            <ul class="list-inline" style="margin-top:10px;">
+                                <li>Page:</li>
+                                <li>
+                                    <span class="page"/>
+                                </li>
+                                <li>/</li>
+                                <li>
+                                    <span class="topage"/>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    </template>
+    </data>
+</odoo>

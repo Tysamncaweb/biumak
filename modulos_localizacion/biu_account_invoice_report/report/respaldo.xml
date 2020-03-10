@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="report.paperformat" id="paperformat_account_invoice_cliente">
+            <field name="name">paperformat.account.invoice</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">60</field>
+            <field name="margin_right">10</field>
+            <field name="margin_bottom">80</field>
+            <field name="margin_left">10</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">50</field>
+            <field name="dpi">90</field>
+        </record>
+
+    <template id="template_cliente" >
+        <div class="article">
+            <div class="page" style="page-break-before:always;">
+                <div class="text-left">
+                 <t t-foreach="infos" t-as="info">
+            <!--////////////////////////// FACTURAS NORMALES /////////////////////////////////////////////////////// -->
+                       <t t-if="origin_check == 'FAC'">
+                            <!-- ////////////////////// COMPAÑIA Agrosun /////////////////////-->
+                             <t t-if="compañia == 'AgroSun, C.A.'">
+                            <table style="width:100%;">
+                            <tr>
+                                <td colspan="5" ><p class="text-left">&amp;nbsp;</p></td>
+                                <td colspan="2" class="text-left"> <b>Fecha: </b><span t-esc="info['fecha']"/> </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" ><p class="text-left">&amp;nbsp;</p></td>
+                                <td colspan="2" class="text-left"> <b>N° de factura: </b><span t-esc="info['n_factura']"/> </td></tr>
+                            <tr>
+                                <td colspan="5" ><p class="text-left">&amp;nbsp;</p></td>
+                                <td colspan="2" class="text-left"> <b>N° Cliente: </b><span t-esc="info['n_cliente']"/> </td>
+                            </tr>
+                         <tr><td>&amp;nbsp;</td></tr>
+                         <tr><td>&amp;nbsp;</td></tr>
+                         <tr class="text-left table-bordered" style="height:20px; border: 1px solid #000000;width:100%;">
+                            <td colspan="4"  class="text-left table-bordered" style=" vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;RAZON SOCIAL:</b> <span t-esc="info['razon']"/> </td>
+                            <td colspan="3" class="text-left table-bordered" style=" vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;RIF:</b> <span t-esc="info['rif']"/></td>
+                        </tr>
+                        <tr class="text-left table-bordered" style="height:20px; border: 1px solid #000000;width:100%;">
+                            <td colspan="5" class="text-left table-bordered" style="width:75%; vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;DIRECCION:</b> <span t-esc="info['direccion']"/></td>
+                            <td colspan="2" class="text-left table-bordered" style="width:25%; vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;TEL:</b> <span t-esc="info['telefono']"/></td>
+                        </tr>
+                        <tr class="text-left table-bordered" style="height:20px; border: 1px solid #000000;width:100%;">
+                            <td colspan="3" class="text-left table-bordered" style="width:30%; vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;FORMA DE PAGO</b></td>
+                            <td colspan="1" class="text-center table-bordered" style="width:40%; vertical-align: middle; border: 1px solid #000000; "><span t-esc="info['forma_pago']"/></td>
+                            <td colspan="3" class="text-left table-bordered" style="width:30%; vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;BANCO:</b> <span t-esc="info['banco']"/></td>
+
+                        </tr>
+                         <tr><td>&amp;nbsp;</td></tr>
+                         <tr><td>&amp;nbsp;</td></tr>
+                         <tr><td>&amp;nbsp;</td></tr>
+
+                           <tr class="text-center table-bordered" style="height:20px; border: 1px solid #000000;">
+                            <th class="text-center table-bordered" style="width:2%; vertical-align: middle; border: 1px solid #000000; ">&amp;nbsp;N°</th>
+                            <th class="text-center table-bordered" style="width:12%; vertical-align: middle; border: 1px solid #000000;">COD. PRODUCTO</th>
+                            <th class="text-center table-bordered" style="width:5%; vertical-align: middle; border: 1px solid #000000;">&amp;nbsp;CANT&amp;nbsp;</th>
+                            <th class="text-center table-bordered" style="width:40%; vertical-align: middle; border: 1px solid #000000;">DESCRIPCION</th>
+                            <th class="text-center table-bordered" style="width:8%; vertical-align: middle; border: 1px solid #000000;">&amp;nbsp;</th>
+                            <th class="text-center table-bordered" style="width:13%; vertical-align: middle; border: 1px solid #000000;">PRECIO UNITARIO</th>
+                            <th class="text-center table-bordered" style="width:12%; vertical-align: middle; border: 1px solid #000000;">TOTAL</th>
+                         </tr>
+                         <t t-foreach="docs" t-as="doc">
+                             <tr class="text-center" style="height:20px; border: 1px solid #000000;">
+                            <td class="text-center " style="width:2%;   vertical-align: middle; border: 1px solid #000000; "><span t-esc="doc['n']"/></td>
+                            <td class="text-center " style="width:12%;  vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['cod']"/></td>
+                            <td class="text-center " style="width:5%;   vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['cant']"/></td>
+                            <td class="text-center " style="width:40%;  vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['descripcion']"/></td>
+                            <td class="text-center " style="width:8%;   vertical-align: middle; border: 1px solid #000000;">&amp;nbsp;</td>
+                            <td class="text-center " style="width:13%;  vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['precio_unitario']"/></td>
+                            <td class="text-center " style="width:12%;  vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['precio_total']"/></td>
+                         </tr>
+
+                         </t>
+                         <tr>
+                                <td colspan="4" ><p class="text-left">&amp;nbsp;</p></td>
+                                <td colspan="2" style="vertical-align: middle; border: 1px solid #000000;font-size:14px;"><p>&amp;nbsp;Total monto Exento Bs</p></td>
+                                <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;"><span t-esc="total"/></td>
+                         </tr>
+                         <tr>
+                                <td colspan="4" ><p class="text-left">&amp;nbsp;</p></td>
+                                <td colspan="2" style="vertical-align: middle; border: 1px solid #000000;font-size:14px;"><p>&amp;nbsp;Base Imponible Gravable</p></td>
+                                <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;"><p>0,00</p></td>
+                         </tr>
+                         <tr>
+                                <td colspan="4" style="border-bottom:1px solid #000000"><p class="text-left">&amp;nbsp;</p></td>
+                                <td colspan="2" style="vertical-align: middle; border: 1px solid #000000;font-size:14px;"><p>&amp;nbsp;Monto IVA (16%)</p></td>
+                                <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;"><p>0,00</p></td>
+                         </tr>
+                         <tr>
+                                <td colspan="4"  ><p class="text-center">&amp;nbsp; SON: <span t-esc="cifra_total"/></p> </td>
+                                <td class="text-center" colspan="2" style="vertical-align: middle; border: 1px solid #000000;font-size:14px;"><p>Monto Total Bs</p></td>
+                                <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;"><span t-esc="total"/></td>
+                         </tr>
+                     </table>
+                        </t>
+                           <!-- ///////////////////// COMPAÑIA Biumak //////////////////////-->
+                             <t t-if="compañia != 'Biumak Pharmaceuticals, C.A.'">
+                                 <table style="width:100%;">
+                                    <tr>
+                                        <td colspan="6" ><p class="text-left">&amp;nbsp;</p></td>
+                                        <td colspan="2" class="text-left"> <b>Fecha: </b><span t-esc="info['fecha']"/> </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="6" ><p class="text-left">&amp;nbsp;</p></td>
+                                        <td colspan="2" class="text-left"> <b>N° de factura: </b><span t-esc="info['n_factura']"/> </td></tr>
+                                    <tr>
+                                        <td colspan="6" ><p class="text-left">&amp;nbsp;</p></td>
+                                        <td colspan="2" class="text-left"> <b>N° Cliente: </b><span t-esc="info['n_cliente']"/> </td>
+                                    </tr>
+                                     <tr><td>&amp;nbsp;</td></tr>
+                                     <tr><td>&amp;nbsp;</td></tr>
+                                     <tr class="text-left table-bordered" style="height:20px; border: 1px solid #000000;width:100%;">
+                                        <td colspan="5"  class="text-left table-bordered" style=" vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;RAZON SOCIAL:</b> <span t-esc="info['razon']"/> </td>
+                                        <td colspan="3" class="text-left table-bordered" style=" vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;RIF:</b> <span t-esc="info['rif']"/></td>
+                                    </tr>
+                                    <tr class="text-left table-bordered" style="height:20px; border: 1px solid #000000;width:100%;">
+                                        <td colspan="6" class="text-left table-bordered" style="width:75%; vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;DIRECCION:</b> <span t-esc="info['direccion']"/></td>
+                                        <td colspan="2" class="text-left table-bordered" style="width:25%; vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;TEL:</b> <span t-esc="info['telefono']"/></td>
+                                    </tr>
+                                    <tr class="text-left table-bordered" style="height:20px; border: 1px solid #000000;width:100%;">
+                                        <td colspan="3" class="text-left table-bordered" style="width:30%; vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;FORMA DE PAGO</b></td>
+                                        <td colspan="2" class="text-center table-bordered" style="width:40%; vertical-align: middle; border: 1px solid #000000; "><span t-esc="info['forma_pago']"/></td>
+                                        <td colspan="3" class="text-left table-bordered" style="width:30%; vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;BANCO:</b> <span t-esc="info['banco']"/></td>
+
+                                    </tr>
+                                     <tr><td>&amp;nbsp;</td></tr>
+                                     <tr><td>&amp;nbsp;</td></tr>
+                                     <tr><td>&amp;nbsp;</td></tr>
+
+                                     <tr class="text-center table-bordered" style="height:20px; border: 1px solid #000000;">
+                                        <th class="text-center table-bordered" style="width:2%; vertical-align: middle; border: 1px solid #000000; ">&amp;nbsp;N°</th>
+                                        <th class="text-center table-bordered" style="width:12%; vertical-align: middle; border: 1px solid #000000;">COD. PRODUCTO</th>
+                                        <th class="text-center table-bordered" style="width:5%; vertical-align: middle; border: 1px solid #000000;">&amp;nbsp;CANT&amp;nbsp;</th>
+                                        <th class="text-center table-bordered" style="width:8%; vertical-align: middle; border: 1px solid #000000;">U.M</th>
+                                        <th class="text-center table-bordered" style="width:40%; vertical-align: middle; border: 1px solid #000000;">DESCRIPCION</th>
+                                        <th class="text-center table-bordered" style="width:8%; vertical-align: middle; border: 1px solid #000000;">N° DE LOTE</th>
+                                        <th class="text-center table-bordered" style="width:13%; vertical-align: middle; border: 1px solid #000000;">PRECIO UNITARIO</th>
+                                        <th class="text-center table-bordered" style="width:12%; vertical-align: middle; border: 1px solid #000000;">TOTAL</th>
+                                     </tr>
+                                     <t t-foreach="docs" t-as="doc">
+                                         <tr class="text-center" style="height:20px; border: 1px solid #000000;">
+                                            <td class="text-center " style="width:2%;   vertical-align: middle; border: 1px solid #000000; "><span t-esc="doc['n']"/></td>
+                                            <td class="text-center " style="width:12%;  vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['cod']"/></td>
+                                            <td class="text-center " style="width:5%;   vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['cant']"/></td>
+                                            <td class="text-center " style="width:8%;   vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['um']"/></td>
+                                            <td class="text-center " style="width:40%;  vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['descripcion']"/></td>
+                                            <td class="text-center " style="width:8%;   vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['lote']"/></td>
+                                            <td class="text-center " style="width:13%;  vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['precio_unitario']"/></td>
+                                            <td class="text-center " style="width:12%;  vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['precio_total']"/></td>
+                                         </tr>
+                                     </t>
+
+                                     <tr>
+                                            <td colspan="5" ><p class="text-left">&amp;nbsp;</p></td>
+                                            <td colspan="2" style="vertical-align: middle; border: 1px solid #000000;font-size:14px;"><p>&amp;nbsp;Total monto Exento Bs</p></td>
+                                            <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;"><span t-esc="total"/></td>
+                                     </tr>
+                                     <tr>
+                                            <td colspan="5" ><p class="text-left">&amp;nbsp;</p></td>
+                                            <td colspan="2" style="vertical-align: middle; border: 1px solid #000000;font-size:14px;"><p>&amp;nbsp;Base Imponible Gravable</p></td>
+                                            <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;"><p>0,00</p></td>
+                                     </tr>
+                                     <tr>
+                                            <td colspan="5" style="border-bottom:1px solid #000000"><p class="text-left">&amp;nbsp;</p></td>
+                                            <td colspan="2" style="vertical-align: middle; border: 1px solid #000000;font-size:14px;"><p>&amp;nbsp;Monto IVA (16%)</p></td>
+                                            <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;"><p>0,00</p></td>
+                                     </tr>
+                                     <tr>
+                                            <td colspan="5"  ><p class="text-center">&amp;nbsp; SON: <span t-esc="cifra_total"/></p> </td>
+                                            <td class="text-center" colspan="2" style="vertical-align: middle; border: 1px solid #000000;font-size:14px;"><p>Monto Total Bs</p></td>
+                                            <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;"><span t-esc="total"/></td>
+                                     </tr>
+                                 </table>
+                             </t>
+
+                       </t>
+
+            <!--//////////////////////////   RECTIFICATIVAS  /////////////////////////////////////////////////////// -->
+                       <t t-if="origin_check == 'REC'">
+                            <!-- ////////////////////// COMPAÑIA Agrosun /////////////////////-->
+                             <t t-if="compañia == 'AgroSun, C.A.'">
+                                <table style="width:100%;">
+                                    <tr>
+                                        <td colspan="4" ><p class="text-left">&amp;nbsp;</p></td>
+                                        <td colspan="2" class="text-left"> <b>Fecha: </b><span t-esc="info['fecha']"/> </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" ><p class="text-left">&amp;nbsp;</p></td>
+                                        <td colspan="2" class="text-left"> <b>Nota de Credito N° <span t-esc="info['n_factura']"/> </b></td></tr>
+                                    <tr>
+                                        <td colspan="4" ><p class="text-center"><b>NOTA DE CREDITO</b></p></td>
+                                        <td colspan="2" class="text-left"> <b>Factura que afecta</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" ><p class="text-left">&amp;nbsp;</p></td>
+                                        <td colspan="2" class="text-left"> <b>Factura N° <span t-esc="origin_number"/> </b></td>
+                                    </tr>
+                                     <tr><td>&amp;nbsp;</td></tr>
+                                     <tr><td>&amp;nbsp;</td></tr>
+                                     <tr class="text-left table-bordered" style="height:20px; border: 1px solid #000000;width:100%;">
+                                        <td colspan="4"  class="text-left table-bordered" style=" vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;RAZON SOCIAL:</b> <span t-esc="info['razon']"/> </td>
+                                        <td colspan="2" class="text-left table-bordered" style=" vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;RIF:</b> <span t-esc="info['rif']"/></td>
+                                    </tr>
+                                    <tr class="text-left table-bordered" style="height:20px; border: 1px solid #000000;width:100%;">
+                                        <td colspan="4" class="text-left table-bordered" style="width:75%; vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;DIRECCION:</b> <span t-esc="info['direccion']"/></td>
+                                        <td colspan="2" class="text-left table-bordered" style="width:25%; vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;TEL:</b> <span t-esc="info['telefono']"/></td>
+                                    </tr>
+                                    <tr class="text-left table-bordered" style="height:20px; border: 1px solid #000000;width:100%;">
+                                        <td colspan="3" class="text-left table-bordered" style="width:30%; vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;FORMA DE PAGO</b></td>
+                                        <td colspan="1" class="text-center table-bordered" style="width:40%; vertical-align: middle; border: 1px solid #000000; "><span t-esc="info['forma_pago']"/></td>
+                                        <td colspan="2" class="text-left table-bordered" style="width:30%; vertical-align: middle; border: 1px solid #000000; ">&amp;nbsp;</td>
+
+                                    </tr>
+                                     <tr><td>&amp;nbsp;</td></tr>
+                                     <tr><td>&amp;nbsp;</td></tr>
+                                     <tr><td>&amp;nbsp;</td></tr>
+
+                                       <tr class="text-center table-bordered" style="height:20px; border: 1px solid #000000;">
+                                        <th class="text-center table-bordered" style=" vertical-align: middle; border: 1px solid #000000; ">&amp;nbsp;N°</th>
+                                        <th class="text-center table-bordered" style=" vertical-align: middle; border: 1px solid #000000;">COD. PRODUCTO</th>
+                                        <th class="text-center table-bordered" style=" vertical-align: middle; border: 1px solid #000000;">&amp;nbsp;CANT&amp;nbsp;</th>
+                                        <th class="text-center table-bordered" style=" vertical-align: middle; border: 1px solid #000000;">DESCRIPCION</th>
+                                        <th class="text-center table-bordered" style=" vertical-align: middle; border: 1px solid #000000;">PRECIO UNITARIO</th>
+                                        <th class="text-center table-bordered" style=" vertical-align: middle; border: 1px solid #000000;">TOTAL</th>
+                                     </tr>
+                                     <t t-foreach="docs" t-as="doc">
+                                         <tr class="text-center" style="height:20px; border: 1px solid #000000;">
+                                        <td class="text-center " style="   vertical-align: middle; border: 1px solid #000000; "><span t-esc="doc['n']"/></td>
+                                        <td class="text-center " style="  vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['cod']"/></td>
+                                        <td class="text-center " style="  vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['cant']"/></td>
+                                        <td class="text-center " style=" vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['descripcion']"/></td>
+                                        <td class="text-center " style="  vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['precio_unitario']"/></td>
+                                        <td class="text-center " style="  vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['precio_total']"/></td>
+                                     </tr>
+                                     </t>
+                                     <tr>
+                                            <td colspan="4" class="text-center"><b>NOTA: <span t-esc="nota_cred"/></b></td>
+                                            <td colspan="1" style="vertical-align: middle; border: 1px solid #000000;font-size:14px;"><p>&amp;nbsp;Total monto Exento Bs</p></td>
+                                            <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;"><span t-esc="total"/></td>
+                                     </tr>
+                                     <tr>
+                                            <td colspan="4" ><p class="text-left">&amp;nbsp;</p></td>
+                                            <td colspan="1" style="vertical-align: middle; border: 1px solid #000000;font-size:14px;"><p>&amp;nbsp;Base Imponible Gravable</p></td>
+                                            <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;"><p>0,00</p></td>
+                                     </tr>
+                                     <tr>
+                                            <td colspan="4" style="border-bottom:1px solid #000000"><p class="text-left">&amp;nbsp;</p></td>
+                                            <td colspan="1" style="vertical-align: middle; border: 1px solid #000000;font-size:14px;"><p>&amp;nbsp;Monto IVA (16%)</p></td>
+                                            <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;"><p>0,00</p></td>
+                                     </tr>
+                                     <tr>
+                                            <td colspan="4"  ><p class="text-center">&amp;nbsp; SON: <span t-esc="cifra_total"/></p> </td>
+                                            <td class="text-center" colspan="1" style="vertical-align: middle; border: 1px solid #000000;font-size:14px;"><p>Monto Total Bs</p></td>
+                                            <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;"><span t-esc="total"/></td>
+                                     </tr>
+                                </table>
+                             </t>
+
+                           <!-- ///////////////////// COMPAÑIA Biumak //////////////////////-->
+                             <t t-if="compañia == 'Biumak Pharmaceuticals, C.A.'">
+                                 <table style="width:100%;">
+                             <tr>
+                                <td colspan="5" ><p class="text-left">&amp;nbsp;</p></td>
+                                <td colspan="2" class="text-center" style=" vertical-align: middle; border: 1px solid #000000; "> <b>NOTA DE CREDITO</b> </td>
+                            </tr>
+                             <tr>
+                                <td colspan="5" ><p class="text-left">&amp;nbsp;</p></td>
+                                <td colspan="2" class="text-center" style=" vertical-align: middle; border: 1px solid #000000; "> <span t-esc="info['n_factura']"/> </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" ><p class="text-left">&amp;nbsp;</p></td>
+                                <td colspan="2" class="text-left" style=" vertical-align: middle; border: 1px solid #000000;border-bottom:0px"> <b>&amp;nbsp;Fecha: </b><span t-esc="info['fecha']"/> </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" ><p class="text-left">&amp;nbsp;</p></td>
+                                <td colspan="2" class="text-left" style=" vertical-align: middle; border: 1px solid #000000; "> <b>&amp;nbsp;Factura que afecta: &amp;nbsp;&amp;nbsp;</b><span t-esc="origin_number"/> </td></tr>
+
+                         <tr><td>&amp;nbsp;</td></tr>
+                         <tr><td>&amp;nbsp;</td></tr>
+                         <tr class="text-left table-bordered" style="height:20px; border: 1px solid #000000;width:100%;">
+                            <td colspan="4"  class="text-left table-bordered" style=" vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;RAZON SOCIAL:</b> <span t-esc="info['razon']"/> </td>
+                            <td colspan="3" class="text-left table-bordered" style=" vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;RIF:</b> <span t-esc="info['rif']"/></td>
+                        </tr>
+                        <tr class="text-left table-bordered" style="height:20px; border: 1px solid #000000;width:100%;">
+                            <td colspan="5" class="text-left table-bordered" style="width:75%; vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;DIRECCION:</b> <span t-esc="info['direccion']"/></td>
+                            <td colspan="2" class="text-left table-bordered" style="width:25%; vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;TEL:</b> <span t-esc="info['telefono']"/></td>
+                        </tr>
+                        <tr class="text-left table-bordered" style="height:20px; border: 1px solid #000000;width:100%;">
+                            <td colspan="3" class="text-left table-bordered" style="width:30%; vertical-align: middle; border: 1px solid #000000; "><b>&amp;nbsp;FORMA DE PAGO</b></td>
+                            <td colspan="1" class="text-center table-bordered" style="width:40%; vertical-align: middle; border: 1px solid #000000; "><span t-esc="info['forma_pago']"/></td>
+                            <td colspan="3" class="text-left table-bordered" style="width:30%; vertical-align: middle; border: 1px solid #000000; ">&amp;nbsp;</td>
+
+                        </tr>
+                         <tr><td>&amp;nbsp;</td></tr>
+                         <tr><td>&amp;nbsp;</td></tr>
+                         <tr><td>&amp;nbsp;</td></tr>
+
+                           <tr class="text-center table-bordered" style="height:20px; border: 1px solid #000000;">
+                            <th class="text-center table-bordered" style="width:2%; vertical-align: middle; border: 1px solid #000000; ">&amp;nbsp;N°</th>
+                            <th class="text-center table-bordered" style="width:12%; vertical-align: middle; border: 1px solid #000000;">COD. PRODUCTO</th>
+                            <th class="text-center table-bordered" style="width:5%; vertical-align: middle; border: 1px solid #000000;">&amp;nbsp;CANT&amp;nbsp;</th>
+                            <th class="text-center table-bordered" style="width:40%; vertical-align: middle; border: 1px solid #000000;">DESCRIPCION</th>
+                            <th class="text-center table-bordered" style="width:8%; vertical-align: middle; border: 1px solid #000000;">N° DE LOTE</th>
+                            <th class="text-center table-bordered" style="width:13%; vertical-align: middle; border: 1px solid #000000;">PRECIO UNITARIO</th>
+                            <th class="text-center table-bordered" style="width:12%; vertical-align: middle; border: 1px solid #000000;">TOTAL</th>
+                         </tr>
+                         <t t-foreach="docs" t-as="doc">
+                             <tr class="text-center" style="height:20px; border: 1px solid #000000;">
+                            <td class="text-center " style="width:2%;   vertical-align: middle; border: 1px solid #000000; "><span t-esc="doc['n']"/></td>
+                            <td class="text-center " style="width:12%;  vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['cod']"/></td>
+                            <td class="text-center " style="width:5%;   vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['cant']"/></td>
+                            <td class="text-center " style="width:40%;  vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['descripcion']"/></td>
+                            <td class="text-center " style="width:8%;   vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['lote']"/></td>
+                            <td class="text-center " style="width:13%;  vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['precio_unitario']"/></td>
+                            <td class="text-center " style="width:12%;  vertical-align: middle; border: 1px solid #000000;"><span t-esc="doc['precio_total']"/></td>
+                         </tr>
+
+                         </t>
+                         <tr>
+                                <td colspan="4" class="text-center"><b>NOTA: <span t-esc="nota_cred"/></b></td>
+                                <td colspan="2" style="vertical-align: middle; border: 1px solid #000000;font-size:14px;"><p>&amp;nbsp;Total monto Exento Bs</p></td>
+                                <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;"><span t-esc="total"/></td>
+                         </tr>
+                         <tr>
+                                <td colspan="4" ><p class="text-left">&amp;nbsp;</p></td>
+                                <td colspan="2" style="vertical-align: middle; border: 1px solid #000000;font-size:14px;"><p>&amp;nbsp;Base Imponible Gravable</p></td>
+                                <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;"><p>0,00</p></td>
+                         </tr>
+                         <tr>
+                                <td colspan="4" style="border-bottom:1px solid #000000"><p class="text-left">&amp;nbsp;</p></td>
+                                <td colspan="2" style="vertical-align: middle; border: 1px solid #000000;font-size:14px;"><p>&amp;nbsp;Monto IVA (16%)</p></td>
+                                <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;"><p>0,00</p></td>
+                         </tr>
+                         <tr>
+                                <td colspan="4"  ><p class="text-center">&amp;nbsp; SON: <span t-esc="cifra_total"/></p> </td>
+                                <td class="text-center" colspan="2" style="vertical-align: middle; border: 1px solid #000000;font-size:14px;"><p>Monto Total Bs</p></td>
+                                <td class="text-right" style="vertical-align: middle; border: 1px solid #000000;"><span t-esc="total"/></td>
+                         </tr>
+                     </table>
+                             </t>
+                       </t>
+
+
+                </t>
+                </div>
+            </div>
+         </div>
+
+    </template>
+
+    <report
+            id="action_reporte_biumak_cliente"
+            string="Factura"
+            model="account.invoice"
+            report_type="qweb-pdf"
+            name="biu_account_invoice_report.template_cliente"
+            file="biu_account_invoice_report.template_cliente"
+            paperformat ="paperformat_account_invoice_cliente"
+        />
+
+    <record id="account_boton_view_inherit" model="ir.ui.view">
+            <field name="name">account.boton.view.inherit</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='invoice_print']" position="replace">
+                   <button name="obtener_reporte" string="IMPRIMIR FACTURA" type="object" attrs="{'invisible':['|',('sent','=',True), ('state', 'not in', ('open','paid'))]}" class="oe_highlight" groups="base.group_user"/>
+                </xpath>
+            </field>
+    </record>
+    <record id="boton_view_inherit" model="ir.ui.view">
+            <field name="name">boton.view.inherit</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_due']" position="after">
+                        <field name="pago_transfe" string="Forma de Pago"/>
+                        <field name="tipo_banco" string="Banco"/>
+                </xpath>
+            </field>
+    </record>
+    <record id="boton_view_inherit_2" model="ir.ui.view">
+            <field name="name">boton.view.inherit.2</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_due']" position="after">
+                        <field name="pago_transfe" string="Forma de Pago"/>
+                        <field name="tipo_banco" string="Banco"/>
+                </xpath>
+            </field>
+    </record>
+
+    <record id="remplazo_campo_compa" model="ir.ui.view">
+            <field name="name">remplazo.campo.compa</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='company_id']" position="replace">
+                        <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" required = "1"/>
+                </xpath>
+            </field>
+    </record>
+</odoo>

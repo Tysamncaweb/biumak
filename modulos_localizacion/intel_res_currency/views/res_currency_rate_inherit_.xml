@@ -1,0 +1,53 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_currency_rate_tree_inherit">
+            <field name="name">res.currency.rate.tree.inherit</field>
+            <field name="model">res.currency.rate</field>
+            <field name="inherit_id" ref="base.view_currency_rate_tree"/>
+            <field name="arch" type="xml">
+                <!--field name="name" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field-->
+                <field name="name" position="before">
+                    <field name="hora" string="Fecha y Hora"/>
+                </field>
+                <field name="rate" position="before">
+                    <field name="rate_real" string="Tasa"/>
+                </field>
+                <field name="rate" position="attributes">
+                    <attribute name="string">Tasa Inversa</attribute>
+
+                </field>
+            </field>
+        </record>
+
+        <!-- vista de las tasas monetarias..-->
+        <record id="view_currency_tree_inherit" model="ir.ui.view">
+            <field name="name">res.currency.tree.inherit</field>
+            <field name="model">res.currency</field>
+            <field name="inherit_id" ref="base.view_currency_tree"/>
+            <field name="arch" type="xml">
+                <field name="date" position="after">
+                    <field name="rate_real" string="Tasa" readonly="1" />
+                </field>
+                <field name="rate" position="attributes">
+                    <attribute name="string">Tasa Inversa</attribute>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_currency_form_inherit" model="ir.ui.view">
+            <field name="name">res.currency.form.inherit</field>
+            <field name="model">res.currency</field>
+            <field name="inherit_id" ref="base.view_currency_form"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="rate_real" string="Tasa" readonly="1" />
+                </field>
+                <field name="rate" position="attributes">
+                    <attribute name="string">Tasa Inversa</attribute>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,70 @@
+<odoo>
+  <data>
+      <record id="view_bank_reconciliation_wizard" model="ir.ui.view">
+            <field name="name">bank.reconciliation.form</field>
+                <field name="model">bank.reconciliation</field>
+                <field name="arch" type="xml">
+                <form string="Transacciones no Reconciliadas">
+                    <group>
+                        <field name="journal_id" string="Banco/Diario" domain="[('type','=','bank')]"/>
+                        <field name="start_date" string="Fecha Inicio"/>
+                        <field name="end_date" string="Fecha Fin"  />
+                        <field name="currency_id" string="Moneda"/>
+                        <field name="company" string="Empresa"/>
+                    </group>
+                    <footer>
+                        <button name="generate_bank_reconciliation_pdf" string="Imprimir PDF" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+      </record>
+
+        <record id="action_bank_statement" model="ir.actions.act_window">
+        	<field name="name">Extractos Bancarios</field>
+        	<field name="res_model">account.bank.statement</field>
+        	<!--field name="view_type">form,tree</field-->
+        	<field name="view_mode">tree,form</field>
+            <field name="domain"></field>
+    	</record>
+
+        <record id="action_conciliation_model" model="ir.actions.act_window">
+        	<field name="name">Modelo de Conciliación</field>
+        	<field name="res_model">account.reconcile.model</field>
+        	<!--field name="view_type">form,tree</field-->
+        	<field name="view_mode">tree,form</field>
+            <!--field name="domain">[('pos_session_id','=',False)]</field-->
+    	</record>
+        <record id="action_unreconciled_transactions" model="ir.actions.act_window">
+        	<field name="name">Transacciones no Reconciliadas</field>
+        	<field name="res_model">bank.reconciliation</field>
+        	<field name="view_type">form</field>
+        	<field name="view_mode">form</field>
+        	<field name="view_id" ref="view_bank_reconciliation_wizard"/>
+        	<field name="target">new</field>
+    	</record>
+
+      <record id="view_bank_statement_form_inherit" model="ir.ui.view">
+            <field name="name">account.bank.statement.form.inherit</field>
+            <field name="model">account.bank.statement</field>
+            <field name="inherit_id" ref="account.view_bank_statement_form"/>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='journal_id']" position="replace">
+                    <field name="journal_id" string="Diario" domain="[('type', '=', 'bank')]" widget="selection"/>
+                </xpath>
+            </field>
+      </record>
+
+        <menuitem
+                 id="bank_reconcilation"
+                 parent="account.menu_finance"
+                 name="Conciliación"
+                 sequence="11"
+        />
+      <menuitem id="bank_statement" name="Extracto Bancario" parent="bank_reconcilation"  action="action_bank_statement" sequence="1"/>
+      <menuitem id="conciliation_model" name="Modelo de Conciliación" parent="bank_reconcilation" action="action_conciliation_model" sequence="2"/>
+      <menuitem id="unreconciled_transactions" name="Transacciones no Reconciliadas" parent="bank_reconcilation" action="action_unreconciled_transactions" sequence="3"/>
+
+  </data>
+</odoo>

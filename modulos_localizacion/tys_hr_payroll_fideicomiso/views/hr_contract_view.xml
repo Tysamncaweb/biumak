@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Inherit hr_contract_view.xml -->
+        <record id="hr_payroll_fideicomiso_contract__view_form_inherit" model="ir.ui.view">
+            <field name="name">hr.peyroll.fideicomiso.contract.view.form.inherit</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract_add_fields.hr_contract_view_inherit"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//notebook/page[@name='asignaciones_deducciones']" position="after">
+                    <page string="Prestaciones Sociales" name="prestaciones_sociales">
+                        <group name="prestaciones">
+                             <h2><a><b>Prestaciones Sociales</b></a></h2>
+                            <newline/>
+                           <field name="monto_acumulado" string="Monto Acumulado de Prestaciones" readonly="1" style="width: 35%%"/>
+                           <field name="fecha_ult_actualizacion" string="Fecha de Última Actualización" readonly="1"/>
+                           <label for= "anticipo_check" string="Anticipo de Prestaciones"/>
+
+                           <div>
+                               <div class="address_format">
+                                   <field name="anticipo_check" style="width: 15%%"/>
+                                   <field name="anticipo_value" class="oe_no_button" style="width: 35%%" attrs="{'invisible': [('anticipo_check', '!=', True)]}"/>
+                               </div>
+                           </div>
+                           <!--field name="capitalizacion" string="Capitalización"/-->
+                           <label for= "interes_acumulado_check" string="Intereses Acumulados"/>
+                           <div>
+                               <div class="address_format">
+                                   <field name="interes_acumulado_check" style="width: 15%%"/>
+                                   <field name="interes_acumulado_value" class="oe_no_button" style="width: 65%%" attrs="{'invisible': [('interes_acumulado_check', '!=', True)]}"/>
+                               </div>
+                           </div>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>
