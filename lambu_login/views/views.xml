@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="lambu_login.list">
+      <field name="name">lambu_login list</field>
+      <field name="model">lambu_login.lambu_login</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="lambu_login.action_window">
+      <field name="name">lambu_login window</field>
+      <field name="res_model">lambu_login.lambu_login</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="lambu_login.action_server">
+      <field name="name">lambu_login server</field>
+      <field name="model_id" ref="model_lambu_login_lambu_login"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="lambu_login" id="lambu_login.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="lambu_login.menu_1" parent="lambu_login.menu_root"/>
+    <menuitem name="Menu 2" id="lambu_login.menu_2" parent="lambu_login.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="lambu_login.menu_1_list" parent="lambu_login.menu_1"
+              action="lambu_login.action_window"/>
+    <menuitem name="Server to list" id="lambu_login" parent="lambu_login.menu_2"
+              action="lambu_login.action_server"/>
+    -->
+  </data>
+</odoo>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- FORM VIEW LOGIN -->
+        <record model="ir.ui.view" id="view_form_login">
+            <field name="name">view_form_login.form</field>
+            <field name="model">lambu.login.users</field>
+            <field name="arch" type="xml">
+                <form string="Usuarios">
+                    <sheet>
+                        <group string="Crear Usuario">
+                            <field name="employee_id"/>
+                            <field name="user_name"/>
+                            <field name="odoo_user" />
+                            <field name="password" class="oe_edit_only" password="True"/>
+                        </group>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-check">
+                                <field name="active" widget="boolean_button" options='{"terminology": "active"}'/>
+                            </button>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!--TREE VIEW LOGIN-->
+        <record id="view_tree_login" model="ir.ui.view">
+            <field name="name">lambu.login.users.tree</field>
+            <field name="model">lambu.login.users</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="employee_id"/>
+                    <field name="user_name"/>
+                </tree>
+            </field>
+        </record>
+        <!--TREE VIEW SESSION-->
+        <record id="view_tree_sessions" model="ir.ui.view">
+            <field name="name">lambu.login.session.tree</field>
+            <field name="model">lambu.login.session</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="user_name" />
+                    <field name="token"/>
+                    <field name="ip_pc" class = "ipcaptuaring"/>
+                    <field name="create_date"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="sessions_search_view" model="ir.ui.view">
+            <field name="name">lambu.login.session.search</field>
+            <field name="model">lambu.login.session</field>
+            <field name="arch" type="xml">
+                <search string="Session Search">
+                    <field name="token"/>
+                    <filter string="Activa" name="actuve_session" domain="[('date_close','=', False)]"/>
+                    <group expand="1" string="Group By">
+                        <filter string="Usuario" name="user" context="{'group_by':'user_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- ACTION-->
+        <record model="ir.actions.act_window" id="lambu_action_window">
+            <field name="name">Sesiones</field>
+            <field name="res_model">lambu.login.session</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="lambu_action_form_window">
+            <field name="name">Usuarios </field>
+            <field name="res_model">lambu.login.users</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+
+        <!-- Menu  list -->
+
+
+        <menuitem name="Sesiones" id="menu_root" action="lambu_action_form_window" groups="hr.group_hr_manager"/>
+
+        <menuitem name="Usuarios" id="lambu_login_users_menu_list" parent="menu_root" action="lambu_action_form_window"/>
+
+        <menuitem name="Sesiones" id="lambu_sesions_users" parent="menu_root" action="lambu_action_window" />
+
+    </data>
+</odoo>

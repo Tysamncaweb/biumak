@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_lambu_login_users,lambu_login_users,model_lambu_login_users,,1,1,1,1
+access_lambu_session_users,lambu_session_users,model_lambu_login_session,,1,0,0,0

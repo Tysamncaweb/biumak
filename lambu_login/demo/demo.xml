@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- <record id ="login_user_1" model ="lambu.login.users">
+            <field name ="user_name">vligas</field>
+            <field name = "password">123</field>
+            <field name = "active">True </field>
+            <field name="odoo_user" ref="base.default_user"></field>
+            <field name="employee_id" ref="hr.employee_al"></field>
+        </record>
+       <record id ="login_user_2" model = "lambu.login.users">
+            <field name ="user_name">ameza</field>
+            <field name = "password">123</field>
+            <field name = "active">True </field>
+            <field name="odoo_user" ref="base.default_user"></field>
+            <field name="employee_id" ref="hr.employee_al"></field>
+        </record>
+         <record id ="login_user_3" model ="lambu.login.users">
+            <field name ="user_name">apinto</field>
+            <field name = "password">123</field>
+            <field name = "active" >True </field>
+            <field name="odoo_user" ref="base.default_user"></field>
+            <field name="employee_id" ref="hr.employee_mit"></field>
+        </record>
+        <record id ="login_user_4" model ="lambu.login.users">
+            <field name ="user_name">kramirez</field>
+            <field name = "password">123</field>
+            <field name = "active">True </field>
+            <field name="odoo_user" ref="base.public_user"></field>
+            <field name="employee_id" ref="hr.employee_stw"></field>
+        </record> -->
+    </data>
+</odoo>
