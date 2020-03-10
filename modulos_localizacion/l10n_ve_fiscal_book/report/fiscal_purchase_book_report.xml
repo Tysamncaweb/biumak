@@ -34,6 +34,7 @@
                  <div class="page">
                  <div class="text-left">
                     <h5 >Nombre de la Empresa: <span t-esc="res_company.name"/></h5>
+                    <h5 >RIF: <span t-esc="res_company.partner_id.vat"/></h5>
                     <h5 >Dirección de la Empresa: <span t-esc="res_company.partner_id.street"/> <span t-esc="res_company.partner_id.street2"/></h5>
                 </div>
                  <div class="text-center">
