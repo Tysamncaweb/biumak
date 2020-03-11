@@ -1,10 +1,8 @@
-# coding: utf-8
+# -*- coding: utf-8 -*-
 
-
-from odoo import models, fields, api
-from odoo.tools.translate import _
-from datetime import datetime,date
+from datetime import datetime, date
 from dateutil import relativedelta
+from odoo import api, fields, models, _
 
 _DATETIME_FORMAT = "%Y-%m-%d"
 
@@ -12,13 +10,11 @@ _DATETIME_FORMAT = "%Y-%m-%d"
 class AccountInvoice(models.Model):
     _inherit = 'account.invoice'
 
-    supplier_invoice_number = fields.Char(string='Supplier Invoice Number',store=True,
-                                          help="The reference of this invoice as provided by the supplier.")
-    nro_ctrl = fields.Char(
-        'Control Number', size=32,
-        help="Number used to manage pre-printed invoices, by law you will"
-             " need to put here this number to be able to declarate on"
-             " Fiscal reports correctly.",store=True)
+    supplier_invoice_number = fields.Char(string='Supplier Invoice Number', store=True, help="The reference of this invoice as provided by the supplier.")
+    nro_ctrl = fields.Char(string='Control Number', size=32,
+                            help="Number used to manage pre-printed invoices, by law you will"
+                            "need to put here this number to be able to declarate on"
+                            "Fiscal reports correctly.",store=True)
 
     rif = fields.Char(string="Rif", related='partner_id.vat',store=True,states={'draft': [('readonly', True)]})
 
@@ -52,17 +48,16 @@ class AccountInvoice(models.Model):
     paper_anu = fields.Boolean('papel dañado', defeult=False)
     marck_paper = fields.Boolean(default=False)
 
-    international = fields.Boolean( 'provedoor internacional', compute='_get_international')
+    international = fields.Boolean('provedoor internacional', compute='_get_international')
     nro_planilla_impor = fields.Char('Nro de Planilla de Importacion', size=25)
     nro_expediente_impor = fields.Char('Nro de Expediente de Importacion', size=25)
     fecha_importacion = fields.Date('Fecha de la planilla de Importación')
 
-    # date_document = lambda *a: time.strftime('%Y-%m-%d')
+
     @api.one
     @api.depends('partner_id')
     def _get_international(self):
         self.international = (self.partner_id.international_supplier)
-
 
 
     def _get_journal(self, context):
@@ -70,7 +65,6 @@ class AccountInvoice(models.Model):
         used in the current user's company, otherwise
         it does not exist, return false
         """
-
         context = context or {}
         res = super(AccountInvoice, self)._get_journal(context)
         if res:
