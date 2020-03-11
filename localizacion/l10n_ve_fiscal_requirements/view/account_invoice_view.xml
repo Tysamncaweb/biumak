@@ -84,7 +84,7 @@
                     <group>
                        <separator string="Fiscal Information"/>
                         <field name="sin_cred"/>
-                        <field name="nro_ctrl" required="True" attrs="{'invisible': [('state','=','draft')],'readonly': [('state', 'in', ('paid','open'))]}" />
+                        <field name="nro_ctrl" attrs="{'invisible': [('state','=','draft')],'readonly': [('state', 'in', ('paid','open'))]}" />
                         <button name="%(action_wiz_nroctrl)d" type="action" string="Change control number" colspan="6" attrs="{'invisible': [('state','=','draft')]}"/>
                     </group>
                 </xpath>
