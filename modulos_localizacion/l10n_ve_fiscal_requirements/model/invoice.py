@@ -1,10 +1,8 @@
-# coding: utf-8
+# -*- coding: utf-8 -*-
 
-
-from odoo import models, fields, api
-from odoo.tools.translate import _
-from datetime import datetime,date
+from datetime import datetime, date
 from dateutil import relativedelta
+from odoo import api, fields, models, _
 
 _DATETIME_FORMAT = "%Y-%m-%d"
 
@@ -12,13 +10,11 @@ _DATETIME_FORMAT = "%Y-%m-%d"
 class AccountInvoice(models.Model):
     _inherit = 'account.invoice'
 
-    supplier_invoice_number = fields.Char(string='Supplier Invoice Number',store=True,
-                                          help="The reference of this invoice as provided by the supplier.")
-    nro_ctrl = fields.Char(
-        'Control Number', size=32,
-        help="Number used to manage pre-printed invoices, by law you will"
-             " need to put here this number to be able to declarate on"
-             " Fiscal reports correctly.",store=True)
+    supplier_invoice_number = fields.Char(string='Supplier Invoice Number', store=True, help="The reference of this invoice as provided by the supplier.")
+    nro_ctrl = fields.Char(string='Control Number', size=32,
+                            help="Number used to manage pre-printed invoices, by law you will"
+                            "need to put here this number to be able to declarate on"
+                            "Fiscal reports correctly.",store=True)
 
     rif = fields.Char(string="Rif", related='partner_id.vat',store=True,states={'draft': [('readonly', True)]})
 
@@ -52,17 +48,16 @@ class AccountInvoice(models.Model):
     paper_anu = fields.Boolean('papel dañado', defeult=False)
     marck_paper = fields.Boolean(default=False)
 
-    international = fields.Boolean( 'provedoor internacional', compute='_get_international')
+    international = fields.Boolean('provedoor internacional', compute='_get_international')
     nro_planilla_impor = fields.Char('Nro de Planilla de Importacion', size=25)
     nro_expediente_impor = fields.Char('Nro de Expediente de Importacion', size=25)
     fecha_importacion = fields.Date('Fecha de la planilla de Importación')
 
-    # date_document = lambda *a: time.strftime('%Y-%m-%d')
+
     @api.one
     @api.depends('partner_id')
     def _get_international(self):
         self.international = (self.partner_id.international_supplier)
-
 
 
     def _get_journal(self, context):
@@ -70,7 +65,6 @@ class AccountInvoice(models.Model):
         used in the current user's company, otherwise
         it does not exist, return false
         """
-
         context = context or {}
         res = super(AccountInvoice, self)._get_journal(context)
         if res:
@@ -85,24 +79,23 @@ class AccountInvoice(models.Model):
         return res and res[0] or False
 
 
-    def _unique_invoice_per_partner(self, field, value):
-        """ Return false when it is found
-        that the bill is not out_invoice or out_refund,
-        and it is not unique to the partner.
-        """
+    #def _unique_invoice_per_partner(self, field, value):
+    #    """ Return false when it is found
+    #    that the bill is not out_invoice or out_refund,
+    #    and it is not unique to the partner.
+    #    """
+    #    ids_ivo = []
+    #    inv_ids = []
+    #    for inv in self:
 
-        ids_ivo = []
-        inv_ids = []
-        for inv in self:
+    #        ids_ivo.append(inv.id)
+    #        if inv.type in ('out_invoice', 'out_refund'):
+    #            return True
+    #        inv_ids = (self.search([(field, '=',value), ('type', '=', inv.type), ('partner_id', '=', inv.partner_id.id)]))
 
-            ids_ivo.append(inv.id)
-            if inv.type in ('out_invoice', 'out_refund'):
-                return True
-            inv_ids = (self.search([(field, '=',value), ('type', '=', inv.type), ('partner_id', '=', inv.partner_id.id)]))
-
-            if [True for i in inv_ids if i not in ids_ivo] and inv_ids:
-                return False
-        return True
+    #        if [True for i in inv_ids if i not in ids_ivo] and inv_ids:
+    #            return False
+    #    return True
 
     def _get_loc_req(self):
         """Get if a field is required or not by a Localization
@@ -175,40 +168,40 @@ class AccountInvoice(models.Model):
         if vals.get('type') in ('out_invoice', 'out_refund') and \
                 vals.get('date_invoice') and not vals.get('date_document'):
             vals['date_document'] = vals['date_invoice']
-        if vals.get('supplier_invoice_number', False):
-            supplier_invoice_number_id = self._unique_invoice_per_partner('supplier_invoice_number',
-                                                                          vals.get('supplier_invoice_number', False))
-            if not supplier_invoice_number_id:
-                self.supplier_invoice_number = False
-                return {'warning': {'title': "Advertencia!",
-                                    'message': "  El Numero de la Factura del Proveedor ya Existe  "}}
-        if vals.get('nro_ctrl', False):
-            nro_ctrl_id = self._unique_invoice_per_partner('nro_ctrl', vals.get('nro_ctrl', False))
-            if not nro_ctrl_id:
-                self.nro_ctrl = False
-                return {'warning': {'title': "Advertencia!",
-                                    'message': "  El Numero de control de la Factura del Proveedor ya Existe  "}}
+        #if vals.get('supplier_invoice_number', False):
+        #    supplier_invoice_number_id = self._unique_invoice_per_partner('supplier_invoice_number',
+        #                                                                  vals.get('supplier_invoice_number', False))
+        #    if not supplier_invoice_number_id:
+        #        self.supplier_invoice_number = False
+        #        return {'warning': {'title': "Advertencia!",
+        #                            'message': "  El Numero de la Factura del Proveedor ya Existe  "}}
+        #if vals.get('nro_ctrl', False):
+        #    nro_ctrl_id = self._unique_invoice_per_partner('nro_ctrl', vals.get('nro_ctrl', False))
+        #    if not nro_ctrl_id:
+        #        self.nro_ctrl = False
+        #        return {'warning': {'title': "Advertencia!",
+        #                            'message': "  El Numero de control de la Factura del Proveedor ya Existe  "}}
 
 
         return super(AccountInvoice, self).write(vals)
 
-    @api.onchange('supplier_invoice_number')
-    def onchange_supplier_invoice_number(self):
-        if self.supplier_invoice_number:
-            supplier_invoice_number_id = self._unique_invoice_per_partner('supplier_invoice_number', self.supplier_invoice_number)
-            if not supplier_invoice_number_id:
-                self.supplier_invoice_number = False
-                return {'warning': {'title': "Advertencia!",
-                                    'message': "  El Numero de la Factura del Proveedor ya Existe  "}}
+    #@api.onchange('supplier_invoice_number')
+    #def onchange_supplier_invoice_number(self):
+    #    if self.supplier_invoice_number:
+    #        supplier_invoice_number_id = self._unique_invoice_per_partner('supplier_invoice_number', self.supplier_invoice_number)
+    #        if not supplier_invoice_number_id:
+    #            self.supplier_invoice_number = False
+    #            return {'warning': {'title': "Advertencia!",
+    #                                'message': "  El Numero de la Factura del Proveedor ya Existe  "}}
 
-    @api.onchange('nro_ctrl')
-    def onchange_nro_ctrl(self):
-        if self.nro_ctrl:
-            nro_ctrl_id = self._unique_invoice_per_partner('nro_ctrl',self.nro_ctrl)
-            if not nro_ctrl_id:
-                self.nro_ctrl = False
-                return {'warning': {'title': "Advertencia!",
-                                    'message': "  El Numero de control de la Factura del Proveedor ya Existe  "}}
+    #@api.onchange('nro_ctrl')
+    #def onchange_nro_ctrl(self):
+    #    if self.nro_ctrl:
+    #        nro_ctrl_id = self._unique_invoice_per_partner('nro_ctrl',self.nro_ctrl)
+    #        if not nro_ctrl_id:
+    #            self.nro_ctrl = False
+    #            return {'warning': {'title': "Advertencia!",
+    #                                'message': "  El Numero de control de la Factura del Proveedor ya Existe  "}}
 
 class AccountInvoiceTax(models.Model):
     _inherit = 'account.invoice.tax'
