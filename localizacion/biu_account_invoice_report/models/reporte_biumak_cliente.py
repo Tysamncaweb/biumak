@@ -85,7 +85,7 @@ class ReportAccountPayment_biucliente(models.AbstractModel):
                 'cod': lin.product_id.default_code,
                 'cant': lin.quantity,
                 'um': lin.uom_id.name,
-                'descripcion': lin.product_id.product_tmpl_id.name,
+                'descripcion': lin.product_id.product_tmpl_id.name,#
                 'lote': lin.nro_lote,
                 'precio_unitario': self.formato_cifras(lin.price_unit),
                 'precio_total': self.formato_cifras(lin.tasa_me),
