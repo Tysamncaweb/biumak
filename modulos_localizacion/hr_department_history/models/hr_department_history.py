@@ -30,7 +30,7 @@ class Employee(models.Model):
         obj_employee = super(Employee, self).create(data)
         hr_dept = {
             'employee_id': obj_employee.id,
-            #'employee_ci': obj_employee.identification_id_2,
+            'employee_ci': obj_employee.identification_id_2,
             #'employee_ci: obj_employee.identification_id_2,
             'department_last': '',
             'department_new': obj_employee.department_id.name,
