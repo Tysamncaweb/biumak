@@ -70,7 +70,7 @@
                 </xpath>
                 <xpath expr="//field[@name='date_due']" position="after">
                     <field name="nro_planilla_impor" string="N° de Planilla de Importación" attrs="{'required': [('international', '=', True)],'readonly': [('state', 'in', ('paid','open'))]}"/>
-                    <field name="nro_expediente_impor" string="N° de Planilla de Importación" attrs="{'required': [('international', '=', True)],'readonly': [('state', 'in', ('paid','open'))]}"/>
+                    <field name="nro_expediente_impor" string="N° de Expediente de Importación" attrs="{'required': [('international', '=', True)],'readonly': [('state', 'in', ('paid','open'))]}"/>
                     <field name="fecha_importacion" string="Fecha de la Planilla de Importación" attrs="{'required': [('international', '=', True)],'readonly': [('state', 'in', ('paid','open'))]}"/>
                 </xpath>
                 <xpath expr="//field[@name='partner_id']" position="after">

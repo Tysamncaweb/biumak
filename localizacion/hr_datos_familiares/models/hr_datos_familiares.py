@@ -38,7 +38,7 @@ class Employee(models.Model):
     direccion_father = fields.Char("Dirección", size=100)
     telf_hab_father = fields.Char(string="Telefono habitacion", size=12)
     telf_mov_father = fields.Char(string="Telefono Móvil", size=12)
-    spouse = fields.Boolean(string="Conyugue")
+    spouse = fields.Boolean(string="Cónyuge")
     spouse_name = fields.Char("Nombre y Apellido del conyugue", size=256)
     spouse_date = fields.Date("Fecha de Nacimiento del conyugue")
     spouse_age = fields.Integer("Edad del conyugue")
