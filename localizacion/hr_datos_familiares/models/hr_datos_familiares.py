@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import logging
+import re
 
-from odoo import api, fields, models, _,exceptions
+from odoo import api, fields, models, _, exceptions
 from odoo.exceptions import ValidationError
 from odoo.tools import DEFAULT_SERVER_DATE_FORMAT
 from datetime import datetime, date
 from dateutil import relativedelta
-import re
 
 _logger = logging.getLogger(__name__)
 
@@ -53,18 +53,7 @@ class Employee(models.Model):
     @api.one
     def _total_hijos(self):
         self.total_son = len(self.son_ids.ids)
-        #if not son_ids :
-        #    self.total_son= 0
-
-        #else:
-        #    if len(self.son_ids.ids):
-        #        self.total_son = len(self.son_ids.ids)
-        #    else:
-        #        self.total_son = 0
         return
-
-
-
 
     @api.onchange('mother_date')
     def onchange_date_of_birth_mother(self):
@@ -85,8 +74,6 @@ class Employee(models.Model):
             age = self._calculate_date_of_birth(date)
             if age.days >= 0 and age.months >= 0 and age.years >= 0:
                 self.father_age = age.years
-                #self.age_sons_months = age.months Campos para el calculo en  dias y meses.
-                #self.age_sons_days = age.days
             else:
                 self.father_age = False
                 return {'warning': {'title': "Advertencia!", 'message': "La fecha ingresada es mayor que la fecha actual"}}
@@ -99,8 +86,6 @@ class Employee(models.Model):
             age = self._calculate_date_of_birth(date)
             if age.days >= 0 and age.months >= 0 and age.years >= 0:
                 self.spouse_age = age.years
-                #self.age_sons_months = age.months Campos para el calculo en  dias y meses.
-                #self.age_sons_days = age.days
             else:
                 self.spouse_age = False
                 return {'warning': {'title': "Advertencia!", 'message': "La fecha ingresada es mayor que la fecha actual"}}
@@ -109,13 +94,10 @@ class Employee(models.Model):
     def _calculate_date_of_birth(self, value):
             age = 0
             if value:
-                #ahora = datetime.now().strftime(_DATETIME_FORMAT)
                 ahora = str(date.today())
                 age = relativedelta.relativedelta(datetime.strptime(ahora, DEFAULT_SERVER_DATE_FORMAT),
                                                          datetime.strptime(value, DEFAULT_SERVER_DATE_FORMAT))
-                #age = relativedelta.relativedelta(datetime.strptime(ahora,_DATETIME_FORMAT), datetime.strptime(value,_DATETIME_FORMAT))
             return age
-
 
     def validate_mother_ci(self,valor):
         res = None
@@ -152,18 +134,11 @@ class Employee(models.Model):
            res = {}
 
            phone_obj = re.compile(r"""^0\d{3}-\d{7}""", re.X)
-           # ^: inicio de linea
-           # 0\d{3}: codigo de area: cuantro (4) caracteres numericos comenzando con 0
-           # -: seguido de -
-           # \d{7}: numero de telefono: cualquier caracter numerico del 0 al 9. 7 numeros
-           # re.X: bandera de compilacion X: habilita la modo verborrágico, el cual permite organizar el patrón de búsqueda de una forma que sea más sencilla de entender y leer.
            if phone_obj.search(phone):
                res = {
                    field: phone
                }
            return res
-
-
 
 
     def create(self, vals):
@@ -297,11 +272,6 @@ class HrSon(models.Model):
         res = {}
 
         phone_obj = re.compile(r"""^0\d{3}-\d{7}""", re.X)
-        # ^: inicio de linea
-        # 0\d{3}: codigo de area: cuantro (4) caracteres numericos comenzando con 0
-        # -: seguido de -
-        # \d{7}: numero de telefono: cualquier caracter numerico del 0 al 9. 7 numeros
-        # re.X: bandera de compilacion X: habilita la modo verborrágico, el cual permite organizar el patrón de búsqueda de una forma que sea más sencilla de entender y leer.
         if phone_obj.search(phone):
             res = {
                 field: phone
@@ -316,8 +286,6 @@ class HrSon(models.Model):
             age = self._calculate_date_of_birth(date)
             if age.days >= 0 and age.months >= 0 and age.years >= 0:
                 self.age_sons = age.years
-                #self.age_sons_months = age.months Campos para el calculo en  dias y meses.
-                #self.age_sons_days = age.days
             else:
                 self.age_sons = False
                 return {'warning': {'title': "Advertencia!", 'message': "La fecha ingresada es mayor que la fecha actual"}}
@@ -356,7 +324,6 @@ class HrSon(models.Model):
             if not res:
                 raise exceptions.except_orm(('Advertencia!'), (
                     u'El Telefono Móvil del Hijo tiene el formato incorrecto. Ej: 0416-4567890. Por favor intente de nuevo'))
-
 
         return super(HrSon, self).create(vals)
 
