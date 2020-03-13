@@ -150,8 +150,11 @@ class ReportAccountPayment_biucliente(models.AbstractModel):
             numero_letras = numero_letras.strip()
             contador = contador + 1
             entero = int(entero / 1000)
+        #raise UserError(_('valor decimal es  = %s')%decimal)
         if decimal < 10:
             decimal = "0"+str(decimal)
+        if decimal >=10:
+            decimal = str(decimal)
         numero_letras = numero_letras+" BOLIVARES CON :"+decimal+" /100 centimos"
         return numero_letras
 
