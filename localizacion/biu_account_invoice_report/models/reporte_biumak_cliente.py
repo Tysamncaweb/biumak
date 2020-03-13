@@ -131,6 +131,7 @@ class ReportAccountPayment_biucliente(models.AbstractModel):
         decimal = int(round((numero - entero) * 100))
         # print 'decimal : ',decimal
         contador = 0
+        decimal_text=0
         numero_letras = ""
         while entero > 0:
             a = entero % 1000
@@ -152,10 +153,10 @@ class ReportAccountPayment_biucliente(models.AbstractModel):
             entero = int(entero / 1000)
         #raise UserError(_('valor decimal es  = %s')%decimal)
         if decimal < 10:
-            decimal = "0"+str(decimal)
+            decimal_text = "0"+str(decimal)
         if decimal >=10:
-            decimal = str(decimal)
-        numero_letras = numero_letras+" BOLIVARES CON :"+decimal+" /100 centimos"
+            decimal_text = str(decimal)
+        numero_letras = numero_letras+" BOLIVARES CON :"+decimal_text+" /100 centimos"
         return numero_letras
 
     def convierte_cifra(self,numero, sw):
