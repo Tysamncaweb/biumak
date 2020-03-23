@@ -23,11 +23,11 @@ class Employee(models.Model):
     ]
 
     #Datos para Antiguedad
-    fecha_inicio = fields.Date("Fecha de Ingreso", required=True)
-    fecha_fin = fields.Date("Fecha de Egreso")
+    fecha_inicio = fields.Date("Fecha de ingreso", required=True)
+    fecha_fin = fields.Date("Fecha de egreso")
     dias_antig = fields.Integer('Dias', help="Total de dias de Antiguedad.", readonly=False, default=0)
-    mes_antig = fields.Integer('Mes', help="Total de Meses de Antiguedad.", readonly=False, default=0)
-    ano_antig = fields.Integer('Año', help="Total de Años de Antiguedad.", readonly=False, default=0)
+    mes_antig = fields.Integer('Month', help="Total de Meses de Antiguedad.", readonly=False, default=0)
+    ano_antig = fields.Integer('Year', help="Total de Años de Antiguedad.", readonly=False, default=0)
     m_egreso = fields.Many2one('hr.egress.conditions','Motivo de Egreso')
     bank_account_id_emp_2 = fields.Many2one('res.bank', 'Banco de Nomina', help="Payslip bank")
     account_number_2 = fields.Char('Nro. de Cuenta', size=20)

@@ -7,42 +7,41 @@
             <field name="inherit_id" ref="hr.view_employee_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//page[@name='personal_information']" position="replace">
-                    <page name ="Personal Information" string="Información Personal">
+                    <page name ="personal_info" string="Información Personal">
                      <group>
                          <group string="Datos Personales">
                              <field name="nationality"/>
                              <field name="passport_id"/>
-                             <field name="identification_id_2" placeholder="Ej. 19763505" required="True"/>
+                             <field name="identification_id_2" string="Cédula de identidad" placeholder="Ej. 19763505" required="True"/>
                              <field name="rif" on_change="onchange_rif_er(rif)" placeholder="Ej. V-012345678"/>
                              <field name="personal_email" string="Email" placeholder="Ej. cuenta@dominio.xxx"/>
                              <field name="education"/>
-                             <field name="profesion_id"/>
+                             <field name="profesion_id" string="Profesión"/>
                              <field name="birthday" required="1"/>
-                             <field name="country_birth_id" string="Pais de nacimiento" options="'no_quick_create': True, 'no_create_edit' : True"/>
+                             <field name="country_birth_id" string="País de nacimiento" options="'no_quick_create': True, 'no_create_edit' : True"/>
                              <field name="state_id" string="Estado de nacimiento" domain="[('country_id','=',country_birth_id)]" options="{'no_quick_create': True, 'no_create_edit' : True}"/>
                              <field name="city_id" string="Ciudad de nacimiento" domain="[('res_country_state_id','=',state_id)]" options="{'no_quick_create': True, 'no_create_edit' : True}"/>
                              <field name="employee_age"/>
-                             <field name="marriage_certificate"/>
+                             <field name="marriage_certificate" string="Entrego acta de matrimonio"/>
                              <field name="marital_2"/>
-                             <!--field name="Nro_de_Hijos"/-->
-                             <field name="grupo_sanguineo"/>
+                             <field name="grupo_sanguineo" string="Grupo sanguíneo"/>
                              <field name="factor_rh"/>
                              <field name="gender"/>
                          </group>
-                         <group string="Informacion de Contacto">
+                         <group string="Información de Contacto">
                              <field name="var_state" invisible="1"/>
                              <field name="var_municipe" invisible="1"/>
                              <field name="state_id_res" required="1" options="'no_quick_create': True, 'no_create_edit' : True"/>
                              <field name="city_id_res" required="1" domain="[('res_country_state_id','=',var_state)]" options="'no_quick_create': True, 'no_create_edit' : True"/>
                              <field name="e_municipio" string="Municipio" domain="[('res_country_state_id','=',var_state)]" options="'no_quick_create': True, 'no_create_edit' : True"/>
                              <field name="e_parroquia" string="Parroquia" domain="[('res_state_municipal_id','=',var_municipe)]" options="'no_quick_create': True, 'no_create_edit' : True"/>
-                             <field name="code_postal"/>
+                             <field name="code_postal" string="Código postal"/>
                              <field name="street"/>
                              <field name="house"/>
                              <field name="apto"/>
                              <field name="piso"/>
-                             <field name="telf_hab" placeholder="Ej. 0123-4567890" />
-                             <field name="telf_Contacto" placeholder="Ej. 0123-4567890"/>
+                             <field name="telf_hab" string="Teléfono de habitación" placeholder="Ej. 0123-4567890" />
+                             <field name="telf_Contacto" string="Teléfono de contacto" placeholder="Ej. 0123-4567890"/>
                          </group>
                      </group>
                     </page>
@@ -82,7 +81,7 @@
             <field name="inherit_id" ref="hr.view_employee_tree"/>
             <field name="arch" type="xml">
                 <xpath expr="//tree/field[4]" position="after">
-                     <field name="identification_id_2" string="Cédula de Identidad"/>
+                     <field name="identification_id_2" string="Cédula de identidad"/>
                 </xpath>
             </field>
         </record>
@@ -94,7 +93,7 @@
             <field name="inherit_id" ref="hr.view_employee_filter"/>
             <field name="arch" type="xml">
                 <xpath expr="//search/field[@name='name']" position="after">
-                     <field name="identification_id_2" string="Cédula"/>
+                     <field name="identification_id_2" string="Cédula de identidad"/>
                 </xpath>
             </field>
 
