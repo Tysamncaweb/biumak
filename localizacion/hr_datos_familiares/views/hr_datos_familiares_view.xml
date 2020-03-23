@@ -34,8 +34,8 @@
                                 <field name="mother_date"  nolabel="1"/>
                                 <label for="mother_age" string="Edad"/>
                                 <field name="mother_age" nolabel="1"/>
-                                <field name="telf_hab_mother" placeholder="Ej.0212-7568081"/>
-                                <field name="telf_mov_mother" placeholder="Ej.0416-4562123"/>
+                                <field name="telf_hab_mother" string="Teléfono de habitación" placeholder="Ej.0212-7568081"/>
+                                <field name="telf_mov_mother" string="Teléfono de móvil" placeholder="Ej.0416-4562123"/>
                                 <label for="mother_live" string="Vive"/>
                                 <field name="mother_live" nolabel="1"/>
                             </group>
