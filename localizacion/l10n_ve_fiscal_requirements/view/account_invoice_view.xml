@@ -63,20 +63,20 @@
             <field name="inherit_id" ref="account.invoice_supplier_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='date_invoice']" position="replace">
-                    <label for="date_invoice" string="Fecha Contable" />
+                    <label for="date_invoice" string="Fecha contable" />
                     <field name="date_invoice" nolabel="1"/>
-                    <label for="date_document" string="Fecha Factura"/>
+                    <label for="date_document" string="Fecha factura"/>
                     <field name="date_document" nolabel="1" attrs="{'readonly': [('state','=','open')]}"/>
                 </xpath>
                 <xpath expr="//field[@name='date_due']" position="after">
-                    <field name="nro_planilla_impor" string="N° de Planilla de Importación" attrs="{'required': [('international', '=', True)],'readonly': [('state', 'in', ('paid','open'))]}"/>
-                    <field name="nro_expediente_impor" string="N° de Expediente de Importación" attrs="{'required': [('international', '=', True)],'readonly': [('state', 'in', ('paid','open'))]}"/>
-                    <field name="fecha_importacion" string="Fecha de la Planilla de Importación" attrs="{'required': [('international', '=', True)],'readonly': [('state', 'in', ('paid','open'))]}"/>
+                    <field name="nro_planilla_impor" string="N° Planilla de importación" attrs="{'required': [('international', '=', True)],'readonly': [('state', 'in', ('paid','open'))]}"/>
+                    <field name="nro_expediente_impor" string="N° Expediente de Importación" attrs="{'required': [('international', '=', True)],'readonly': [('state', 'in', ('paid','open'))]}"/>
+                    <field name="fecha_importacion" string="Planilla de importación" attrs="{'required': [('international', '=', True)],'readonly': [('state', 'in', ('paid','open'))]}"/>
                 </xpath>
                 <xpath expr="//field[@name='partner_id']" position="after">
                     <field name="international" invisible="1"/>
                     <field name="rif" string="RIF" attrs="{'invisible': [('international', '=', True)]}"/>
-                    <field name="supplier_invoice_number" required="True" string="Supplier Invoice Number"/>
+                    <field name="supplier_invoice_number" required="True" string="Número de factura del proveedor"/>
                     <field name="nro_ctrl" string="Número de control"
                     attrs="{'readonly': [('state', 'in', ('paid','open'))]}"/>
                 </xpath>

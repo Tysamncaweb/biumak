@@ -78,10 +78,10 @@ class HrEmployee(models.Model):
     state_id = fields.Many2one('res.country.state', 'Estado de nacimiento') #, domain="[('country_id','=',238)]")    #ESTADO DE NACIMIENTO
     city_id = fields.Many2one('res.country.city', 'Ciudad de nacimiento')                                             #CIUDAD DE NACIMIENTO
     employee_age = fields.Integer("Edad", compute='_calcular_edad')
-    marriage_certificate = fields.Boolean('Entrego acta de matrimonio?')
+    marriage_certificate = fields.Boolean('Entrego acta de matrimonio')
     marital_2 = fields.Selection(MARITAL_STATUS, 'Marital Status')
    # Nro_de_Hijos = fields.Integer('Numero de hijos', size=2)
-    grupo_sanguineo = fields.Selection(GRUPO_SANGUINEO, 'Grupo Sangineo')
+    grupo_sanguineo = fields.Selection(GRUPO_SANGUINEO, 'Grupo Sanguineo')
     factor_rh = fields.Selection(FACTOR_RH, 'Factor RH')
     #INFORMACION DE CONTACTO
     street = fields.Char('Av./Calle', size=50)
@@ -94,7 +94,7 @@ class HrEmployee(models.Model):
     telf_Contacto = fields.Char('Telefono Contacto', size=12)
     e_municipio = fields.Many2one('res.state.municipal','Municipio', size=100)
     e_parroquia = fields.Many2one('res.municipal.parish','Parroquia', size=100)
-    code_postal = fields.Char('Código Postal', size=4)
+    code_postal = fields.Char('Codigo Postal', size=4)
   #  birthday = fields.Many2one('hr.employee','Fecha de Nacimiento')
     coach_id = fields.Many2one('hr.employee', 'Coach')
     var_state = fields.Char()
