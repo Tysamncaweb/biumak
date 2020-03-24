@@ -10,8 +10,13 @@ import re
 class gc_cliente_proveedor(models.Model):
     _inherit = 'res.partner'
 
-    num_cliente = fields.Char(size=4)
-    international_supplier = fields.Boolean('Es Proveedor Internacional ?')
+    num_cliente = fields.Char(string="Numero de Cliente", size=4)
+    international_supplier = fields.Boolean('Proveedor Internacional')
+
+    @api.onchange('international_supplier')
+    def rif_clean(self):
+        if self.international_supplier:
+            self.vat = ''
 
 
     def validate_num_cliente(self,valor):
