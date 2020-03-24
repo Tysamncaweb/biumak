@@ -37,31 +37,17 @@ class PurchaseOrder(models.Model):
     _inherit = 'purchase.order'
 
 
-
-
-
-
     Rif_prueba = fields.Char(string="R.I.F", size=15, required=True, related='partner_id.vat')
     phone = fields.Char(related='partner_id.phone', store=True, string="Telefono" )
-
     adress_purchase = fields.Char(size=60 , string="Dirección Fiscal", related='partner_id.street')
-
     zip_purchase = fields.Char(related='partner_id.zip')
-
     city_purchase = fields.Char(related='partner_id.city')
-
     state_purchase = fields.Many2one("res.country.state", string='State', ondelete='restrict', related='partner_id.state_id')
-
     country_purchase =fields.Many2one('res.country', string='Country', ondelete='restrict', related='partner_id.country_id')
-
     amount_untaxed = fields.Monetary(string='Subtotal', store=True, readonly=True, compute='_amount_all',
                                      track_visibility='always')
     amount_tax = fields.Monetary(string='I.V.A. (16%)', store=True, readonly=True, compute='_amount_all')
-
     amount_total = fields.Monetary(string='Precio Total', store=True, readonly=True, compute='_amount_all')
-
-
-
 
 
 class PurchaseOrderLine(models.Model):
@@ -84,11 +70,9 @@ class PurchaseOrderLine(models.Model):
     price_subtotal = fields.Monetary(compute='_compute_amount', string='Subtotal', store=True)
     price_total = fields.Monetary(compute='_compute_amount', string='Total', store=True)
     price_tax = fields.Float(compute='_compute_amount', string='Tax', store=True)
-
     order_id = fields.Many2one('purchase.order', string='Order Reference', index=True, required=True,
                                ondelete='cascade')
     state = fields.Selection(related='order_id.state', store=True)
-
     invoice_lines = fields.One2many('account.invoice.line', 'purchase_line_id', string="Bill Lines", readonly=True,
                                     copy=False)
     # Replace by invoiced Qty
@@ -96,17 +80,13 @@ class PurchaseOrderLine(models.Model):
                                 digits=dp.get_precision('Product Unit of Measure'), store=True)
     qty_received = fields.Float(compute='_compute_qty_received', string="Received Qty",
                                 digits=dp.get_precision('Product Unit of Measure'), store=True)
-
     partner_id = fields.Many2one('res.partner', related='order_id.partner_id', string='Partner', readonly=True,
                                  store=True)
     currency_id = fields.Many2one(related='order_id.currency_id', store=True, string='Currency', readonly=True)
     date_order = fields.Datetime(related='order_id.date_order', string='Order Date', readonly=True)
-
     move_dest_ids = fields.One2many('stock.move', 'created_purchase_line_id', 'Downstream Moves')
     product_id = fields.Many2one('product.product', string='Cod. producto', domain=[('purchase_ok', '=', True)],
                                  change_default=True, required=True)
-
-
 
 
 class SaleOrderLine(models.Model):
@@ -134,7 +114,6 @@ class Partner(models.Model):
                                          "Used by the some of the legal statements.")
 
 
-
     @api.onchange('country_id')
     def _compute_country(self):
         if not self.country_id:
@@ -142,3 +121,5 @@ class Partner(models.Model):
             self.country_id =country_id.id
         return
 
+
+    
